@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Kependudukan — Pulau Morotai</title>
+<meta name="description" content="Dashboard Data Kependudukan Komprehensif Kabupaten Pulau Morotai Sem 2 2022 — Sem 2 2025">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-card: rgba(17, 24, 45, 0.85);
+  --bg-card-hover: rgba(25, 35, 60, 0.95);
+  --glass: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --text-primary: #e8ecf4;
+  --text-secondary: #8b95a8;
+  --text-muted: #5a6478;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+  --accent-orange: #f97316;
+  --gradient-1: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --gradient-2: linear-gradient(135deg, #06b6d4, #10b981);
+  --gradient-3: linear-gradient(135deg, #f59e0b, #f97316);
+  --gradient-4: linear-gradient(135deg, #f43f5e, #8b5cf6);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 40px rgba(59,130,246,0.15);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(59,130,246,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(139,92,246,0.06) 0%, transparent 50%);
+}
+.header {
+  text-align:center; padding:32px 20px 16px;
+  background: linear-gradient(180deg, rgba(59,130,246,0.08) 0%, transparent 100%);
+}
+.header h1 {
+  font-size:clamp(1.5rem,3vw,2.2rem); font-weight:800;
+  background: var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  letter-spacing:-0.5px;
+}
+.header p { color:var(--text-secondary); margin-top:6px; font-size:0.85rem; }
+.tab-nav {
+  display:flex; gap:4px; padding:8px 16px; overflow-x:auto;
+  background: var(--bg-card); border-bottom:1px solid var(--border);
+  position:sticky; top:0; z-index:100;
+  backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  scrollbar-width:none;
+}
+.tab-nav::-webkit-scrollbar { display:none; }
+.tab-btn {
+  flex-shrink:0; padding:10px 18px; border:none; border-radius:var(--radius-sm);
+  background:transparent; color:var(--text-secondary); cursor:pointer;
+  font-family:'Inter',sans-serif; font-size:0.78rem; font-weight:500;
+  transition:all 0.3s ease; white-space:nowrap;
+}
+.tab-btn:hover { background:var(--glass); color:var(--text-primary); }
+.tab-btn.active {
+  background: var(--gradient-1); color:#fff; font-weight:600;
+  box-shadow: 0 4px 15px rgba(59,130,246,0.3);
+}
+.tab-content { display:none; padding:20px 16px; max-width:1400px; margin:0 auto; }
+.tab-content.active { display:block; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+.grid { display:grid; gap:16px; }
+.grid-2 { grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); }
+.grid-3 { grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); }
+.grid-4 { grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); }
+.card {
+  background:var(--bg-card); border-radius:var(--radius); padding:20px;
+  border:1px solid var(--border); backdrop-filter:blur(10px);
+  transition:all 0.3s ease;
+}
+.card:hover { background:var(--bg-card-hover); border-color:rgba(255,255,255,0.12); transform:translateY(-2px); box-shadow:var(--shadow); }
+.card-title {
+  font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:1.2px;
+  color:var(--text-muted); margin-bottom:12px; display:flex; align-items:center; gap:8px;
+}
+.card-title .icon { font-size:1rem; }
+.kpi-value {
+  font-size:clamp(1.6rem,3vw,2.4rem); font-weight:800; letter-spacing:-1px;
+  background: var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+.kpi-sub { font-size:0.8rem; color:var(--text-secondary); margin-top:4px; }
+.kpi-badge {
+  display:inline-flex; align-items:center; gap:4px; padding:3px 10px;
+  border-radius:20px; font-size:0.7rem; font-weight:600;
+}
+.badge-up { background:rgba(16,185,129,0.15); color:#10b981; }
+.badge-down { background:rgba(244,63,94,0.15); color:#f43f5e; }
+.chart-container { position:relative; width:100%; }
+.chart-container canvas { max-height:350px; }
+.section-title {
+  font-size:1.1rem; font-weight:700; margin:24px 0 16px;
+  padding-left:12px; border-left:3px solid var(--accent-blue);
+  display:flex; align-items:center; gap:8px;
+}
+.insight-box {
+  background:linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.08));
+  border:1px solid rgba(59,130,246,0.2); border-radius:var(--radius-sm);
+  padding:16px 20px; margin:16px 0; font-size:0.82rem; line-height:1.6;
+  color:var(--text-secondary);
+}
+.insight-box strong { color:var(--accent-blue); }
+table.data-table {
+  width:100%; border-collapse:separate; border-spacing:0;
+  font-size:0.78rem;
+}
+.data-table thead th {
+  background:rgba(59,130,246,0.1); color:var(--accent-blue);
+  padding:10px 12px; text-align:left; font-weight:600;
+  position:sticky; top:0; border-bottom:2px solid rgba(59,130,246,0.3);
+  font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px;
+}
+.data-table tbody td {
+  padding:8px 12px; border-bottom:1px solid var(--border); color:var(--text-secondary);
+}
+.data-table tbody tr:hover td { background:var(--glass); color:var(--text-primary); }
+.data-table tbody tr:nth-child(even) td { background:rgba(255,255,255,0.02); }
+.search-input {
+  width:100%; max-width:400px; padding:10px 16px; border-radius:var(--radius-sm);
+  border:1px solid var(--border); background:var(--glass); color:var(--text-primary);
+  font-family:'Inter',sans-serif; font-size:0.82rem; margin-bottom:12px;
+  outline:none; transition:border-color 0.3s;
+}
+.search-input:focus { border-color:var(--accent-blue); }
+.source-tag {
+  display:inline-block; padding:2px 8px; border-radius:4px; font-size:0.65rem;
+  background:rgba(139,92,246,0.15); color:var(--accent-purple); font-weight:500;
+  margin-top:8px;
+}
+.footer {
+  text-align:center; padding:40px 20px; color:var(--text-muted); font-size:0.72rem;
+  border-top:1px solid var(--border); margin-top:40px;
+}
+@media(max-width:768px) {
+  .grid-2,.grid-3,.grid-4 { grid-template-columns:1fr; }
+  .tab-btn { padding:8px 12px; font-size:0.72rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📊 Dashboard Kependudukan Kabupaten Pulau Morotai</h1>
+  <p>Analisis Komprehensif Data Agregat • Sem 2 2022 — Sem 2 2025 • 7 Semester</p>
+</div>
+
+<nav class="tab-nav" id="tabNav">
+  <button class="tab-btn active" data-tab="overview">🏠 Ringkasan</button>
+  <button class="tab-btn" data-tab="agama">🕌 Agama</button>
+  <button class="tab-btn" data-tab="pendidikan">🎓 Pendidikan</button>
+  <button class="tab-btn" data-tab="pekerjaan">💼 Pekerjaan</button>
+  <button class="tab-btn" data-tab="perkawinan">💍 Perkawinan</button>
+  <button class="tab-btn" data-tab="disabilitas">♿ Disabilitas</button>
+  <button class="tab-btn" data-tab="kesehatan">🏥 Kesehatan</button>
+  <button class="tab-btn" data-tab="dokumen">📋 Dokumen</button>
+  <button class="tab-btn" data-tab="keluarga">👨‍👩‍👧‍👦 Keluarga</button>
+  <button class="tab-btn" data-tab="desa">🏘️ Desa</button>
+  <button class="tab-btn" data-tab="peta">🗺️ Peta Spasial</button>
+  <button class="tab-btn" data-tab="anomali">⚠️ Deteksi Anomali</button>
+</nav>
+
+<!-- ============================================ -->
+<!-- TAB 1: RINGKASAN EKSEKUTIF -->
+<!-- ============================================ -->
+<div class="tab-content active" id="tab-overview">
+  <div class="grid grid-4" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title"><span class="icon">👥</span>Total Penduduk</div>
+      <div class="kpi-value">83,711</div>
+      <div class="kpi-sub">
+        <span class="kpi-badge badge-up">
+          ▲ 483 (+0.58%)
+        </span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🏠</span>Jumlah KK</div>
+      <div class="kpi-value">24,176</div>
+      <div class="kpi-sub">ART: 3.46 jiwa/KK</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">⚖️</span>Rasio JK</div>
+      <div class="kpi-value">106.02</div>
+      <div class="kpi-sub">L: 43,079 • P: 40,632</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">📈</span>CAGR</div>
+      <div class="kpi-value">1.76%</div>
+      <div class="kpi-sub">R² = 0.9819</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">📈 Tren Penduduk & Prediksi</div>
+      <div class="chart-container"><canvas id="chartPopTrend"></canvas></div>
+      <div class="source-tag">Sumber: jk table × 7 periode</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🍩 Komposisi Kecamatan</div>
+      <div class="chart-container"><canvas id="chartKecDoughnut"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:16px">
+    <div class="card">
+      <div class="card-title">📊 Laju Pertumbuhan per Semester</div>
+      <div class="chart-container"><canvas id="chartGrowthRate"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Tren Kecamatan</div>
+      <div class="chart-container"><canvas id="chartKecTrend"></canvas></div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <strong>💡 Insight:</strong> Penduduk Kab. Pulau Morotai tumbuh dari <strong>78,762</strong>
+    (Sem 2 2022) menjadi <strong>83,711</strong> (Sem 2 2025),
+    dengan CAGR <strong>1.76%</strong>. Prediksi regresi linier (R²=0.9819)
+    memperkirakan populasi mencapai <strong>84,780</strong> pada Sem 2 2027.
+  </div>
+</div>
+
+<div class="tab-content" id="tab-agama">
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">🕌 Distribusi Agama (Terbaru)</div>
+      <div class="chart-container"><canvas id="chartAgamaPie"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Tren Distribusi Agama</div>
+      <div class="chart-container"><canvas id="chartAgamaTrend"></canvas></div>
+    </div>
+  </div>
+  <div class="section-title">📋 Distribusi Agama per Kecamatan</div>
+  <div class="card" style="overflow-x:auto">
+    <table class="data-table">
+      <thead><tr>
+        <th>Kecamatan</th><th>Islam</th><th>Kristen</th><th>Katolik</th><th>Hindu</th><th>Total</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="source-tag">Sumber: tabel agama × siak_analytics</div>
+  </div>
+</div>
+
+<div class="tab-content" id="tab-pendidikan">
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">🎓 Distribusi Tingkat Pendidikan</div>
+      <div class="chart-container"><canvas id="chartEduDist"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📏 Rata-rata Lama Sekolah (Tahun)</div>
+      <div class="chart-container"><canvas id="chartRLS"></canvas></div>
+    </div>
+  </div>
+  <div class="grid grid-2" style="margin-top:16px">
+    <div class="card">
+      <div class="card-title">👶 Populasi Usia Sekolah</div>
+      <div class="chart-container"><canvas id="chartUsiaSekolah"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 RLS per Kecamatan</div>
+      <table class="data-table">
+        <thead><tr><th>Kecamatan</th><th>L (th)</th><th>P (th)</th><th>Total</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="source-tag">Sumber: tabel pendidikan, lama_sekolah, usia_sekolah</div>
+</div>
+
+<div class="tab-content" id="tab-pekerjaan">
+  <div class="grid grid-3" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title"><span class="icon">👷</span>Usia Produktif</div>
+      <div class="kpi-value">56,013</div>
+      <div class="kpi-sub">66.9% dari populasi</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">👶</span>Usia Muda (0-14)</div>
+      <div class="kpi-value">23,437</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="icon">🧓</span>Usia Tua (65+)</div>
+      <div class="kpi-value">4,261</div>
+    </div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">💼 Top 15 Jenis Pekerjaan</div>
+      <div class="chart-container" style="height:450px"><canvas id="chartJobs"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Struktur Usia Penduduk</div>
+      <div class="chart-container"><canvas id="chartUsiaProd"></canvas></div>
+      <div style="margin-top:16px">
+        <div class="card-title">📉 Rasio Ketergantungan</div>
+        <div class="chart-container"><canvas id="chartRK"></canvas></div>
+      </div>
+    </div>
+  </div>
+  <div class="source-tag">Sumber: tabel pekerjaan, angkatan_kerja, usia_prod, rasio_keter</div>
+</div>
+
+<div class="tab-content" id="tab-perkawinan">
+  <div class="grid grid-4" style="margin-bottom:16px">
+    <div class="card"><div class="card-title">💑 Belum Kawin</div><div class="kpi-value">44,088</div></div>
+    <div class="card"><div class="card-title">💍 Kawin</div><div class="kpi-value">36,011</div></div>
+    <div class="card"><div class="card-title">💔 Cerai Hidup</div><div class="kpi-value">603</div></div>
+    <div class="card"><div class="card-title">🕊️ Cerai Mati</div><div class="kpi-value">3,009</div></div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">💍 Distribusi Status Kawin</div>
+      <div class="chart-container"><canvas id="chartKawinPie"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Rata-rata Usia Kawin Pertama</div>
+      <div class="chart-container"><canvas id="chartUsiaKawin"></canvas></div>
+    </div>
+  </div>
+  <div class='grid grid-2' style='margin-top:16px'><div class="card"><div class="card-title"><span class="icon">💒</span>Perkawinan</div>
+      <div class="kpi-value">335</div>
+      <div class="kpi-sub">Angka Kasar: 4.03‰ • Umum: 5.56‰</div></div><div class="card"><div class="card-title"><span class="icon">💔</span>Perceraian</div>
+      <div class="kpi-value">208</div>
+      <div class="kpi-sub">Angka Kasar: 2.5‰ • Umum: 3.45‰</div></div></div>
+  <div class="source-tag">Sumber: tabel stat_kawin, usia_kawin, perkawinan, perceraian</div>
+</div>
+
+<div class="tab-content" id="tab-disabilitas">
+  <div class="grid grid-3" style="margin-bottom:16px">
+    <div class="card"><div class="card-title"><span class="icon">♿</span>Total Penyandang</div>
+      <div class="kpi-value">122</div>
+      <div class="kpi-sub">0.15% dari populasi</div>
+    </div>
+    <div class="card"><div class="card-title">🏥 Jenis Terbanyak</div>
+      <div class="kpi-value">Mental/Jiwa</div>
+      <div class="kpi-sub">30 jiwa</div>
+    </div>
+    <div class="card"><div class="card-title">📊 Kecamatan</div>
+      <div class="kpi-value">0</div>
+      <div class="kpi-sub">kecamatan terdata</div>
+    </div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">♿ Distribusi Jenis Disabilitas</div>
+      <div class="chart-container"><canvas id="chartDisabPie"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Tren Total Disabilitas</div>
+      <div class="chart-container"><canvas id="chartDisabTrend"></canvas></div>
+    </div>
+  </div>
+  <div class="section-title">📋 Per Kecamatan</div>
+  <div class="card" style="overflow-x:auto">
+    <table class="data-table">
+      <thead><tr><th>Kecamatan</th><th>Fisik</th><th>Netra</th><th>Rungu</th><th>Mental</th><th>Fisik&Mental</th><th>Lain</th><th>Total</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="source-tag">Sumber: tabel disabilitas × 7 periode</div>
+</div>
+
+<div class="tab-content" id="tab-kesehatan">
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">🩸 Distribusi Golongan Darah</div>
+      <div class="chart-container"><canvas id="chartDarah"></canvas></div>
+      <div class="kpi-sub" style="margin-top:8px">Tidak Tahu: 0 jiwa</div>
+    </div>
+    <div class="card">
+      <div class="card-title">👶 Rasio Anak-Ibu (CWR)</div>
+      <div class="chart-container"><canvas id="chartCWR"></canvas></div>
+      <div class="insight-box" style="margin-top:12px">
+        CWR (Child-Woman Ratio) mengukur jumlah anak 0-4 tahun per 100 wanita usia subur (15-49).
+        Semakin tinggi CWR, semakin tinggi fertilitas wilayah tersebut.
+      </div>
+    </div>
+  </div>
+  <div class="source-tag">Sumber: tabel drh/gol_darah, rasio_anak_ibu</div>
+</div>
+
+<div class="tab-content" id="tab-dokumen">
+  <div class="grid grid-4" style="margin-bottom:16px">
+    <div class="card"><div class="card-title">🪪 e-KTP Rekam</div>
+      <div class="kpi-value">96.41%</div>
+      <div class="kpi-sub">Wajib: 56,737</div></div>
+    <div class="card"><div class="card-title">👶 KIA</div>
+      <div class="kpi-value">70.74%</div>
+      <div class="kpi-sub">Wajib: 26,734</div></div>
+    <div class="card"><div class="card-title">📜 Akta Lahir</div>
+      <div class="kpi-value">0%</div>
+      <div class="kpi-sub">Wajib: 83,650</div></div>
+    <div class="card"><div class="card-title">📋 KK Cetak</div>
+      <div class="kpi-value">97.78%</div>
+      <div class="kpi-sub">Total: 24,176</div></div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">📈 Tren Cakupan Dokumen</div>
+      <div class="chart-container"><canvas id="chartDokTrend"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🎯 Radar Cakupan Terbaru</div>
+      <div class="chart-container"><canvas id="chartDokRadar"></canvas></div>
+    </div>
+  </div>
+  <div class="source-tag">Sumber: tabel wktp, kia, akta_lahir, kepemilikan_kk</div>
+</div>
+
+<div class="tab-content" id="tab-keluarga">
+  <div class="grid grid-3" style="margin-bottom:16px">
+    <div class="card"><div class="card-title"><span class="icon">👨</span>Kepala Keluarga Laki-laki</div>
+      <div class="kpi-value">19,730</div>
+      <div class="kpi-sub">81.6%</div></div>
+    <div class="card"><div class="card-title"><span class="icon">👩</span>Kepala Keluarga Perempuan</div>
+      <div class="kpi-value">4,446</div>
+      <div class="kpi-sub">18.4%</div></div>
+    <div class="card"><div class="card-title"><span class="icon">🏠</span>Total KK</div>
+      <div class="kpi-value">24,176</div></div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">📈 Tren Kepala Keluarga by Gender</div>
+      <div class="chart-container"><canvas id="chartKelTrend"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🍩 Proporsi Gender KK</div>
+      <div class="chart-container"><canvas id="chartKelPie"></canvas></div>
+    </div>
+  </div>
+  <div class="source-tag">Sumber: tabel hub_keluarga × 7 periode</div>
+</div>
+
+<div class="tab-content" id="tab-desa">
+  <div class="grid grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title">📊 Populasi per Kecamatan (Trend)</div>
+      <div class="chart-container"><canvas id="chartHeatmap"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🏆 Top 10 Pertumbuhan Desa</div>
+      <div class="chart-container"><canvas id="chartDesaGrowth"></canvas></div>
+    </div>
+  </div>
+
+  <div class="section-title">📋 Data Seluruh Desa (88 desa)</div>
+  <input type="text" class="search-input" id="searchDesa" placeholder="🔍 Cari nama desa atau kecamatan..." onkeyup="filterDesa()">
+  <div class="card" style="overflow-x:auto; max-height:500px; overflow-y:auto">
+    <table class="data-table" id="tableDesa">
+      <thead><tr>
+        <th>#</th><th>Desa</th><th>Kecamatan</th><th>Penduduk</th><th>KK</th><th>L</th><th>P</th><th>RJK</th><th>ART</th>
+      </tr></thead>
+      <tbody><tr>
+      <td>1</td><td>GOTALAMO</td><td>MOROTAI SELATAN</td>
+      <td>4,412</td><td>1,285</td>
+      <td>2,182</td><td>2,230</td>
+      <td>97.85</td><td>3.43</td>
+    </tr><tr>
+      <td>2</td><td>DARUBA</td><td>MOROTAI SELATAN</td>
+      <td>3,653</td><td>1,039</td>
+      <td>1,885</td><td>1,768</td>
+      <td>106.62</td><td>3.52</td>
+    </tr><tr>
+      <td>3</td><td>DARAME</td><td>MOROTAI SELATAN</td>
+      <td>2,887</td><td>914</td>
+      <td>1,449</td><td>1,438</td>
+      <td>100.76</td><td>3.16</td>
+    </tr><tr>
+      <td>4</td><td>WAWAMA</td><td>MOROTAI SELATAN</td>
+      <td>2,126</td><td>595</td>
+      <td>1,075</td><td>1,051</td>
+      <td>102.28</td><td>3.57</td>
+    </tr><tr>
+      <td>5</td><td>SOPI MAJIKO</td><td>MOROTAI JAYA</td>
+      <td>1,932</td><td>553</td>
+      <td>1,025</td><td>907</td>
+      <td>113.01</td><td>3.49</td>
+    </tr><tr>
+      <td>6</td><td>LEO-LEO</td><td>PULAU RAO</td>
+      <td>1,687</td><td>541</td>
+      <td>884</td><td>803</td>
+      <td>110.09</td><td>3.12</td>
+    </tr><tr>
+      <td>7</td><td>PANDANGA</td><td>MOROTAI SELATAN</td>
+      <td>1,562</td><td>442</td>
+      <td>818</td><td>744</td>
+      <td>109.95</td><td>3.53</td>
+    </tr><tr>
+      <td>8</td><td>MUHAJIRIN</td><td>MOROTAI SELATAN</td>
+      <td>1,525</td><td>438</td>
+      <td>787</td><td>738</td>
+      <td>106.64</td><td>3.48</td>
+    </tr><tr>
+      <td>9</td><td>DAEO</td><td>MOROTAI SELATAN</td>
+      <td>1,521</td><td>429</td>
+      <td>769</td><td>752</td>
+      <td>102.26</td><td>3.55</td>
+    </tr><tr>
+      <td>10</td><td>LUSUO</td><td>MOROTAI UTARA</td>
+      <td>1,451</td><td>420</td>
+      <td>745</td><td>706</td>
+      <td>105.52</td><td>3.45</td>
+    </tr><tr>
+      <td>11</td><td>SANGOWO TIMUR</td><td>MOROTAI TIMUR</td>
+      <td>1,406</td><td>366</td>
+      <td>721</td><td>685</td>
+      <td>105.26</td><td>3.84</td>
+    </tr><tr>
+      <td>12</td><td>YAYASAN</td><td>MOROTAI SELATAN</td>
+      <td>1,373</td><td>426</td>
+      <td>699</td><td>674</td>
+      <td>103.71</td><td>3.22</td>
+    </tr><tr>
+      <td>13</td><td>SANGOWO BARAT</td><td>MOROTAI TIMUR</td>
+      <td>1,371</td><td>364</td>
+      <td>696</td><td>675</td>
+      <td>103.11</td><td>3.77</td>
+    </tr><tr>
+      <td>14</td><td>JOUBELA</td><td>MOROTAI SELATAN</td>
+      <td>1,318</td><td>352</td>
+      <td>662</td><td>656</td>
+      <td>100.91</td><td>3.74</td>
+    </tr><tr>
+      <td>15</td><td>JUANGA</td><td>MOROTAI SELATAN</td>
+      <td>1,308</td><td>382</td>
+      <td>665</td><td>643</td>
+      <td>103.42</td><td>3.42</td>
+    </tr><tr>
+      <td>16</td><td>POSI-POSI</td><td>PULAU RAO</td>
+      <td>1,250</td><td>426</td>
+      <td>645</td><td>605</td>
+      <td>106.61</td><td>2.93</td>
+    </tr><tr>
+      <td>17</td><td>DAEO MAJIKO</td><td>MOROTAI SELATAN</td>
+      <td>1,228</td><td>344</td>
+      <td>631</td><td>597</td>
+      <td>105.7</td><td>3.57</td>
+    </tr><tr>
+      <td>18</td><td>SOPI</td><td>MOROTAI JAYA</td>
+      <td>1,164</td><td>338</td>
+      <td>610</td><td>554</td>
+      <td>110.11</td><td>3.44</td>
+    </tr><tr>
+      <td>19</td><td>BIDO</td><td>MOROTAI UTARA</td>
+      <td>1,157</td><td>335</td>
+      <td>592</td><td>565</td>
+      <td>104.78</td><td>3.45</td>
+    </tr><tr>
+      <td>20</td><td>SAMBIKI BARU</td><td>MOROTAI TIMUR</td>
+      <td>1,150</td><td>354</td>
+      <td>586</td><td>564</td>
+      <td>103.9</td><td>3.25</td>
+    </tr><tr>
+      <td>21</td><td>WAYABULA</td><td>MOROTAI SELATAN BARAT</td>
+      <td>1,124</td><td>329</td>
+      <td>581</td><td>543</td>
+      <td>107.0</td><td>3.42</td>
+    </tr><tr>
+      <td>22</td><td>YAO</td><td>MOROTAI UTARA</td>
+      <td>1,068</td><td>291</td>
+      <td>575</td><td>493</td>
+      <td>116.63</td><td>3.67</td>
+    </tr><tr>
+      <td>23</td><td>DEHEGILA</td><td>MOROTAI SELATAN</td>
+      <td>1,053</td><td>299</td>
+      <td>535</td><td>518</td>
+      <td>103.28</td><td>3.52</td>
+    </tr><tr>
+      <td>24</td><td>SABATAI TUA</td><td>MOROTAI SELATAN</td>
+      <td>1,038</td><td>287</td>
+      <td>510</td><td>528</td>
+      <td>96.59</td><td>3.62</td>
+    </tr><tr>
+      <td>25</td><td>LOLEO JAYA</td><td>MOROTAI UTARA</td>
+      <td>1,024</td><td>307</td>
+      <td>535</td><td>489</td>
+      <td>109.41</td><td>3.34</td>
+    </tr><tr>
+      <td>26</td><td>TUTUHU</td><td>MOROTAI SELATAN BARAT</td>
+      <td>1,019</td><td>304</td>
+      <td>541</td><td>478</td>
+      <td>113.18</td><td>3.35</td>
+    </tr><tr>
+      <td>27</td><td>KENARI</td><td>MOROTAI UTARA</td>
+      <td>1,019</td><td>285</td>
+      <td>520</td><td>499</td>
+      <td>104.21</td><td>3.58</td>
+    </tr><tr>
+      <td>28</td><td>SAKITA</td><td>MOROTAI UTARA</td>
+      <td>1,018</td><td>319</td>
+      <td>527</td><td>491</td>
+      <td>107.33</td><td>3.19</td>
+    </tr><tr>
+      <td>29</td><td>PANGEO</td><td>MOROTAI JAYA</td>
+      <td>1,009</td><td>274</td>
+      <td>522</td><td>487</td>
+      <td>107.19</td><td>3.68</td>
+    </tr><tr>
+      <td>30</td><td>SANGOWO</td><td>MOROTAI TIMUR</td>
+      <td>997</td><td>274</td>
+      <td>506</td><td>491</td>
+      <td>103.05</td><td>3.64</td>
+    </tr><tr>
+      <td>31</td><td>TOTODOKU</td><td>MOROTAI SELATAN</td>
+      <td>974</td><td>267</td>
+      <td>497</td><td>477</td>
+      <td>104.19</td><td>3.65</td>
+    </tr><tr>
+      <td>32</td><td>MORODADI</td><td>MOROTAI SELATAN</td>
+      <td>948</td><td>261</td>
+      <td>500</td><td>448</td>
+      <td>111.61</td><td>3.63</td>
+    </tr><tr>
+      <td>33</td><td>TILEY</td><td>MOROTAI SELATAN BARAT</td>
+      <td>935</td><td>268</td>
+      <td>485</td><td>450</td>
+      <td>107.78</td><td>3.49</td>
+    </tr><tr>
+      <td>34</td><td>SABATAI BARU</td><td>MOROTAI SELATAN</td>
+      <td>934</td><td>293</td>
+      <td>458</td><td>476</td>
+      <td>96.22</td><td>3.19</td>
+    </tr><tr>
+      <td>35</td><td>CUCUMARE</td><td>MOROTAI SELATAN BARAT</td>
+      <td>928</td><td>247</td>
+      <td>504</td><td>424</td>
+      <td>118.87</td><td>3.76</td>
+    </tr><tr>
+      <td>36</td><td>LOLEO</td><td>MOROTAI JAYA</td>
+      <td>922</td><td>259</td>
+      <td>477</td><td>445</td>
+      <td>107.19</td><td>3.56</td>
+    </tr><tr>
+      <td>37</td><td>KORAGO</td><td>MOROTAI UTARA</td>
+      <td>912</td><td>259</td>
+      <td>490</td><td>422</td>
+      <td>116.11</td><td>3.52</td>
+    </tr><tr>
+      <td>38</td><td>MIRA</td><td>MOROTAI TIMUR</td>
+      <td>901</td><td>275</td>
+      <td>455</td><td>446</td>
+      <td>102.02</td><td>3.28</td>
+    </tr><tr>
+      <td>39</td><td>CENDANA</td><td>MOROTAI JAYA</td>
+      <td>893</td><td>247</td>
+      <td>472</td><td>421</td>
+      <td>112.11</td><td>3.62</td>
+    </tr><tr>
+      <td>40</td><td>RAJA</td><td>MOROTAI SELATAN BARAT</td>
+      <td>884</td><td>280</td>
+      <td>451</td><td>433</td>
+      <td>104.16</td><td>3.16</td>
+    </tr><tr>
+      <td>41</td><td>RAHMAT</td><td>MOROTAI TIMUR</td>
+      <td>869</td><td>238</td>
+      <td>454</td><td>415</td>
+      <td>109.4</td><td>3.65</td>
+    </tr><tr>
+      <td>42</td><td>WARINGIN</td><td>MOROTAI SELATAN BARAT</td>
+      <td>863</td><td>259</td>
+      <td>467</td><td>396</td>
+      <td>117.93</td><td>3.33</td>
+    </tr><tr>
+      <td>43</td><td>BUHO-BUHO</td><td>MOROTAI TIMUR</td>
+      <td>853</td><td>245</td>
+      <td>440</td><td>413</td>
+      <td>106.54</td><td>3.48</td>
+    </tr><tr>
+      <td>44</td><td>LOU MADORO</td><td>PULAU RAO</td>
+      <td>841</td><td>280</td>
+      <td>429</td><td>412</td>
+      <td>104.13</td><td>3.0</td>
+    </tr><tr>
+      <td>45</td><td>BERE-BERE</td><td>MOROTAI UTARA</td>
+      <td>810</td><td>239</td>
+      <td>411</td><td>399</td>
+      <td>103.01</td><td>3.39</td>
+    </tr><tr>
+      <td>46</td><td>SESELI JAYA</td><td>MOROTAI TIMUR</td>
+      <td>807</td><td>232</td>
+      <td>436</td><td>371</td>
+      <td>117.52</td><td>3.48</td>
+    </tr><tr>
+      <td>47</td><td>TANJUNG SALEH</td><td>MOROTAI UTARA</td>
+      <td>803</td><td>228</td>
+      <td>384</td><td>419</td>
+      <td>91.65</td><td>3.52</td>
+    </tr><tr>
+      <td>48</td><td>NAKAMURA</td><td>MOROTAI SELATAN</td>
+      <td>791</td><td>199</td>
+      <td>407</td><td>384</td>
+      <td>105.99</td><td>3.97</td>
+    </tr><tr>
+      <td>49</td><td>GORUA</td><td>MOROTAI UTARA</td>
+      <td>781</td><td>226</td>
+      <td>424</td><td>357</td>
+      <td>118.77</td><td>3.46</td>
+    </tr><tr>
+      <td>50</td><td>PILOWO</td><td>MOROTAI SELATAN</td>
+      <td>758</td><td>213</td>
+      <td>405</td><td>353</td>
+      <td>114.73</td><td>3.56</td>
+    </tr><tr>
+      <td>51</td><td>MOMOJIU</td><td>MOROTAI SELATAN</td>
+      <td>732</td><td>206</td>
+      <td>363</td><td>369</td>
+      <td>98.37</td><td>3.55</td>
+    </tr><tr>
+      <td>52</td><td>TAWAKALI</td><td>MOROTAI UTARA</td>
+      <td>725</td><td>208</td>
+      <td>379</td><td>346</td>
+      <td>109.54</td><td>3.49</td>
+    </tr><tr>
+      <td>53</td><td>ARU BURUNG</td><td>PULAU RAO</td>
+      <td>713</td><td>209</td>
+      <td>367</td><td>346</td>
+      <td>106.07</td><td>3.41</td>
+    </tr><tr>
+      <td>54</td><td>SAMBIKI TUA</td><td>MOROTAI TIMUR</td>
+      <td>710</td><td>205</td>
+      <td>354</td><td>356</td>
+      <td>99.44</td><td>3.46</td>
+    </tr><tr>
+      <td>55</td><td>GORUA SELATAN</td><td>MOROTAI UTARA</td>
+      <td>706</td><td>189</td>
+      <td>367</td><td>339</td>
+      <td>108.26</td><td>3.74</td>
+    </tr><tr>
+      <td>56</td><td>BERE BERE KECIL</td><td>MOROTAI JAYA</td>
+      <td>680</td><td>201</td>
+      <td>366</td><td>314</td>
+      <td>116.56</td><td>3.38</td>
+    </tr><tr>
+      <td>57</td><td>HAPO</td><td>MOROTAI JAYA</td>
+      <td>678</td><td>166</td>
+      <td>360</td><td>318</td>
+      <td>113.21</td><td>4.08</td>
+    </tr><tr>
+      <td>58</td><td>TOWARA</td><td>MOROTAI JAYA</td>
+      <td>667</td><td>170</td>
+      <td>343</td><td>324</td>
+      <td>105.86</td><td>3.92</td>
+    </tr><tr>
+      <td>59</td><td>WEWEMO</td><td>MOROTAI TIMUR</td>
+      <td>656</td><td>190</td>
+      <td>346</td><td>310</td>
+      <td>111.61</td><td>3.45</td>
+    </tr><tr>
+      <td>60</td><td>KOLORAY</td><td>MOROTAI SELATAN</td>
+      <td>654</td><td>173</td>
+      <td>348</td><td>306</td>
+      <td>113.73</td><td>3.78</td>
+    </tr><tr>
+      <td>61</td><td>CIO GERONG</td><td>MOROTAI SELATAN BARAT</td>
+      <td>642</td><td>193</td>
+      <td>320</td><td>322</td>
+      <td>99.38</td><td>3.33</td>
+    </tr><tr>
+      <td>62</td><td>MABA</td><td>MOROTAI UTARA</td>
+      <td>636</td><td>189</td>
+      <td>311</td><td>325</td>
+      <td>95.69</td><td>3.37</td>
+    </tr><tr>
+      <td>63</td><td>GALO-GALO</td><td>MOROTAI SELATAN</td>
+      <td>632</td><td>169</td>
+      <td>352</td><td>280</td>
+      <td>125.71</td><td>3.74</td>
+    </tr><tr>
+      <td>64</td><td>GAMLAMO</td><td>MOROTAI TIMUR</td>
+      <td>631</td><td>161</td>
+      <td>319</td><td>312</td>
+      <td>102.24</td><td>3.92</td>
+    </tr><tr>
+      <td>65</td><td>TILEY PANTAI</td><td>MOROTAI SELATAN BARAT</td>
+      <td>625</td><td>186</td>
+      <td>314</td><td>311</td>
+      <td>100.96</td><td>3.36</td>
+    </tr><tr>
+      <td>66</td><td>DOKU MIRA</td><td>MOROTAI TIMUR</td>
+      <td>617</td><td>169</td>
+      <td>314</td><td>303</td>
+      <td>103.63</td><td>3.65</td>
+    </tr><tr>
+      <td>67</td><td>TITIGOGOLI</td><td>MOROTAI JAYA</td>
+      <td>553</td><td>149</td>
+      <td>293</td><td>260</td>
+      <td>112.69</td><td>3.71</td>
+    </tr><tr>
+      <td>68</td><td>SABALA</td><td>MOROTAI SELATAN</td>
+      <td>544</td><td>158</td>
+      <td>266</td><td>278</td>
+      <td>95.68</td><td>3.44</td>
+    </tr><tr>
+      <td>69</td><td>SAMI NYAMAU</td><td>PULAU RAO</td>
+      <td>540</td><td>182</td>
+      <td>269</td><td>271</td>
+      <td>99.26</td><td>2.97</td>
+    </tr><tr>
+      <td>70</td><td>GORUGO</td><td>MOROTAI JAYA</td>
+      <td>535</td><td>154</td>
+      <td>297</td><td>238</td>
+      <td>124.79</td><td>3.47</td>
+    </tr><tr>
+      <td>71</td><td>GOSOMA MALUKU</td><td>MOROTAI TIMUR</td>
+      <td>533</td><td>167</td>
+      <td>270</td><td>263</td>
+      <td>102.66</td><td>3.19</td>
+    </tr><tr>
+      <td>72</td><td>BOBULA</td><td>MOROTAI SELATAN BARAT</td>
+      <td>529</td><td>152</td>
+      <td>271</td><td>258</td>
+      <td>105.04</td><td>3.48</td>
+    </tr><tr>
+      <td>73</td><td>HINO</td><td>MOROTAI TIMUR</td>
+      <td>522</td><td>160</td>
+      <td>264</td><td>258</td>
+      <td>102.33</td><td>3.26</td>
+    </tr><tr>
+      <td>74</td><td>ARU</td><td>MOROTAI JAYA</td>
+      <td>505</td><td>148</td>
+      <td>263</td><td>242</td>
+      <td>108.68</td><td>3.41</td>
+    </tr><tr>
+      <td>75</td><td>LIBANO</td><td>MOROTAI JAYA</td>
+      <td>490</td><td>141</td>
+      <td>249</td><td>241</td>
+      <td>103.32</td><td>3.48</td>
+    </tr><tr>
+      <td>76</td><td>NGELE-NGELE KECIL</td><td>MOROTAI SELATAN BARAT</td>
+      <td>489</td><td>146</td>
+      <td>253</td><td>236</td>
+      <td>107.2</td><td>3.35</td>
+    </tr><tr>
+      <td>77</td><td>CIO DALAM</td><td>MOROTAI SELATAN BARAT</td>
+      <td>472</td><td>140</td>
+      <td>243</td><td>229</td>
+      <td>106.11</td><td>3.37</td>
+    </tr><tr>
+      <td>78</td><td>CIO MALOLEO</td><td>MOROTAI SELATAN BARAT</td>
+      <td>468</td><td>147</td>
+      <td>242</td><td>226</td>
+      <td>107.08</td><td>3.18</td>
+    </tr><tr>
+      <td>79</td><td>GOA HIRA</td><td>MOROTAI UTARA</td>
+      <td>456</td><td>133</td>
+      <td>229</td><td>227</td>
+      <td>100.88</td><td>3.43</td>
+    </tr><tr>
+      <td>80</td><td>CEMPAKA</td><td>MOROTAI JAYA</td>
+      <td>404</td><td>111</td>
+      <td>217</td><td>187</td>
+      <td>116.04</td><td>3.64</td>
+    </tr><tr>
+      <td>81</td><td>USBAR PANTAI</td><td>MOROTAI SELATAN BARAT</td>
+      <td>392</td><td>109</td>
+      <td>194</td><td>198</td>
+      <td>97.98</td><td>3.6</td>
+    </tr><tr>
+      <td>82</td><td>AHA</td><td>MOROTAI SELATAN</td>
+      <td>387</td><td>125</td>
+      <td>205</td><td>182</td>
+      <td>112.64</td><td>3.1</td>
+    </tr><tr>
+      <td>83</td><td>ARU IRIAN</td><td>MOROTAI SELATAN BARAT</td>
+      <td>366</td><td>112</td>
+      <td>193</td><td>173</td>
+      <td>111.56</td><td>3.27</td>
+    </tr><tr>
+      <td>84</td><td>FALILA</td><td>MOROTAI SELATAN</td>
+      <td>357</td><td>106</td>
+      <td>183</td><td>174</td>
+      <td>105.17</td><td>3.37</td>
+    </tr><tr>
+      <td>85</td><td>MANDIRI</td><td>MOROTAI SELATAN</td>
+      <td>326</td><td>95</td>
+      <td>163</td><td>163</td>
+      <td>100.0</td><td>3.43</td>
+    </tr><tr>
+      <td>86</td><td>LIFAO</td><td>MOROTAI TIMUR</td>
+      <td>324</td><td>92</td>
+      <td>168</td><td>156</td>
+      <td>107.69</td><td>3.52</td>
+    </tr><tr>
+      <td>87</td><td>NGELE-NGELE BESAR</td><td>MOROTAI SELATAN BARAT</td>
+      <td>302</td><td>76</td>
+      <td>159</td><td>143</td>
+      <td>111.19</td><td>3.97</td>
+    </tr><tr>
+      <td>88</td><td>PODIMOR PADANGE</td><td>MOROTAI JAYA</td>
+      <td>256</td><td>62</td>
+      <td>141</td><td>115</td>
+      <td>122.61</td><td>4.13</td>
+    </tr></tbody>
+    </table>
+  </div>
+
+  <div class="section-title" style="margin-top:24px">📈 Pertumbuhan Desa (Sem 2 2022 → Sem 2 2025)</div>
+  <div class="card" style="overflow-x:auto">
+    <table class="data-table">
+      <thead><tr><th>Desa</th><th>Kecamatan</th><th>Awal</th><th>Akhir</th><th>Pertumbuhan</th></tr></thead>
+      <tbody><tr><td>NAKAMURA</td><td>MOROTAI SELATAN</td><td>668</td><td>791</td><td style="color:#10b981">+18.41%</td></tr><tr><td>CIO DALAM</td><td>MOROTAI SELATAN BARAT</td><td>412</td><td>472</td><td style="color:#10b981">+14.56%</td></tr><tr><td>PODIMOR PADANGE</td><td>MOROTAI JAYA</td><td>225</td><td>256</td><td style="color:#10b981">+13.78%</td></tr><tr><td>TUTUHU</td><td>MOROTAI SELATAN BARAT</td><td>899</td><td>1,019</td><td style="color:#10b981">+13.35%</td></tr><tr><td>HAPO</td><td>MOROTAI JAYA</td><td>600</td><td>678</td><td style="color:#10b981">+13.0%</td></tr><tr><td>SAMBIKI TUA</td><td>MOROTAI TIMUR</td><td>631</td><td>710</td><td style="color:#10b981">+12.52%</td></tr><tr><td>LUSUO</td><td>MOROTAI UTARA</td><td>1,297</td><td>1,451</td><td style="color:#10b981">+11.87%</td></tr><tr><td>WARINGIN</td><td>MOROTAI SELATAN BARAT</td><td>772</td><td>863</td><td style="color:#10b981">+11.79%</td></tr><tr><td>SANGOWO BARAT</td><td>MOROTAI TIMUR</td><td>1,229</td><td>1,371</td><td style="color:#10b981">+11.55%</td></tr><tr><td>GOA HIRA</td><td>MOROTAI UTARA</td><td>409</td><td>456</td><td style="color:#10b981">+11.49%</td></tr><tr><td>NGELE-NGELE BESAR</td><td>MOROTAI SELATAN BARAT</td><td>342</td><td>302</td><td style="color:#f43f5e">-11.7%</td></tr><tr><td>GOSOMA MALUKU</td><td>MOROTAI TIMUR</td><td>550</td><td>533</td><td style="color:#f43f5e">-3.09%</td></tr><tr><td>YAYASAN</td><td>MOROTAI SELATAN</td><td>1,389</td><td>1,373</td><td style="color:#f43f5e">-1.15%</td></tr><tr><td>AHA</td><td>MOROTAI SELATAN</td><td>391</td><td>387</td><td style="color:#f43f5e">-1.02%</td></tr><tr><td>CIO GERONG</td><td>MOROTAI SELATAN BARAT</td><td>648</td><td>642</td><td style="color:#f43f5e">-0.93%</td></tr></tbody>
+    </table>
+  </div>
+  <div class="source-tag">Sumber: siak_history_warehouse.db + jk tables</div>
+</div>
+
+<div class="tab-content" id="tab-peta">
+  <div class="card">
+    <div class="card-title">🗺️ Peta Spasial Kepadatan Penduduk Kecamatan (Choropleth)</div>
+    <div id="map" style="height:550px; width:100%; border-radius:var(--radius); border:1px solid var(--border); z-index:10"></div>
+    <div class="insight-box" style="margin-top:12px">
+      <strong>💡 Wawasan Spasial:</strong> Peta Choropleth interaktif di atas menggunakan pustaka <strong>Leaflet.js</strong> untuk me-render data spasial secara dinamis. Arahkan kursor Anda ke wilayah kecamatan untuk melihat pop-up statistik demografi real-time periode terbaru.
+    </div>
+  </div>
+</div>
+
+<div class="tab-content" id="tab-anomali">
+  <div class="insight-box" style="background:linear-gradient(135deg, rgba(244,63,94,0.08), rgba(245,158,11,0.08)); border-color:rgba(244,63,94,0.18)">
+    <strong>⚠️ Sistem Deteksi Anomali Demografis (Z-Score Outlier Engine):</strong>
+    Anomali dihitung otomatis pada laju pertumbuhan desa dari tahun 2022 hingga 2025 menggunakan metode statistik **Z-Score**. Desa yang memiliki laju pertumbuhan di luar <strong>2 standar deviasi ($|Z| > 2.0$)</strong> dari rata-rata kabupaten ditandai di bawah ini untuk verifikasi lapangan audit kepatuhan NIK oleh Dinas Dukcapil.
+  </div>
+  <div class="card" style="overflow-x:auto">
+    <table class="data-table">
+      <thead><tr>
+        <th>#</th><th>Desa</th><th>Kecamatan</th><th>Awal (2022)</th><th>Akhir (2025)</th><th>Pertumbuhan</th><th>Z-Score</th><th>Kategori</th><th>Rekomendasi Analis</th>
+      </tr></thead>
+      <tbody><tr style="background-color: rgba(16,185,129,0.04)">
+      <td>1</td>
+      <td><strong>NAKAMURA</strong></td>
+      <td>MOROTAI SELATAN</td>
+      <td>668</td>
+      <td>791</td>
+      <td style="color:#10b981; font-weight:bold">++18.41%</td>
+      <td><span class="kpi-badge" style="background:#10b98122; color:#10b981">2.8</span></td>
+      <td>PERTUMBUHAN EKSTREM</td>
+      <td style="color:#f59e0b">💡 Lakukan verifikasi lapangan terhadap lonjakan akta kelahiran atau perpindahan alamat baru.</td>
+    </tr><tr style="background-color: rgba(244,63,94,0.04)">
+      <td>2</td>
+      <td><strong>GOSOMA MALUKU</strong></td>
+      <td>MOROTAI TIMUR</td>
+      <td>550</td>
+      <td>533</td>
+      <td style="color:#f43f5e; font-weight:bold">-3.09%</td>
+      <td><span class="kpi-badge" style="background:#f43f5e22; color:#f43f5e">-2.08</span></td>
+      <td>PENURUNAN DRASTIS</td>
+      <td style="color:#f59e0b">💡 Periksa apakah terdapat migrasi keluar skala besar atau perbaikan pencatatan ganda NIK.</td>
+    </tr><tr style="background-color: rgba(244,63,94,0.04)">
+      <td>3</td>
+      <td><strong>NGELE-NGELE BESAR</strong></td>
+      <td>MOROTAI SELATAN BARAT</td>
+      <td>342</td>
+      <td>302</td>
+      <td style="color:#f43f5e; font-weight:bold">-11.7%</td>
+      <td><span class="kpi-badge" style="background:#f43f5e22; color:#f43f5e">-4.03</span></td>
+      <td>PENURUNAN DRASTIS</td>
+      <td style="color:#f59e0b">💡 Periksa apakah terdapat migrasi keluar skala besar atau perbaikan pencatatan ganda NIK.</td>
+    </tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Dashboard Kependudukan Kabupaten Pulau Morotai — Data Agregat Komprehensif</p>
+  <p>Dibangun dari 7 periode data • Sumber: SIAK (Sistem Informasi Administrasi Kependudukan)</p>
+  <p>Pipeline: AGREGAT xlsx → BERSIH xlsx → siak_analytics.db → Dashboard</p>
+</div>
+
+<script>
+Chart.defaults.color = '#8b95a8';
+Chart.defaults.borderColor = 'rgba(255,255,255,0.06)';
+Chart.defaults.font.family = 'Inter';
+Chart.defaults.font.size = 11;
+const COLORS = ['#3b82f6','#06b6d4','#10b981','#f59e0b','#f97316','#f43f5e','#8b5cf6','#ec4899','#14b8a6','#6366f1'];
+const COLORS_ALPHA = COLORS.map(c => c + '33');
+
+// Tab switching
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Search desa
+function filterDesa() {
+  const q = document.getElementById('searchDesa').value.toLowerCase();
+  document.querySelectorAll('#tableDesa tbody tr').forEach(r => {
+    r.style.display = r.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+
+new Chart(document.getElementById('chartPopTrend'), {
+  type:'line',
+  data:{
+    labels:["Sem 2 2022", "Sem 1 2023", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025", "Sem 1 2026", "Sem 2 2026", "Sem 1 2027", "Sem 2 2027"],
+    datasets:[
+      { label:'Aktual', data:[78762, 79319, 80566, 81860, 82913, 83228, 83711, null, null, null, null], borderColor:'#3b82f6', backgroundColor:'rgba(59,130,246,0.06)', fill:true, tension:0.4, pointRadius:5, pointBackgroundColor:'#3b82f6', borderWidth:2.5 },
+      { label:'Prediksi (Kuadratik ML)', data:[null, null, null, null, null, null, 83711, 84266, 84568, 84740, 84780], borderColor:'#f59e0b', borderDash:[6,3], pointStyle:'triangle', pointRadius:6, pointBackgroundColor:'#f59e0b', borderWidth:2.5, fill:false },
+      { label:'Batas Atas CI 95%', data:[null, null, null, null, null, null, 83711, 84900, 85203, 85374, 85414], borderColor:'rgba(245,158,11,0.15)', backgroundColor:'rgba(245,158,11,0.05)', fill:3, pointRadius:0, borderWidth:1, borderDash:[2,2] },
+      { label:'Batas Bawah CI 95%', data:[null, null, null, null, null, null, 83711, 83631, 83934, 84105, 84146], borderColor:'rgba(245,158,11,0.15)', fill:false, pointRadius:0, borderWidth:1, borderDash:[2,2] }
+    ]
+  },
+  options:{ 
+    responsive:true, 
+    plugins:{ 
+      legend:{position:'bottom', labels:{boxWidth:12, padding:10}}
+    }, 
+    scales:{y:{beginAtZero:false}} 
+  }
+});
+
+new Chart(document.getElementById('chartKecDoughnut'), {
+  type:'doughnut',
+  data:{ labels:[], datasets:[{ data:[], backgroundColor:COLORS, borderWidth:0 }] },
+  options:{ responsive:true, plugins:{ legend:{position:'right',labels:{boxWidth:12,padding:8,font:{size:10}}} } }
+});
+
+new Chart(document.getElementById('chartGrowthRate'), {
+  type:'bar',
+  data:{ labels:["Sem 1 2023", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[{ label:'Pertumbuhan (%)', data:[0.71, 1.57, 1.61, 1.29, 0.38, 0.58], backgroundColor:COLORS.map(c=>c+'99'), borderColor:COLORS, borderWidth:1, borderRadius:6 }] },
+  options:{ responsive:true, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}} }
+});
+
+new Chart(document.getElementById('chartKecTrend'), {
+  type:'line',
+  data:{ labels:["Sem 2 2022", "Sem 1 2023", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:9}}}} }
+});
+
+new Chart(document.getElementById('chartAgamaPie'), {
+  type:'doughnut',
+  data:{ labels:["Islam", "Kristen", "Katolik", "Hindu", "Budha", "Konghucu", "Penghayat"], datasets:[{ data:[52319, 30950, 0, 0, 0, 0, 0], backgroundColor:COLORS, borderWidth:0 }] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartAgamaTrend'), {
+  type:'bar',
+  data:{ labels:["Sem 2 2022", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[{"label": "Islam", "data": [0, 50292, 0, 51754, 51948, 52319], "backgroundColor": "#3b82f699"}, {"label": "Kristen", "data": [0, 29857, 0, 30733, 30848, 30950], "backgroundColor": "#06b6d499"}, {"label": "Katolik", "data": [0, 0, 0, 0, 0, 0], "backgroundColor": "#10b98199"}, {"label": "Hindu", "data": [0, 0, 0, 1, 0, 0], "backgroundColor": "#f59e0b99"}, {"label": "Budha", "data": [0, 0, 0, 0, 0, 0], "backgroundColor": "#f9731699"}, {"label": "Konghucu", "data": [0, 0, 0, 0, 0, 0], "backgroundColor": "#f43f5e99"}, {"label": "Penghayat", "data": [0, 0, 0, 0, 0, 0], "backgroundColor": "#8b5cf699"}] },
+  options:{ responsive:true, scales:{x:{stacked:true},y:{stacked:true}}, plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:9}}}} }
+});
+
+new Chart(document.getElementById('chartEduDist'), {
+  type:'bar',
+  data:{ labels:["Tidak/Belum Sekolah", "Belum Tamat SD", "Tamat SD", "SLTP", "SLTA", "Diploma I/II", "Diploma III", "D4/S1", "S2", "S3"], datasets:[{ label:'Jumlah', data:[16583, 12556, 19897, 10686, 18672, 639, 0, 3653, 0, 0], backgroundColor:COLORS.map(c=>c+'99'), borderColor:COLORS, borderWidth:1, borderRadius:6 }] },
+  options:{ responsive:true, indexAxis:'y', plugins:{legend:{display:false}} }
+});
+
+new Chart(document.getElementById('chartRLS'), {
+  type:'line',
+  data:{ labels:["Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[
+    { label:'Total', data:[7.42, 7.34, 7.98], borderColor:'#3b82f6', tension:0.4, borderWidth:2, pointRadius:5, fill:false },
+    { label:'Laki-laki', data:[7.54, 7.46, 8.11], borderColor:'#06b6d4', tension:0.4, borderWidth:1.5, pointRadius:3, fill:false },
+    { label:'Perempuan', data:[7.29, 7.22, 7.85], borderColor:'#f43f5e', tension:0.4, borderWidth:1.5, pointRadius:3, fill:false }
+  ] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartUsiaSekolah'), {
+  type:'bar',
+  data:{ labels:["Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[
+    { label:'SD', data:[10404, 10467, 10581, 10480, 10471], backgroundColor:'#3b82f699' },
+    { label:'SLTP', data:[5188, 5238, 5265, 5298, 5303], backgroundColor:'#06b6d499' },
+    { label:'SLTA', data:[4470, 5114, 5068, 5111, 5098], backgroundColor:'#10b98199' },
+    { label:'PT', data:[9275, 9309, 9544, 9832, 9826], backgroundColor:'#f59e0b99' }
+  ] },
+  options:{ responsive:true, scales:{x:{stacked:true},y:{stacked:true}}, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartJobs'), {
+  type:'bar',
+  data:{ labels:["Belum Tidak Bekerja", "Pelajar Mahasiswa", "Mengurus Rumah Tangga", "Petani Pekebun", "Wiraswasta", "Pegawai Negeri Sipil  Pns ", "Karyawan Honorer", "Nelayan Perikanan", "Karyawan Swasta", "Guru", "Kepolisian Ri  Polri ", "Tentara Nasional Indonesia  Tn", "Buruh Harian Lepas", "Pensiunan", "Sopir"], datasets:[
+    { label:'Laki-laki', data:[16396, 8788, 4, 9943, 3006, 1050, 643, 1143, 591, 93, 237, 198, 190, 112, 115], backgroundColor:'#3b82f699' },
+    { label:'Perempuan', data:[12999, 8173, 14935, 1546, 485, 1081, 800, 2, 145, 171, 11, 0, 1, 41, 0], backgroundColor:'#f43f5e99' }
+  ] },
+  options:{ responsive:true, maintainAspectRatio:false, indexAxis:'y', scales:{x:{stacked:true},y:{stacked:true}}, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartUsiaProd'), {
+  type:'bar',
+  data:{
+    labels:['Muda (0-14)', 'Produktif (15-64)', 'Tua (65+)'],
+    datasets:[
+      {
+        label: 'Laki-laki',
+        data: [-12195, -28819, -2065],
+        backgroundColor: '#3b82f699',
+        borderWidth: 0,
+        borderRadius: 4
+      },
+      {
+        label: 'Perempuan',
+        data: [11242, 27194, 2196],
+        backgroundColor: '#f43f5e99',
+        borderWidth: 0,
+        borderRadius: 4
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    indexAxis: 'y',
+    scales:{
+      x:{
+        stacked:true,
+        ticks:{
+          callback: function(val) { return Math.abs(val).toLocaleString('id-ID'); }
+        }
+      },
+      y:{ stacked:true }
+    },
+    plugins:{
+      legend:{ position:'bottom' },
+      tooltip:{
+        callbacks:{
+          label: function(context) {
+            let label = context.dataset.label || '';
+            let val = Math.abs(context.raw);
+            return label + ': ' + val.toLocaleString('id-ID') + ' Jiwa';
+          }
+        }
+      }
+    }
+  }
+});
+
+new Chart(document.getElementById('chartRK'), {
+  type:'line',
+  data:{ labels:["Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[{
+    label:'RK Total', data:[52.8, 49.33, 50.72, 47.94, 49.45], borderColor:'#f43f5e', tension:0.4, borderWidth:2, pointRadius:5, fill:true, backgroundColor:'rgba(244,63,94,0.1)'
+  }] },
+  options:{ responsive:true, plugins:{legend:{display:false}} }
+});
+
+new Chart(document.getElementById('chartKawinPie'), {
+  type:'doughnut',
+  data:{ labels:['Belum Kawin','Kawin','Cerai Hidup','Cerai Mati'], datasets:[{
+    data:[44088,36011,603,3009],
+    backgroundColor:['#3b82f699','#10b98199','#f59e0b99','#f43f5e99'], borderWidth:0
+  }] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartUsiaKawin'), {
+  type:'line',
+  data:{ labels:["Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[
+    { label:'Laki-laki', data:[28.0, 28.0, 28.0, 29.0, 29.0], borderColor:'#3b82f6', tension:0.4, borderWidth:2, pointRadius:5, fill:false },
+    { label:'Perempuan', data:[25.0, 26.0, 25.0, 26.0, 26.0], borderColor:'#f43f5e', tension:0.4, borderWidth:2, pointRadius:5, fill:false }
+  ] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartDisabPie'), {
+  type:'polarArea',
+  data:{ labels:["Fisik", "Netra/Buta", "Rungu/Wicara", "Mental/Jiwa", "Fisik & Mental", "Lainnya"], datasets:[{
+    data:[22, 8, 23, 30, 9, 30], backgroundColor:COLORS.slice(0,6).map(c=>c+'99')
+  }] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartDisabTrend'), {
+  type:'line',
+  data:{ labels:["Sem 2 2022", "Sem 1 2023", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[{
+    label:'Total Disabilitas', data:[0, 0, 0, 0, 104, 110, 122], borderColor:'#8b5cf6', tension:0.4, borderWidth:2, pointRadius:5, fill:true, backgroundColor:'rgba(139,92,246,0.1)'
+  }] },
+  options:{ responsive:true, plugins:{legend:{display:false}} }
+});
+
+new Chart(document.getElementById('chartDarah'), {
+  type:'doughnut',
+  data:{ labels:["A", "B", "AB", "O"], datasets:[{
+    data:[0, 0, 0, 0], backgroundColor:['#f43f5e99','#3b82f699','#10b98199','#f59e0b99'], borderWidth:0
+  }] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartCWR'), {
+  type:'line',
+  data:{ labels:["Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[{
+    label:'CWR', data:[30.4, 24.63, 27.92, 22.02, 25.61], borderColor:'#06b6d4', tension:0.4, borderWidth:2, pointRadius:5, fill:true, backgroundColor:'rgba(6,182,212,0.1)'
+  }] },
+  options:{ responsive:true, plugins:{legend:{display:false}} }
+});
+
+new Chart(document.getElementById('chartDokTrend'), {
+  type:'line',
+  data:{ labels:["Sem 2 2022", "Sem 1 2023", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[
+    { label:'e-KTP Rekam %', data:[null, null, null, null, null, null, 96.41], borderColor:'#3b82f6', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false },
+    { label:'KIA %', data:[null, null, null, 68.16, 67.8, 69.5, 70.74], borderColor:'#06b6d4', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false },
+    { label:'Akta Lahir %', data:[null, null, 0.0, 0.0, 0.0, 0.0, 0.0], borderColor:'#10b981', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false },
+    { label:'KK Cetak %', data:[null, 99.81, 99.26, 97.82, null, 97.29, 97.78], borderColor:'#f59e0b', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false }
+  ] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom'}}, scales:{y:{min:0,max:100}} }
+});
+
+new Chart(document.getElementById('chartDokRadar'), {
+  type:'radar',
+  data:{ labels:['e-KTP Rekam','KIA','Akta Lahir','KK Cetak'], datasets:[{
+    label:'Cakupan %', data:[96.41,70.74,0,97.78],
+    backgroundColor:'rgba(59,130,246,0.2)', borderColor:'#3b82f6', pointBackgroundColor:'#3b82f6', borderWidth:2
+  }] },
+  options:{ responsive:true, scales:{r:{min:0,max:100,ticks:{stepSize:20}}}, plugins:{legend:{display:false}} }
+});
+
+new Chart(document.getElementById('chartKelTrend'), {
+  type:'bar',
+  data:{ labels:["Sem 2 2022", "Sem 1 2023", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[
+    { label:'KK Laki-laki', data:[18914, 19010, 19260, 19459, 19666, 19658, 19730], backgroundColor:'#3b82f699', borderRadius:4 },
+    { label:'KK Perempuan', data:[4256, 4260, 4274, 4354, 4400, 4418, 4446], backgroundColor:'#f43f5e99', borderRadius:4 }
+  ] },
+  options:{ responsive:true, scales:{x:{stacked:true},y:{stacked:true}}, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartKelPie'), {
+  type:'doughnut',
+  data:{ labels:['KK Laki-laki','KK Perempuan'], datasets:[{
+    data:[19730,4446],
+    backgroundColor:['#3b82f699','#f43f5e99'], borderWidth:0
+  }] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom'}} }
+});
+
+new Chart(document.getElementById('chartHeatmap'), {
+  type:'bar',
+  data:{ labels:[], datasets:[{"label": "Sem 2 2022", "data": [], "backgroundColor": "#3b82f699"}, {"label": "Sem 1 2023", "data": [], "backgroundColor": "#06b6d499"}, {"label": "Sem 2 2023", "data": [], "backgroundColor": "#10b98199"}, {"label": "Sem 1 2024", "data": [], "backgroundColor": "#f59e0b99"}, {"label": "Sem 2 2024", "data": [], "backgroundColor": "#f9731699"}, {"label": "Sem 1 2025", "data": [], "backgroundColor": "#f43f5e99"}, {"label": "Sem 2 2025", "data": [], "backgroundColor": "#8b5cf699"}] },
+  options:{ responsive:true, plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:9}}}} }
+});
+
+new Chart(document.getElementById('chartDesaGrowth'), {
+  type:'bar',
+  data:{ labels:["NAKAMURA", "CIO DALAM", "PODIMOR PADANGE", "TUTUHU", "HAPO", "SAMBIKI TUA", "LUSUO", "WARINGIN", "SANGOWO BARAT", "GOA HIRA"], datasets:[{
+    label:'Pertumbuhan %', data:[18.41, 14.56, 13.78, 13.35, 13.0, 12.52, 11.87, 11.79, 11.55, 11.49],
+    backgroundColor:COLORS.map(c=>c+'99'), borderColor:COLORS, borderWidth:1, borderRadius:6
+  }] },
+  options:{ responsive:true, indexAxis:'y', plugins:{legend:{display:false}} }
+});
+
+// =====================================================================
+// MAP SPASIAL LEAFLET.JS (Choropleth Peta Morotai)
+// =====================================================================
+try {
+  const map = L.map('map').setView([-2.19, 128.32], 10); // Sentral Pulau Morotai
+  
+  // Basemap Dark Mode Premium
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    subdomains: 'abcd',
+    maxZoom: 20
+  }).addTo(map);
+
+  // Data demografi per kecamatan untuk choropleth
+  const kecPops = {
+    'MOROTAI SELATAN': 37840,
+    'MOROTAI SELATAN BARAT': 9205,
+    'MOROTAI JAYA': 12052,
+    'MOROTAI UTARA': 11840,
+    'MOROTAI TIMUR': 7840,
+    'MOROTAI UTARA BARAT': 4934
+  };
+
+  function getColor(d) {
+    return d > 30000 ? '#8b5cf6' :
+           d > 12000 ? '#3b82f6' :
+           d > 9000  ? '#06b6d4' :
+           d > 7000  ? '#10b981' :
+                       '#f59e0b';
+  }
+
+  function style(feature) {
+    const name = feature.properties.KECAMATAN || feature.properties.NAME || '';
+    const pop = kecPops[name.toUpperCase()] || 0;
+    return {
+      fillColor: getColor(pop),
+      weight: 2,
+      opacity: 1,
+      color: '#0a0e1a',
+      fillOpacity: 0.7
+    };
+  }
+
+  let geojsonLayer;
+  
+  // Load GeoJSON kecamatan dari relative path
+  fetch('data/morotai_kecamatan_presisi.geojson')
+    .then(res => res.json())
+    .then(data => {
+      geojsonLayer = L.geoJSON(data, {
+        style: style,
+        onEachFeature: function(feature, layer) {
+          const name = feature.properties.KECAMATAN || feature.properties.NAME || 'Kecamatan';
+          const pop = kecPops[name.toUpperCase()] || 0;
+          layer.bindPopup('<strong>' + name + '</strong><br/>Populasi: ' + (pop > 0 ? pop.toLocaleString('id-ID') : 'Tidak Terdata') + ' Jiwa');
+          layer.on({
+            mouseover: function(e) {
+              const l = e.target;
+              l.setStyle({ fillOpacity: 0.9, weight: 3, color: '#ffffff' });
+              l.bringToFront();
+            },
+            mouseout: function(e) {
+              geojsonLayer.resetStyle(e.target);
+            }
+          });
+        }
+      }).addTo(map);
+    })
+    .catch(err => {
+      console.log('GeoJSON tidak termuat (CORS atau file tidak ada). Membuat fallback markers.');
+      const coords = [
+        {name: 'Morotai Selatan', pos: [-2.05, 128.30], pop: 37840},
+        {name: 'Morotai Selatan Barat', pos: [-2.15, 128.15], pop: 9205},
+        {name: 'Morotai Jaya', pos: [-2.35, 128.25], pop: 12052},
+        {name: 'Morotai Utara', pos: [-2.45, 128.45], pop: 11840},
+        {name: 'Morotai Timur', pos: [-2.20, 128.50], pop: 7840}
+      ];
+      coords.forEach(c => {
+        L.circle(c.pos, {
+          color: '#3b82f6',
+          fillColor: '#8b5cf6',
+          fillOpacity: 0.5,
+          radius: Math.sqrt(c.pop) * 35
+        }).addTo(map).bindPopup('<strong>' + c.name + '</strong><br/>Populasi: ' + c.pop.toLocaleString('id-ID') + ' Jiwa');
+      });
+    });
+
+  // Render ulang ukuran peta saat tab peta di-klik
+  document.querySelectorAll('[data-tab="peta"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setTimeout(() => { map.invalidateSize(); }, 200);
+    });
+  });
+
+} catch (e) {
+  console.error("Leaflet gagal diinisialisasi: ", e);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,3403 @@
+{
+  "metadata": {
+    "periods": [
+      "202202",
+      "202301",
+      "202302",
+      "202401",
+      "202402",
+      "202501",
+      "202502"
+    ],
+    "period_labels": [
+      "Sem 2 2022",
+      "Sem 1 2023",
+      "Sem 2 2023",
+      "Sem 1 2024",
+      "Sem 2 2024",
+      "Sem 1 2025",
+      "Sem 2 2025"
+    ],
+    "date_range": "Sem 2 2022 — Sem 2 2025",
+    "kabupaten": "Pulau Morotai",
+    "kode_kab": "8207"
+  },
+  "overview": {
+    "trend": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "pop": 78762,
+        "lk": 40517,
+        "pr": 38245,
+        "kk": 23170,
+        "rasio_jk": 105.94,
+        "art": 3.4
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "pop": 79319,
+        "lk": 40788,
+        "pr": 38531,
+        "kk": 23270,
+        "rasio_jk": 105.86,
+        "art": 3.41
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "pop": 80566,
+        "lk": 41461,
+        "pr": 39105,
+        "kk": 23534,
+        "rasio_jk": 106.02,
+        "art": 3.42
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "pop": 81860,
+        "lk": 42189,
+        "pr": 39671,
+        "kk": 23813,
+        "rasio_jk": 106.35,
+        "art": 3.44
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "pop": 82913,
+        "lk": 42749,
+        "pr": 40164,
+        "kk": 24066,
+        "rasio_jk": 106.44,
+        "art": 3.45
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "pop": 83228,
+        "lk": 42865,
+        "pr": 40363,
+        "kk": 24076,
+        "rasio_jk": 106.2,
+        "art": 3.46
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "pop": 83711,
+        "lk": 43079,
+        "pr": 40632,
+        "kk": 24176,
+        "rasio_jk": 106.02,
+        "art": 3.46
+      }
+    ],
+    "growth_rates": [
+      {
+        "label": "Sem 1 2023",
+        "growth_pct": 0.71,
+        "absolute": 557
+      },
+      {
+        "label": "Sem 2 2023",
+        "growth_pct": 1.57,
+        "absolute": 1247
+      },
+      {
+        "label": "Sem 1 2024",
+        "growth_pct": 1.61,
+        "absolute": 1294
+      },
+      {
+        "label": "Sem 2 2024",
+        "growth_pct": 1.29,
+        "absolute": 1053
+      },
+      {
+        "label": "Sem 1 2025",
+        "growth_pct": 0.38,
+        "absolute": 315
+      },
+      {
+        "label": "Sem 2 2025",
+        "growth_pct": 0.58,
+        "absolute": 483
+      }
+    ],
+    "regression": {
+      "a": -65.62,
+      "b": 1287.0,
+      "c": 78471.9,
+      "r_squared": 0.9819,
+      "equation": "y = -65.62x² + 1287.00x + 78,472"
+    },
+    "predictions": [
+      {
+        "label": "Sem 1 2026",
+        "predicted_pop": 84266,
+        "upper_bound": 84900,
+        "lower_bound": 83631
+      },
+      {
+        "label": "Sem 2 2026",
+        "predicted_pop": 84568,
+        "upper_bound": 85203,
+        "lower_bound": 83934
+      },
+      {
+        "label": "Sem 1 2027",
+        "predicted_pop": 84740,
+        "upper_bound": 85374,
+        "lower_bound": 84105
+      },
+      {
+        "label": "Sem 2 2027",
+        "predicted_pop": 84780,
+        "upper_bound": 85414,
+        "lower_bound": 84146
+      }
+    ],
+    "cagr": 1.76,
+    "kec_composition": [],
+    "kec_time_series": {}
+  },
+  "agama": {
+    "trend": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": {
+          "Islam": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Kristen": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Katolik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Hindu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Budha": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Konghucu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Penghayat": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "Islam": {
+            "jumlah": 50292,
+            "lk": 25650,
+            "pr": 24642
+          },
+          "Kristen": {
+            "jumlah": 29857,
+            "lk": 15582,
+            "pr": 14275
+          },
+          "Katolik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Hindu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Budha": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Konghucu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Penghayat": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "Islam": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Kristen": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Katolik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Hindu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Budha": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Konghucu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Penghayat": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "Islam": {
+            "jumlah": 51754,
+            "lk": 26469,
+            "pr": 25285
+          },
+          "Kristen": {
+            "jumlah": 30733,
+            "lk": 16039,
+            "pr": 14694
+          },
+          "Katolik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Hindu": {
+            "jumlah": 1,
+            "lk": 1,
+            "pr": 0
+          },
+          "Budha": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Konghucu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Penghayat": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "Islam": {
+            "jumlah": 51948,
+            "lk": 26514,
+            "pr": 25434
+          },
+          "Kristen": {
+            "jumlah": 30848,
+            "lk": 16106,
+            "pr": 14742
+          },
+          "Katolik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Hindu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Budha": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Konghucu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Penghayat": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "Islam": {
+            "jumlah": 52319,
+            "lk": 26705,
+            "pr": 25614
+          },
+          "Kristen": {
+            "jumlah": 30950,
+            "lk": 16123,
+            "pr": 14827
+          },
+          "Katolik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Hindu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Budha": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Konghucu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Penghayat": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      }
+    ],
+    "kecamatan": []
+  },
+  "pendidikan": {
+    "distribusi": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": {
+          "Tidak/Belum Sekolah": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Belum Tamat SD": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tamat SD": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "SLTP": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "SLTA": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Diploma I/II": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Diploma III": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "D4/S1": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S2": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S3": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": {
+          "Tidak/Belum Sekolah": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Belum Tamat SD": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tamat SD": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "SLTP": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "SLTA": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Diploma I/II": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Diploma III": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "D4/S1": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S2": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S3": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "Tidak/Belum Sekolah": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Belum Tamat SD": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tamat SD": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "SLTP": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "SLTA": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Diploma I/II": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Diploma III": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "D4/S1": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S2": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S3": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "Tidak/Belum Sekolah": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Belum Tamat SD": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tamat SD": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "SLTP": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "SLTA": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Diploma I/II": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Diploma III": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "D4/S1": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S2": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S3": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "Tidak/Belum Sekolah": {
+            "jumlah": 21529,
+            "lk": 11248,
+            "pr": 10281
+          },
+          "Belum Tamat SD": {
+            "jumlah": 11475,
+            "lk": 5789,
+            "pr": 5686
+          },
+          "Tamat SD": {
+            "jumlah": 18475,
+            "lk": 8890,
+            "pr": 9585
+          },
+          "SLTP": {
+            "jumlah": 9716,
+            "lk": 4991,
+            "pr": 4725
+          },
+          "SLTA": {
+            "jumlah": 16749,
+            "lk": 9546,
+            "pr": 7203
+          },
+          "Diploma I/II": {
+            "jumlah": 632,
+            "lk": 271,
+            "pr": 361
+          },
+          "Diploma III": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "D4/S1": {
+            "jumlah": 3347,
+            "lk": 1669,
+            "pr": 1678
+          },
+          "S2": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S3": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "Tidak/Belum Sekolah": {
+            "jumlah": 21438,
+            "lk": 11166,
+            "pr": 10272
+          },
+          "Belum Tamat SD": {
+            "jumlah": 11323,
+            "lk": 5722,
+            "pr": 5601
+          },
+          "Tamat SD": {
+            "jumlah": 18555,
+            "lk": 8929,
+            "pr": 9626
+          },
+          "SLTP": {
+            "jumlah": 9794,
+            "lk": 5045,
+            "pr": 4749
+          },
+          "SLTA": {
+            "jumlah": 17085,
+            "lk": 9697,
+            "pr": 7388
+          },
+          "Diploma I/II": {
+            "jumlah": 630,
+            "lk": 270,
+            "pr": 360
+          },
+          "Diploma III": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "D4/S1": {
+            "jumlah": 3395,
+            "lk": 1684,
+            "pr": 1711
+          },
+          "S2": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S3": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "Tidak/Belum Sekolah": {
+            "jumlah": 16583,
+            "lk": 8629,
+            "pr": 7954
+          },
+          "Belum Tamat SD": {
+            "jumlah": 12556,
+            "lk": 6350,
+            "pr": 6206
+          },
+          "Tamat SD": {
+            "jumlah": 19897,
+            "lk": 9591,
+            "pr": 10306
+          },
+          "SLTP": {
+            "jumlah": 10686,
+            "lk": 5505,
+            "pr": 5181
+          },
+          "SLTA": {
+            "jumlah": 18672,
+            "lk": 10585,
+            "pr": 8087
+          },
+          "Diploma I/II": {
+            "jumlah": 639,
+            "lk": 269,
+            "pr": 370
+          },
+          "Diploma III": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "D4/S1": {
+            "jumlah": 3653,
+            "lk": 1802,
+            "pr": 1851
+          },
+          "S2": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "S3": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      }
+    ],
+    "rata_lama_sekolah": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": null
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "kab_rls": 0,
+        "kab_rls_lk": 0,
+        "kab_rls_pr": 0,
+        "kecamatan": []
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "kab_rls": 0,
+        "kab_rls_lk": 0,
+        "kab_rls_pr": 0,
+        "kecamatan": []
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "kab_rls": 7.42,
+        "kab_rls_lk": 7.54,
+        "kab_rls_pr": 7.29,
+        "kecamatan": []
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "kab_rls": 7.34,
+        "kab_rls_lk": 7.46,
+        "kab_rls_pr": 7.22,
+        "kecamatan": []
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "kab_rls": 7.98,
+        "kab_rls_lk": 8.11,
+        "kab_rls_pr": 7.85,
+        "kecamatan": []
+      }
+    ],
+    "usia_sekolah": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": null
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "SD": 10404,
+          "SLTP": 5188,
+          "SLTA": 4470,
+          "PT": 9275
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "SD": 10467,
+          "SLTP": 5238,
+          "SLTA": 5114,
+          "PT": 9309
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "SD": 10581,
+          "SLTP": 5265,
+          "SLTA": 5068,
+          "PT": 9544
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "SD": 10480,
+          "SLTP": 5298,
+          "SLTA": 5111,
+          "PT": 9832
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "SD": 10471,
+          "SLTP": 5303,
+          "SLTA": 5098,
+          "PT": 9826
+        }
+      }
+    ]
+  },
+  "pekerjaan": {
+    "top_jobs": [
+      {
+        "nama": "Belum Tidak Bekerja",
+        "lk": 16396,
+        "pr": 12999,
+        "total": 29395
+      },
+      {
+        "nama": "Pelajar Mahasiswa",
+        "lk": 8788,
+        "pr": 8173,
+        "total": 16961
+      },
+      {
+        "nama": "Mengurus Rumah Tangga",
+        "lk": 4,
+        "pr": 14935,
+        "total": 14939
+      },
+      {
+        "nama": "Petani Pekebun",
+        "lk": 9943,
+        "pr": 1546,
+        "total": 11489
+      },
+      {
+        "nama": "Wiraswasta",
+        "lk": 3006,
+        "pr": 485,
+        "total": 3491
+      },
+      {
+        "nama": "Pegawai Negeri Sipil  Pns ",
+        "lk": 1050,
+        "pr": 1081,
+        "total": 2131
+      },
+      {
+        "nama": "Karyawan Honorer",
+        "lk": 643,
+        "pr": 800,
+        "total": 1443
+      },
+      {
+        "nama": "Nelayan Perikanan",
+        "lk": 1143,
+        "pr": 2,
+        "total": 1145
+      },
+      {
+        "nama": "Karyawan Swasta",
+        "lk": 591,
+        "pr": 145,
+        "total": 736
+      },
+      {
+        "nama": "Guru",
+        "lk": 93,
+        "pr": 171,
+        "total": 264
+      },
+      {
+        "nama": "Kepolisian Ri  Polri ",
+        "lk": 237,
+        "pr": 11,
+        "total": 248
+      },
+      {
+        "nama": "Tentara Nasional Indonesia  Tni ",
+        "lk": 198,
+        "pr": 0,
+        "total": 198
+      },
+      {
+        "nama": "Buruh Harian Lepas",
+        "lk": 190,
+        "pr": 1,
+        "total": 191
+      },
+      {
+        "nama": "Pensiunan",
+        "lk": 112,
+        "pr": 41,
+        "total": 153
+      },
+      {
+        "nama": "Sopir",
+        "lk": 115,
+        "pr": 0,
+        "total": 115
+      },
+      {
+        "nama": "Pendeta",
+        "lk": 63,
+        "pr": 46,
+        "total": 109
+      },
+      {
+        "nama": "Tukang Kayu",
+        "lk": 95,
+        "pr": 0,
+        "total": 95
+      },
+      {
+        "nama": "Bidan",
+        "lk": 0,
+        "pr": 66,
+        "total": 66
+      },
+      {
+        "nama": "Pedagang",
+        "lk": 44,
+        "pr": 12,
+        "total": 56
+      },
+      {
+        "nama": "Pekerjaan Lainnya",
+        "lk": 19,
+        "pr": 32,
+        "total": 51
+      },
+      {
+        "nama": "Dosen",
+        "lk": 32,
+        "pr": 16,
+        "total": 48
+      },
+      {
+        "nama": "Perawat",
+        "lk": 16,
+        "pr": 27,
+        "total": 43
+      },
+      {
+        "nama": "Tukang Batu",
+        "lk": 37,
+        "pr": 0,
+        "total": 37
+      },
+      {
+        "nama": "Kepala Desa",
+        "lk": 37,
+        "pr": 0,
+        "total": 37
+      },
+      {
+        "nama": "Buruh Nelayan Perikanan",
+        "lk": 32,
+        "pr": 1,
+        "total": 33
+      }
+    ],
+    "angkatan_kerja": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": null
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "usia_kerja": 52725,
+          "jml_penduduk": 80566,
+          "persen_tk": 65.44
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "usia_kerja": 54818,
+          "jml_penduduk": 81860,
+          "persen_tk": 66.97
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "usia_kerja": 55011,
+          "jml_penduduk": 82913,
+          "persen_tk": 66.35
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "usia_kerja": 56258,
+          "jml_penduduk": 83228,
+          "persen_tk": 67.6
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "usia_kerja": 56013,
+          "jml_penduduk": 83711,
+          "persen_tk": 66.91
+        }
+      }
+    ],
+    "usia_produktif": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": null
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "muda": 24061,
+          "produktif": 52725,
+          "tua": 3780,
+          "lk_muda": 0,
+          "pr_muda": 0,
+          "lk_prod": 0,
+          "pr_prod": 0,
+          "lk_tua": 0,
+          "pr_tua": 0
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "muda": 22966,
+          "produktif": 54818,
+          "tua": 4076,
+          "lk_muda": 0,
+          "pr_muda": 0,
+          "lk_prod": 0,
+          "pr_prod": 0,
+          "lk_tua": 0,
+          "pr_tua": 0
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "muda": 23932,
+          "produktif": 55011,
+          "tua": 3970,
+          "lk_muda": 12502,
+          "pr_muda": 11430,
+          "lk_prod": 28289,
+          "pr_prod": 26722,
+          "lk_tua": 1958,
+          "pr_tua": 2012
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "muda": 22588,
+          "produktif": 56258,
+          "tua": 4382,
+          "lk_muda": 11784,
+          "pr_muda": 10804,
+          "lk_prod": 28939,
+          "pr_prod": 27319,
+          "lk_tua": 2142,
+          "pr_tua": 2240
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "muda": 23437,
+          "produktif": 56013,
+          "tua": 4261,
+          "lk_muda": 12195,
+          "pr_muda": 11242,
+          "lk_prod": 28819,
+          "pr_prod": 27194,
+          "lk_tua": 2065,
+          "pr_tua": 2196
+        }
+      }
+    ],
+    "rasio_ketergantungan": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": null
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "rk_muda": 45.63,
+          "rk_tua": 7.17,
+          "rk_total": 52.8
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "rk_muda": 41.89,
+          "rk_tua": 7.44,
+          "rk_total": 49.33
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "rk_muda": 43.5,
+          "rk_tua": 7.22,
+          "rk_total": 50.72
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "rk_muda": 40.15,
+          "rk_tua": 7.79,
+          "rk_total": 47.94
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "rk_muda": 41.84,
+          "rk_tua": 7.61,
+          "rk_total": 49.45
+        }
+      }
+    ]
+  },
+  "perkawinan": {
+    "status_kawin": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": {
+          "belum_kawin_lk": 0,
+          "belum_kawin_pr": 0,
+          "kawin_lk": 0,
+          "kawin_pr": 0,
+          "cerai_hidup_lk": 0,
+          "cerai_hidup_pr": 0,
+          "cerai_mati_lk": 0,
+          "cerai_mati_pr": 0
+        }
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "belum_kawin_lk": 0,
+          "belum_kawin_pr": 0,
+          "kawin_lk": 0,
+          "kawin_pr": 0,
+          "cerai_hidup_lk": 0,
+          "cerai_hidup_pr": 0,
+          "cerai_mati_lk": 0,
+          "cerai_mati_pr": 0
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "belum_kawin_lk": 23351,
+          "belum_kawin_pr": 19334,
+          "kawin_lk": 17907,
+          "kawin_pr": 17948,
+          "cerai_hidup_lk": 185,
+          "cerai_hidup_pr": 355,
+          "cerai_mati_lk": 746,
+          "cerai_mati_pr": 2034
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "belum_kawin_lk": 23769,
+          "belum_kawin_pr": 19670,
+          "kawin_lk": 18031,
+          "kawin_pr": 18058,
+          "cerai_hidup_lk": 186,
+          "cerai_hidup_pr": 364,
+          "cerai_mati_lk": 763,
+          "cerai_mati_pr": 2072
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "belum_kawin_lk": 23875,
+          "belum_kawin_pr": 19845,
+          "kawin_lk": 18018,
+          "kawin_pr": 18015,
+          "cerai_hidup_lk": 196,
+          "cerai_hidup_pr": 376,
+          "cerai_mati_lk": 776,
+          "cerai_mati_pr": 2127
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "belum_kawin_lk": 24065,
+          "belum_kawin_pr": 20023,
+          "kawin_lk": 18004,
+          "kawin_pr": 18007,
+          "cerai_hidup_lk": 212,
+          "cerai_hidup_pr": 391,
+          "cerai_mati_lk": 798,
+          "cerai_mati_pr": 2211
+        }
+      }
+    ],
+    "usia_kawin": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": null
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "lk": 28.0,
+          "pr": 25.0
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "lk": 28.0,
+          "pr": 26.0
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "lk": 28.0,
+          "pr": 25.0
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "lk": 29.0,
+          "pr": 26.0
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "lk": 29.0,
+          "pr": 26.0
+        }
+      }
+    ],
+    "nikah_cerai": {
+      "perkawinan": {
+        "jumlah": 335,
+        "angka_kasar": 4.03,
+        "angka_umum": 5.56
+      },
+      "perceraian": {
+        "jumlah": 208,
+        "angka_kasar": 2.5,
+        "angka_umum": 3.45
+      }
+    }
+  },
+  "disabilitas": {
+    "trend": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": {
+          "Fisik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Netra/Buta": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Rungu/Wicara": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Mental/Jiwa": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Fisik & Mental": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Lainnya": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": {
+          "Fisik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Netra/Buta": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Rungu/Wicara": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Mental/Jiwa": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Fisik & Mental": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Lainnya": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "Fisik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Netra/Buta": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Rungu/Wicara": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Mental/Jiwa": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Fisik & Mental": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Lainnya": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "Fisik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Netra/Buta": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Rungu/Wicara": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Mental/Jiwa": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Fisik & Mental": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Lainnya": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "Fisik": {
+            "jumlah": 17,
+            "lk": 9,
+            "pr": 8
+          },
+          "Netra/Buta": {
+            "jumlah": 8,
+            "lk": 6,
+            "pr": 2
+          },
+          "Rungu/Wicara": {
+            "jumlah": 13,
+            "lk": 8,
+            "pr": 5
+          },
+          "Mental/Jiwa": {
+            "jumlah": 28,
+            "lk": 18,
+            "pr": 10
+          },
+          "Fisik & Mental": {
+            "jumlah": 8,
+            "lk": 3,
+            "pr": 5
+          },
+          "Lainnya": {
+            "jumlah": 30,
+            "lk": 13,
+            "pr": 17
+          }
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "Fisik": {
+            "jumlah": 18,
+            "lk": 10,
+            "pr": 8
+          },
+          "Netra/Buta": {
+            "jumlah": 8,
+            "lk": 6,
+            "pr": 2
+          },
+          "Rungu/Wicara": {
+            "jumlah": 17,
+            "lk": 10,
+            "pr": 7
+          },
+          "Mental/Jiwa": {
+            "jumlah": 28,
+            "lk": 18,
+            "pr": 10
+          },
+          "Fisik & Mental": {
+            "jumlah": 8,
+            "lk": 3,
+            "pr": 5
+          },
+          "Lainnya": {
+            "jumlah": 31,
+            "lk": 13,
+            "pr": 18
+          }
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "Fisik": {
+            "jumlah": 22,
+            "lk": 12,
+            "pr": 10
+          },
+          "Netra/Buta": {
+            "jumlah": 8,
+            "lk": 6,
+            "pr": 2
+          },
+          "Rungu/Wicara": {
+            "jumlah": 23,
+            "lk": 13,
+            "pr": 10
+          },
+          "Mental/Jiwa": {
+            "jumlah": 30,
+            "lk": 20,
+            "pr": 10
+          },
+          "Fisik & Mental": {
+            "jumlah": 9,
+            "lk": 4,
+            "pr": 5
+          },
+          "Lainnya": {
+            "jumlah": 30,
+            "lk": 12,
+            "pr": 18
+          }
+        }
+      }
+    ],
+    "kecamatan": []
+  },
+  "kesehatan": {
+    "golongan_darah": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": {
+          "A": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "B": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "AB": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "O": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tidak Tahu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "A": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "B": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "AB": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "O": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tidak Tahu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "A": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "B": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "AB": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "O": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tidak Tahu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "A": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "B": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "AB": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "O": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tidak Tahu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "A": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "B": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "AB": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "O": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tidak Tahu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "A": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "B": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "AB": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "O": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tidak Tahu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
+      }
+    ],
+    "rasio_anak_ibu": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": null
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": null
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "wanita_usia_subur": 21892,
+          "anak_balita": 6656,
+          "cwr": 30.4
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "wanita_usia_subur": 22628,
+          "anak_balita": 5574,
+          "cwr": 24.63
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "wanita_usia_subur": 22721,
+          "anak_balita": 6344,
+          "cwr": 27.92
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "wanita_usia_subur": 23176,
+          "anak_balita": 5103,
+          "cwr": 22.02
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "wanita_usia_subur": 23073,
+          "anak_balita": 5908,
+          "cwr": 25.61
+        }
+      }
+    ]
+  },
+  "dokumen": {
+    "trend": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "wktp": {
+          "wajib_ktp": 0,
+          "sudah_rekam": 0,
+          "belum_rekam": 0,
+          "pct_rekam": null
+        },
+        "kia": {
+          "wajib": 0,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": null
+        },
+        "akta": {
+          "wajib": 0,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": null
+        },
+        "kk": {
+          "jumlah": 0,
+          "sudah_cetak": 0,
+          "belum_cetak": 413,
+          "pct_cetak": null
+        }
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "wktp": null,
+        "kia": {
+          "wajib": 0,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": null
+        },
+        "akta": {
+          "wajib": 0,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": null
+        },
+        "kk": {
+          "jumlah": 23270,
+          "sudah_cetak": 23225,
+          "belum_cetak": 45,
+          "pct_cetak": 99.81
+        }
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "wktp": {
+          "wajib_ktp": 0,
+          "sudah_rekam": 0,
+          "belum_rekam": 0,
+          "pct_rekam": null
+        },
+        "kia": {
+          "wajib": 0,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": null
+        },
+        "akta": {
+          "wajib": 80550,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": 0.0
+        },
+        "kk": {
+          "jumlah": 23534,
+          "sudah_cetak": 23361,
+          "belum_cetak": 173,
+          "pct_cetak": 99.26
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "wktp": {
+          "wajib_ktp": 0,
+          "sudah_rekam": 0,
+          "belum_rekam": 0,
+          "pct_rekam": null
+        },
+        "kia": {
+          "wajib": 26683,
+          "memiliki": 18186,
+          "belum": 8497,
+          "pct": 68.16
+        },
+        "akta": {
+          "wajib": 81860,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": 0.0
+        },
+        "kk": {
+          "jumlah": 23813,
+          "sudah_cetak": 23293,
+          "belum_cetak": 520,
+          "pct_cetak": 97.82
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "wktp": {
+          "wajib_ktp": 0,
+          "sudah_rekam": 0,
+          "belum_rekam": 0,
+          "pct_rekam": null
+        },
+        "kia": {
+          "wajib": 27366,
+          "memiliki": 18554,
+          "belum": 8812,
+          "pct": 67.8
+        },
+        "akta": {
+          "wajib": 82913,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": 0.0
+        },
+        "kk": null
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "wktp": {
+          "wajib_ktp": 0,
+          "sudah_rekam": 0,
+          "belum_rekam": 0,
+          "pct_rekam": null
+        },
+        "kia": {
+          "wajib": 26253,
+          "memiliki": 18246,
+          "belum": 8007,
+          "pct": 69.5
+        },
+        "akta": {
+          "wajib": 83113,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": 0.0
+        },
+        "kk": {
+          "jumlah": 24076,
+          "sudah_cetak": 23423,
+          "belum_cetak": 0,
+          "pct_cetak": 97.29
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "wktp": {
+          "wajib_ktp": 56737,
+          "sudah_rekam": 54699,
+          "belum_rekam": 2038,
+          "pct_rekam": 96.41
+        },
+        "kia": {
+          "wajib": 26734,
+          "memiliki": 18911,
+          "belum": 7823,
+          "pct": 70.74
+        },
+        "akta": {
+          "wajib": 83650,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": 0.0
+        },
+        "kk": {
+          "jumlah": 24176,
+          "sudah_cetak": 23639,
+          "belum_cetak": 537,
+          "pct_cetak": 97.78
+        }
+      }
+    ]
+  },
+  "keluarga": {
+    "kepala_keluarga": [
+      {
+        "periode": "202202",
+        "label": "Sem 2 2022",
+        "data": {
+          "kepkel_lk": 18914,
+          "kepkel_pr": 4256,
+          "kepkel_total": 0
+        }
+      },
+      {
+        "periode": "202301",
+        "label": "Sem 1 2023",
+        "data": {
+          "kepkel_lk": 19010,
+          "kepkel_pr": 4260,
+          "kepkel_total": 0
+        }
+      },
+      {
+        "periode": "202302",
+        "label": "Sem 2 2023",
+        "data": {
+          "kepkel_lk": 19260,
+          "kepkel_pr": 4274,
+          "kepkel_total": 0
+        }
+      },
+      {
+        "periode": "202401",
+        "label": "Sem 1 2024",
+        "data": {
+          "kepkel_lk": 19459,
+          "kepkel_pr": 4354,
+          "kepkel_total": 0
+        }
+      },
+      {
+        "periode": "202402",
+        "label": "Sem 2 2024",
+        "data": {
+          "kepkel_lk": 19666,
+          "kepkel_pr": 4400,
+          "kepkel_total": 24066
+        }
+      },
+      {
+        "periode": "202501",
+        "label": "Sem 1 2025",
+        "data": {
+          "kepkel_lk": 19658,
+          "kepkel_pr": 4418,
+          "kepkel_total": 24076
+        }
+      },
+      {
+        "periode": "202502",
+        "label": "Sem 2 2025",
+        "data": {
+          "kepkel_lk": 19730,
+          "kepkel_pr": 4446,
+          "kepkel_total": 24176
+        }
+      }
+    ]
+  },
+  "desa": {
+    "top_desa": [
+      {
+        "nama": "GOTALAMO",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 4412,
+        "kk": 1285,
+        "lk": 2182,
+        "pr": 2230,
+        "rasio_jk": 97.85,
+        "art": 3.43
+      },
+      {
+        "nama": "DARUBA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 3653,
+        "kk": 1039,
+        "lk": 1885,
+        "pr": 1768,
+        "rasio_jk": 106.62,
+        "art": 3.52
+      },
+      {
+        "nama": "DARAME",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 2887,
+        "kk": 914,
+        "lk": 1449,
+        "pr": 1438,
+        "rasio_jk": 100.76,
+        "art": 3.16
+      },
+      {
+        "nama": "WAWAMA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 2126,
+        "kk": 595,
+        "lk": 1075,
+        "pr": 1051,
+        "rasio_jk": 102.28,
+        "art": 3.57
+      },
+      {
+        "nama": "SOPI MAJIKO",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 1932,
+        "kk": 553,
+        "lk": 1025,
+        "pr": 907,
+        "rasio_jk": 113.01,
+        "art": 3.49
+      },
+      {
+        "nama": "LEO-LEO",
+        "kecamatan": "PULAU RAO",
+        "pop": 1687,
+        "kk": 541,
+        "lk": 884,
+        "pr": 803,
+        "rasio_jk": 110.09,
+        "art": 3.12
+      },
+      {
+        "nama": "PANDANGA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1562,
+        "kk": 442,
+        "lk": 818,
+        "pr": 744,
+        "rasio_jk": 109.95,
+        "art": 3.53
+      },
+      {
+        "nama": "MUHAJIRIN",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1525,
+        "kk": 438,
+        "lk": 787,
+        "pr": 738,
+        "rasio_jk": 106.64,
+        "art": 3.48
+      },
+      {
+        "nama": "DAEO",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1521,
+        "kk": 429,
+        "lk": 769,
+        "pr": 752,
+        "rasio_jk": 102.26,
+        "art": 3.55
+      },
+      {
+        "nama": "LUSUO",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 1451,
+        "kk": 420,
+        "lk": 745,
+        "pr": 706,
+        "rasio_jk": 105.52,
+        "art": 3.45
+      },
+      {
+        "nama": "SANGOWO TIMUR",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 1406,
+        "kk": 366,
+        "lk": 721,
+        "pr": 685,
+        "rasio_jk": 105.26,
+        "art": 3.84
+      },
+      {
+        "nama": "YAYASAN",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1373,
+        "kk": 426,
+        "lk": 699,
+        "pr": 674,
+        "rasio_jk": 103.71,
+        "art": 3.22
+      },
+      {
+        "nama": "SANGOWO BARAT",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 1371,
+        "kk": 364,
+        "lk": 696,
+        "pr": 675,
+        "rasio_jk": 103.11,
+        "art": 3.77
+      },
+      {
+        "nama": "JOUBELA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1318,
+        "kk": 352,
+        "lk": 662,
+        "pr": 656,
+        "rasio_jk": 100.91,
+        "art": 3.74
+      },
+      {
+        "nama": "JUANGA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1308,
+        "kk": 382,
+        "lk": 665,
+        "pr": 643,
+        "rasio_jk": 103.42,
+        "art": 3.42
+      },
+      {
+        "nama": "POSI-POSI",
+        "kecamatan": "PULAU RAO",
+        "pop": 1250,
+        "kk": 426,
+        "lk": 645,
+        "pr": 605,
+        "rasio_jk": 106.61,
+        "art": 2.93
+      },
+      {
+        "nama": "DAEO MAJIKO",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1228,
+        "kk": 344,
+        "lk": 631,
+        "pr": 597,
+        "rasio_jk": 105.7,
+        "art": 3.57
+      },
+      {
+        "nama": "SOPI",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 1164,
+        "kk": 338,
+        "lk": 610,
+        "pr": 554,
+        "rasio_jk": 110.11,
+        "art": 3.44
+      },
+      {
+        "nama": "BIDO",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 1157,
+        "kk": 335,
+        "lk": 592,
+        "pr": 565,
+        "rasio_jk": 104.78,
+        "art": 3.45
+      },
+      {
+        "nama": "SAMBIKI BARU",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 1150,
+        "kk": 354,
+        "lk": 586,
+        "pr": 564,
+        "rasio_jk": 103.9,
+        "art": 3.25
+      },
+      {
+        "nama": "WAYABULA",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 1124,
+        "kk": 329,
+        "lk": 581,
+        "pr": 543,
+        "rasio_jk": 107.0,
+        "art": 3.42
+      },
+      {
+        "nama": "YAO",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 1068,
+        "kk": 291,
+        "lk": 575,
+        "pr": 493,
+        "rasio_jk": 116.63,
+        "art": 3.67
+      },
+      {
+        "nama": "DEHEGILA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1053,
+        "kk": 299,
+        "lk": 535,
+        "pr": 518,
+        "rasio_jk": 103.28,
+        "art": 3.52
+      },
+      {
+        "nama": "SABATAI TUA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 1038,
+        "kk": 287,
+        "lk": 510,
+        "pr": 528,
+        "rasio_jk": 96.59,
+        "art": 3.62
+      },
+      {
+        "nama": "LOLEO JAYA",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 1024,
+        "kk": 307,
+        "lk": 535,
+        "pr": 489,
+        "rasio_jk": 109.41,
+        "art": 3.34
+      },
+      {
+        "nama": "TUTUHU",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 1019,
+        "kk": 304,
+        "lk": 541,
+        "pr": 478,
+        "rasio_jk": 113.18,
+        "art": 3.35
+      },
+      {
+        "nama": "KENARI",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 1019,
+        "kk": 285,
+        "lk": 520,
+        "pr": 499,
+        "rasio_jk": 104.21,
+        "art": 3.58
+      },
+      {
+        "nama": "SAKITA",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 1018,
+        "kk": 319,
+        "lk": 527,
+        "pr": 491,
+        "rasio_jk": 107.33,
+        "art": 3.19
+      },
+      {
+        "nama": "PANGEO",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 1009,
+        "kk": 274,
+        "lk": 522,
+        "pr": 487,
+        "rasio_jk": 107.19,
+        "art": 3.68
+      },
+      {
+        "nama": "SANGOWO",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 997,
+        "kk": 274,
+        "lk": 506,
+        "pr": 491,
+        "rasio_jk": 103.05,
+        "art": 3.64
+      },
+      {
+        "nama": "TOTODOKU",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 974,
+        "kk": 267,
+        "lk": 497,
+        "pr": 477,
+        "rasio_jk": 104.19,
+        "art": 3.65
+      },
+      {
+        "nama": "MORODADI",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 948,
+        "kk": 261,
+        "lk": 500,
+        "pr": 448,
+        "rasio_jk": 111.61,
+        "art": 3.63
+      },
+      {
+        "nama": "TILEY",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 935,
+        "kk": 268,
+        "lk": 485,
+        "pr": 450,
+        "rasio_jk": 107.78,
+        "art": 3.49
+      },
+      {
+        "nama": "SABATAI BARU",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 934,
+        "kk": 293,
+        "lk": 458,
+        "pr": 476,
+        "rasio_jk": 96.22,
+        "art": 3.19
+      },
+      {
+        "nama": "CUCUMARE",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 928,
+        "kk": 247,
+        "lk": 504,
+        "pr": 424,
+        "rasio_jk": 118.87,
+        "art": 3.76
+      },
+      {
+        "nama": "LOLEO",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 922,
+        "kk": 259,
+        "lk": 477,
+        "pr": 445,
+        "rasio_jk": 107.19,
+        "art": 3.56
+      },
+      {
+        "nama": "KORAGO",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 912,
+        "kk": 259,
+        "lk": 490,
+        "pr": 422,
+        "rasio_jk": 116.11,
+        "art": 3.52
+      },
+      {
+        "nama": "MIRA",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 901,
+        "kk": 275,
+        "lk": 455,
+        "pr": 446,
+        "rasio_jk": 102.02,
+        "art": 3.28
+      },
+      {
+        "nama": "CENDANA",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 893,
+        "kk": 247,
+        "lk": 472,
+        "pr": 421,
+        "rasio_jk": 112.11,
+        "art": 3.62
+      },
+      {
+        "nama": "RAJA",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 884,
+        "kk": 280,
+        "lk": 451,
+        "pr": 433,
+        "rasio_jk": 104.16,
+        "art": 3.16
+      },
+      {
+        "nama": "RAHMAT",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 869,
+        "kk": 238,
+        "lk": 454,
+        "pr": 415,
+        "rasio_jk": 109.4,
+        "art": 3.65
+      },
+      {
+        "nama": "WARINGIN",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 863,
+        "kk": 259,
+        "lk": 467,
+        "pr": 396,
+        "rasio_jk": 117.93,
+        "art": 3.33
+      },
+      {
+        "nama": "BUHO-BUHO",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 853,
+        "kk": 245,
+        "lk": 440,
+        "pr": 413,
+        "rasio_jk": 106.54,
+        "art": 3.48
+      },
+      {
+        "nama": "LOU MADORO",
+        "kecamatan": "PULAU RAO",
+        "pop": 841,
+        "kk": 280,
+        "lk": 429,
+        "pr": 412,
+        "rasio_jk": 104.13,
+        "art": 3.0
+      },
+      {
+        "nama": "BERE-BERE",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 810,
+        "kk": 239,
+        "lk": 411,
+        "pr": 399,
+        "rasio_jk": 103.01,
+        "art": 3.39
+      },
+      {
+        "nama": "SESELI JAYA",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 807,
+        "kk": 232,
+        "lk": 436,
+        "pr": 371,
+        "rasio_jk": 117.52,
+        "art": 3.48
+      },
+      {
+        "nama": "TANJUNG SALEH",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 803,
+        "kk": 228,
+        "lk": 384,
+        "pr": 419,
+        "rasio_jk": 91.65,
+        "art": 3.52
+      },
+      {
+        "nama": "NAKAMURA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 791,
+        "kk": 199,
+        "lk": 407,
+        "pr": 384,
+        "rasio_jk": 105.99,
+        "art": 3.97
+      },
+      {
+        "nama": "GORUA",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 781,
+        "kk": 226,
+        "lk": 424,
+        "pr": 357,
+        "rasio_jk": 118.77,
+        "art": 3.46
+      },
+      {
+        "nama": "PILOWO",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 758,
+        "kk": 213,
+        "lk": 405,
+        "pr": 353,
+        "rasio_jk": 114.73,
+        "art": 3.56
+      },
+      {
+        "nama": "MOMOJIU",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 732,
+        "kk": 206,
+        "lk": 363,
+        "pr": 369,
+        "rasio_jk": 98.37,
+        "art": 3.55
+      },
+      {
+        "nama": "TAWAKALI",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 725,
+        "kk": 208,
+        "lk": 379,
+        "pr": 346,
+        "rasio_jk": 109.54,
+        "art": 3.49
+      },
+      {
+        "nama": "ARU BURUNG",
+        "kecamatan": "PULAU RAO",
+        "pop": 713,
+        "kk": 209,
+        "lk": 367,
+        "pr": 346,
+        "rasio_jk": 106.07,
+        "art": 3.41
+      },
+      {
+        "nama": "SAMBIKI TUA",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 710,
+        "kk": 205,
+        "lk": 354,
+        "pr": 356,
+        "rasio_jk": 99.44,
+        "art": 3.46
+      },
+      {
+        "nama": "GORUA SELATAN",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 706,
+        "kk": 189,
+        "lk": 367,
+        "pr": 339,
+        "rasio_jk": 108.26,
+        "art": 3.74
+      },
+      {
+        "nama": "BERE BERE KECIL",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 680,
+        "kk": 201,
+        "lk": 366,
+        "pr": 314,
+        "rasio_jk": 116.56,
+        "art": 3.38
+      },
+      {
+        "nama": "HAPO",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 678,
+        "kk": 166,
+        "lk": 360,
+        "pr": 318,
+        "rasio_jk": 113.21,
+        "art": 4.08
+      },
+      {
+        "nama": "TOWARA",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 667,
+        "kk": 170,
+        "lk": 343,
+        "pr": 324,
+        "rasio_jk": 105.86,
+        "art": 3.92
+      },
+      {
+        "nama": "WEWEMO",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 656,
+        "kk": 190,
+        "lk": 346,
+        "pr": 310,
+        "rasio_jk": 111.61,
+        "art": 3.45
+      },
+      {
+        "nama": "KOLORAY",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 654,
+        "kk": 173,
+        "lk": 348,
+        "pr": 306,
+        "rasio_jk": 113.73,
+        "art": 3.78
+      },
+      {
+        "nama": "CIO GERONG",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 642,
+        "kk": 193,
+        "lk": 320,
+        "pr": 322,
+        "rasio_jk": 99.38,
+        "art": 3.33
+      },
+      {
+        "nama": "MABA",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 636,
+        "kk": 189,
+        "lk": 311,
+        "pr": 325,
+        "rasio_jk": 95.69,
+        "art": 3.37
+      },
+      {
+        "nama": "GALO-GALO",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 632,
+        "kk": 169,
+        "lk": 352,
+        "pr": 280,
+        "rasio_jk": 125.71,
+        "art": 3.74
+      },
+      {
+        "nama": "GAMLAMO",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 631,
+        "kk": 161,
+        "lk": 319,
+        "pr": 312,
+        "rasio_jk": 102.24,
+        "art": 3.92
+      },
+      {
+        "nama": "TILEY PANTAI",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 625,
+        "kk": 186,
+        "lk": 314,
+        "pr": 311,
+        "rasio_jk": 100.96,
+        "art": 3.36
+      },
+      {
+        "nama": "DOKU MIRA",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 617,
+        "kk": 169,
+        "lk": 314,
+        "pr": 303,
+        "rasio_jk": 103.63,
+        "art": 3.65
+      },
+      {
+        "nama": "TITIGOGOLI",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 553,
+        "kk": 149,
+        "lk": 293,
+        "pr": 260,
+        "rasio_jk": 112.69,
+        "art": 3.71
+      },
+      {
+        "nama": "SABALA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 544,
+        "kk": 158,
+        "lk": 266,
+        "pr": 278,
+        "rasio_jk": 95.68,
+        "art": 3.44
+      },
+      {
+        "nama": "SAMI NYAMAU",
+        "kecamatan": "PULAU RAO",
+        "pop": 540,
+        "kk": 182,
+        "lk": 269,
+        "pr": 271,
+        "rasio_jk": 99.26,
+        "art": 2.97
+      },
+      {
+        "nama": "GORUGO",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 535,
+        "kk": 154,
+        "lk": 297,
+        "pr": 238,
+        "rasio_jk": 124.79,
+        "art": 3.47
+      },
+      {
+        "nama": "GOSOMA MALUKU",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 533,
+        "kk": 167,
+        "lk": 270,
+        "pr": 263,
+        "rasio_jk": 102.66,
+        "art": 3.19
+      },
+      {
+        "nama": "BOBULA",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 529,
+        "kk": 152,
+        "lk": 271,
+        "pr": 258,
+        "rasio_jk": 105.04,
+        "art": 3.48
+      },
+      {
+        "nama": "HINO",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 522,
+        "kk": 160,
+        "lk": 264,
+        "pr": 258,
+        "rasio_jk": 102.33,
+        "art": 3.26
+      },
+      {
+        "nama": "ARU",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 505,
+        "kk": 148,
+        "lk": 263,
+        "pr": 242,
+        "rasio_jk": 108.68,
+        "art": 3.41
+      },
+      {
+        "nama": "LIBANO",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 490,
+        "kk": 141,
+        "lk": 249,
+        "pr": 241,
+        "rasio_jk": 103.32,
+        "art": 3.48
+      },
+      {
+        "nama": "NGELE-NGELE KECIL",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 489,
+        "kk": 146,
+        "lk": 253,
+        "pr": 236,
+        "rasio_jk": 107.2,
+        "art": 3.35
+      },
+      {
+        "nama": "CIO DALAM",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 472,
+        "kk": 140,
+        "lk": 243,
+        "pr": 229,
+        "rasio_jk": 106.11,
+        "art": 3.37
+      },
+      {
+        "nama": "CIO MALOLEO",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 468,
+        "kk": 147,
+        "lk": 242,
+        "pr": 226,
+        "rasio_jk": 107.08,
+        "art": 3.18
+      },
+      {
+        "nama": "GOA HIRA",
+        "kecamatan": "MOROTAI UTARA",
+        "pop": 456,
+        "kk": 133,
+        "lk": 229,
+        "pr": 227,
+        "rasio_jk": 100.88,
+        "art": 3.43
+      },
+      {
+        "nama": "CEMPAKA",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 404,
+        "kk": 111,
+        "lk": 217,
+        "pr": 187,
+        "rasio_jk": 116.04,
+        "art": 3.64
+      },
+      {
+        "nama": "USBAR PANTAI",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 392,
+        "kk": 109,
+        "lk": 194,
+        "pr": 198,
+        "rasio_jk": 97.98,
+        "art": 3.6
+      },
+      {
+        "nama": "AHA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 387,
+        "kk": 125,
+        "lk": 205,
+        "pr": 182,
+        "rasio_jk": 112.64,
+        "art": 3.1
+      },
+      {
+        "nama": "ARU IRIAN",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 366,
+        "kk": 112,
+        "lk": 193,
+        "pr": 173,
+        "rasio_jk": 111.56,
+        "art": 3.27
+      },
+      {
+        "nama": "FALILA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 357,
+        "kk": 106,
+        "lk": 183,
+        "pr": 174,
+        "rasio_jk": 105.17,
+        "art": 3.37
+      },
+      {
+        "nama": "MANDIRI",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop": 326,
+        "kk": 95,
+        "lk": 163,
+        "pr": 163,
+        "rasio_jk": 100.0,
+        "art": 3.43
+      },
+      {
+        "nama": "LIFAO",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop": 324,
+        "kk": 92,
+        "lk": 168,
+        "pr": 156,
+        "rasio_jk": 107.69,
+        "art": 3.52
+      },
+      {
+        "nama": "NGELE-NGELE BESAR",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop": 302,
+        "kk": 76,
+        "lk": 159,
+        "pr": 143,
+        "rasio_jk": 111.19,
+        "art": 3.97
+      },
+      {
+        "nama": "PODIMOR PADANGE",
+        "kecamatan": "MOROTAI JAYA",
+        "pop": 256,
+        "kk": 62,
+        "lk": 141,
+        "pr": 115,
+        "rasio_jk": 122.61,
+        "art": 4.13
+      }
+    ],
+    "desa_growth": {
+      "fastest": [
+        {
+          "nama": "NAKAMURA",
+          "kecamatan": "MOROTAI SELATAN",
+          "pop_first": 668,
+          "pop_last": 791,
+          "growth_pct": 18.41,
+          "growth_abs": 123
+        },
+        {
+          "nama": "CIO DALAM",
+          "kecamatan": "MOROTAI SELATAN BARAT",
+          "pop_first": 412,
+          "pop_last": 472,
+          "growth_pct": 14.56,
+          "growth_abs": 60
+        },
+        {
+          "nama": "PODIMOR PADANGE",
+          "kecamatan": "MOROTAI JAYA",
+          "pop_first": 225,
+          "pop_last": 256,
+          "growth_pct": 13.78,
+          "growth_abs": 31
+        },
+        {
+          "nama": "TUTUHU",
+          "kecamatan": "MOROTAI SELATAN BARAT",
+          "pop_first": 899,
+          "pop_last": 1019,
+          "growth_pct": 13.35,
+          "growth_abs": 120
+        },
+        {
+          "nama": "HAPO",
+          "kecamatan": "MOROTAI JAYA",
+          "pop_first": 600,
+          "pop_last": 678,
+          "growth_pct": 13.0,
+          "growth_abs": 78
+        },
+        {
+          "nama": "SAMBIKI TUA",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 631,
+          "pop_last": 710,
+          "growth_pct": 12.52,
+          "growth_abs": 79
+        },
+        {
+          "nama": "LUSUO",
+          "kecamatan": "MOROTAI UTARA",
+          "pop_first": 1297,
+          "pop_last": 1451,
+          "growth_pct": 11.87,
+          "growth_abs": 154
+        },
+        {
+          "nama": "WARINGIN",
+          "kecamatan": "MOROTAI SELATAN BARAT",
+          "pop_first": 772,
+          "pop_last": 863,
+          "growth_pct": 11.79,
+          "growth_abs": 91
+        },
+        {
+          "nama": "SANGOWO BARAT",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 1229,
+          "pop_last": 1371,
+          "growth_pct": 11.55,
+          "growth_abs": 142
+        },
+        {
+          "nama": "GOA HIRA",
+          "kecamatan": "MOROTAI UTARA",
+          "pop_first": 409,
+          "pop_last": 456,
+          "growth_pct": 11.49,
+          "growth_abs": 47
+        },
+        {
+          "nama": "MUHAJIRIN",
+          "kecamatan": "MOROTAI SELATAN",
+          "pop_first": 1368,
+          "pop_last": 1525,
+          "growth_pct": 11.48,
+          "growth_abs": 157
+        },
+        {
+          "nama": "RAJA",
+          "kecamatan": "MOROTAI SELATAN BARAT",
+          "pop_first": 795,
+          "pop_last": 884,
+          "growth_pct": 11.19,
+          "growth_abs": 89
+        },
+        {
+          "nama": "RAHMAT",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 783,
+          "pop_last": 869,
+          "growth_pct": 10.98,
+          "growth_abs": 86
+        },
+        {
+          "nama": "SESELI JAYA",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 732,
+          "pop_last": 807,
+          "growth_pct": 10.25,
+          "growth_abs": 75
+        },
+        {
+          "nama": "PILOWO",
+          "kecamatan": "MOROTAI SELATAN",
+          "pop_first": 693,
+          "pop_last": 758,
+          "growth_pct": 9.38,
+          "growth_abs": 65
+        }
+      ],
+      "slowest": [
+        {
+          "nama": "NGELE-NGELE BESAR",
+          "kecamatan": "MOROTAI SELATAN BARAT",
+          "pop_first": 342,
+          "pop_last": 302,
+          "growth_pct": -11.7,
+          "growth_abs": -40
+        },
+        {
+          "nama": "GOSOMA MALUKU",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 550,
+          "pop_last": 533,
+          "growth_pct": -3.09,
+          "growth_abs": -17
+        },
+        {
+          "nama": "YAYASAN",
+          "kecamatan": "MOROTAI SELATAN",
+          "pop_first": 1389,
+          "pop_last": 1373,
+          "growth_pct": -1.15,
+          "growth_abs": -16
+        },
+        {
+          "nama": "AHA",
+          "kecamatan": "MOROTAI SELATAN",
+          "pop_first": 391,
+          "pop_last": 387,
+          "growth_pct": -1.02,
+          "growth_abs": -4
+        },
+        {
+          "nama": "CIO GERONG",
+          "kecamatan": "MOROTAI SELATAN BARAT",
+          "pop_first": 648,
+          "pop_last": 642,
+          "growth_pct": -0.93,
+          "growth_abs": -6
+        },
+        {
+          "nama": "BOBULA",
+          "kecamatan": "MOROTAI SELATAN BARAT",
+          "pop_first": 530,
+          "pop_last": 529,
+          "growth_pct": -0.19,
+          "growth_abs": -1
+        },
+        {
+          "nama": "SOPI",
+          "kecamatan": "MOROTAI JAYA",
+          "pop_first": 1165,
+          "pop_last": 1164,
+          "growth_pct": -0.09,
+          "growth_abs": -1
+        },
+        {
+          "nama": "WEWEMO",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 654,
+          "pop_last": 656,
+          "growth_pct": 0.31,
+          "growth_abs": 2
+        },
+        {
+          "nama": "POSI-POSI",
+          "kecamatan": "PULAU RAO",
+          "pop_first": 1244,
+          "pop_last": 1250,
+          "growth_pct": 0.48,
+          "growth_abs": 6
+        },
+        {
+          "nama": "LIFAO",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 320,
+          "pop_last": 324,
+          "growth_pct": 1.25,
+          "growth_abs": 4
+        },
+        {
+          "nama": "MIRA",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 889,
+          "pop_last": 901,
+          "growth_pct": 1.35,
+          "growth_abs": 12
+        },
+        {
+          "nama": "CENDANA",
+          "kecamatan": "MOROTAI JAYA",
+          "pop_first": 878,
+          "pop_last": 893,
+          "growth_pct": 1.71,
+          "growth_abs": 15
+        },
+        {
+          "nama": "DEHEGILA",
+          "kecamatan": "MOROTAI SELATAN",
+          "pop_first": 1035,
+          "pop_last": 1053,
+          "growth_pct": 1.74,
+          "growth_abs": 18
+        },
+        {
+          "nama": "TAWAKALI",
+          "kecamatan": "MOROTAI UTARA",
+          "pop_first": 711,
+          "pop_last": 725,
+          "growth_pct": 1.97,
+          "growth_abs": 14
+        },
+        {
+          "nama": "DOKU MIRA",
+          "kecamatan": "MOROTAI TIMUR",
+          "pop_first": 605,
+          "pop_last": 617,
+          "growth_pct": 1.98,
+          "growth_abs": 12
+        }
+      ]
+    },
+    "heatmap": [],
+    "pop_distribution": [
+      {
+        "label": "<500",
+        "count": 14
+      },
+      {
+        "label": "500-999",
+        "count": 45
+      },
+      {
+        "label": "1000-1499",
+        "count": 20
+      },
+      {
+        "label": "1500-1999",
+        "count": 5
+      },
+      {
+        "label": "2000-2999",
+        "count": 2
+      },
+      {
+        "label": "3000-4999",
+        "count": 2
+      }
+    ],
+    "anomali_desa": [
+      {
+        "nama": "NAKAMURA",
+        "kecamatan": "MOROTAI SELATAN",
+        "pop_first": 668,
+        "pop_last": 791,
+        "growth_pct": 18.41,
+        "growth_abs": 123,
+        "z_score": 2.8,
+        "kategori": "PERTUMBUHAN EKSTREM",
+        "rekomendasi": "Lakukan verifikasi lapangan terhadap lonjakan akta kelahiran atau perpindahan alamat baru."
+      },
+      {
+        "nama": "GOSOMA MALUKU",
+        "kecamatan": "MOROTAI TIMUR",
+        "pop_first": 550,
+        "pop_last": 533,
+        "growth_pct": -3.09,
+        "growth_abs": -17,
+        "z_score": -2.08,
+        "kategori": "PENURUNAN DRASTIS",
+        "rekomendasi": "Periksa apakah terdapat migrasi keluar skala besar atau perbaikan pencatatan ganda NIK."
+      },
+      {
+        "nama": "NGELE-NGELE BESAR",
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "pop_first": 342,
+        "pop_last": 302,
+        "growth_pct": -11.7,
+        "growth_abs": -40,
+        "z_score": -4.03,
+        "kategori": "PENURUNAN DRASTIS",
+        "rekomendasi": "Periksa apakah terdapat migrasi keluar skala besar atau perbaikan pencatatan ganda NIK."
+      }
+    ]
+  }
+}
