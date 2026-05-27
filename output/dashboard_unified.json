@@ -269,19 +269,19 @@
         "label": "Sem 2 2022",
         "data": {
           "Islam": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 49061,
+            "lk": 25025,
+            "pr": 24036
           },
           "Kristen": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 29309,
+            "lk": 15275,
+            "pr": 14034
           },
           "Katolik": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 392,
+            "lk": 217,
+            "pr": 175
           },
           "Hindu": {
             "jumlah": 0,
@@ -310,19 +310,19 @@
         "label": "Sem 1 2023",
         "data": {
           "Islam": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 49501,
+            "lk": 25217,
+            "pr": 24284
           },
           "Kristen": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 29423,
+            "lk": 15353,
+            "pr": 14070
           },
           "Katolik": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 395,
+            "lk": 218,
+            "pr": 177
           },
           "Hindu": {
             "jumlah": 0,
@@ -361,9 +361,9 @@
             "pr": 14275
           },
           "Katolik": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 417,
+            "lk": 229,
+            "pr": 188
           },
           "Hindu": {
             "jumlah": 0,
@@ -392,23 +392,23 @@
         "label": "Sem 1 2024",
         "data": {
           "Islam": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 51061,
+            "lk": 26076,
+            "pr": 24985
           },
           "Kristen": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 30378,
+            "lk": 15879,
+            "pr": 14499
           },
           "Katolik": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 420,
+            "lk": 233,
+            "pr": 187
           },
           "Hindu": {
-            "jumlah": 0,
-            "lk": 0,
+            "jumlah": 1,
+            "lk": 1,
             "pr": 0
           },
           "Budha": {
@@ -443,9 +443,9 @@
             "pr": 14694
           },
           "Katolik": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 425,
+            "lk": 240,
+            "pr": 185
           },
           "Hindu": {
             "jumlah": 1,
@@ -484,9 +484,9 @@
             "pr": 14742
           },
           "Katolik": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 431,
+            "lk": 244,
+            "pr": 187
           },
           "Hindu": {
             "jumlah": 0,
@@ -525,9 +525,9 @@
             "pr": 14827
           },
           "Katolik": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 441,
+            "lk": 250,
+            "pr": 191
           },
           "Hindu": {
             "jumlah": 0,
@@ -557,7 +557,7 @@
         "nama": "MOROTAI SELATAN",
         "Islam": 29080,
         "Kristen": 3885,
-        "Katolik": 0,
+        "Katolik": 76,
         "Hindu": 0,
         "Budha": 0,
         "Konghucu": 0,
@@ -567,7 +567,7 @@
         "nama": "MOROTAI SELATAN BARAT",
         "Islam": 4875,
         "Kristen": 5125,
-        "Katolik": 0,
+        "Katolik": 38,
         "Hindu": 0,
         "Budha": 0,
         "Konghucu": 0,
@@ -577,7 +577,7 @@
         "nama": "MOROTAI JAYA",
         "Islam": 3567,
         "Kristen": 6820,
-        "Katolik": 0,
+        "Katolik": 301,
         "Hindu": 0,
         "Budha": 0,
         "Konghucu": 0,
@@ -587,7 +587,7 @@
         "nama": "MOROTAI UTARA",
         "Islam": 6478,
         "Kristen": 6069,
-        "Katolik": 0,
+        "Katolik": 18,
         "Hindu": 0,
         "Budha": 0,
         "Konghucu": 0,
@@ -597,7 +597,7 @@
         "nama": "MOROTAI TIMUR",
         "Islam": 8279,
         "Kristen": 4065,
-        "Katolik": 0,
+        "Katolik": 3,
         "Hindu": 0,
         "Budha": 0,
         "Konghucu": 0,
@@ -607,7 +607,7 @@
         "nama": "PULAU RAO",
         "Islam": 40,
         "Kristen": 4986,
-        "Katolik": 0,
+        "Katolik": 5,
         "Hindu": 0,
         "Budha": 0,
         "Konghucu": 0,
@@ -622,34 +622,34 @@
         "label": "Sem 2 2022",
         "data": {
           "Tidak/Belum Sekolah": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 755,
+            "lk": 485,
+            "pr": 270
           },
           "Belum Tamat SD": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 1613,
+            "lk": 1147,
+            "pr": 466
           },
           "Tamat SD": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 8573,
+            "lk": 6823,
+            "pr": 1750
           },
           "SLTP": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 3616,
+            "lk": 3034,
+            "pr": 582
           },
           "SLTA": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 6315,
+            "lk": 5484,
+            "pr": 831
           },
           "Diploma I/II": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 341,
+            "lk": 275,
+            "pr": 66
           },
           "Diploma III": {
             "jumlah": 0,
@@ -657,9 +657,9 @@
             "pr": 0
           },
           "D4/S1": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 1569,
+            "lk": 1367,
+            "pr": 202
           },
           "S2": {
             "jumlah": 0,
@@ -678,34 +678,34 @@
         "label": "Sem 1 2023",
         "data": {
           "Tidak/Belum Sekolah": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 21273,
+            "lk": 11097,
+            "pr": 10176
           },
           "Belum Tamat SD": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 11495,
+            "lk": 5759,
+            "pr": 5736
           },
           "Tamat SD": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 17892,
+            "lk": 8567,
+            "pr": 9325
           },
           "SLTP": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 9030,
+            "lk": 4690,
+            "pr": 4340
           },
           "SLTA": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 14972,
+            "lk": 8499,
+            "pr": 6473
           },
           "Diploma I/II": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 662,
+            "lk": 285,
+            "pr": 377
           },
           "Diploma III": {
             "jumlah": 0,
@@ -713,9 +713,9 @@
             "pr": 0
           },
           "D4/S1": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 3060,
+            "lk": 1560,
+            "pr": 1500
           },
           "S2": {
             "jumlah": 0,
@@ -734,54 +734,54 @@
         "label": "Sem 2 2023",
         "data": {
           "Tidak/Belum Sekolah": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 21349,
+            "lk": 11136,
+            "pr": 10213
           },
           "Belum Tamat SD": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 11421,
+            "lk": 5734,
+            "pr": 5687
           },
           "Tamat SD": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 18144,
+            "lk": 8689,
+            "pr": 9455
           },
           "SLTP": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 9265,
+            "lk": 4809,
+            "pr": 4456
           },
           "SLTA": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 15619,
+            "lk": 8882,
+            "pr": 6737
           },
           "Diploma I/II": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 660,
+            "lk": 283,
+            "pr": 377
           },
           "Diploma III": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 800,
+            "lk": 226,
+            "pr": 574
           },
           "D4/S1": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 3161,
+            "lk": 1601,
+            "pr": 1560
           },
           "S2": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 144,
+            "lk": 99,
+            "pr": 45
           },
           "S3": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 3,
+            "lk": 2,
+            "pr": 1
           }
         }
       },
@@ -790,54 +790,54 @@
         "label": "Sem 1 2024",
         "data": {
           "Tidak/Belum Sekolah": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 21352,
+            "lk": 11141,
+            "pr": 10211
           },
           "Belum Tamat SD": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 11482,
+            "lk": 5765,
+            "pr": 5717
           },
           "Tamat SD": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 18397,
+            "lk": 8852,
+            "pr": 9545
           },
           "SLTP": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 9446,
+            "lk": 4885,
+            "pr": 4561
           },
           "SLTA": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 16300,
+            "lk": 9296,
+            "pr": 7004
           },
           "Diploma I/II": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 656,
+            "lk": 280,
+            "pr": 376
           },
           "Diploma III": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 822,
+            "lk": 229,
+            "pr": 593
           },
           "D4/S1": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 3254,
+            "lk": 1636,
+            "pr": 1618
           },
           "S2": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 147,
+            "lk": 103,
+            "pr": 44
           },
           "S3": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 4,
+            "lk": 2,
+            "pr": 2
           }
         }
       },
@@ -2274,29 +2274,29 @@
         "label": "Sem 2 2022",
         "data": {
           "A": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 891,
+            "lk": 458,
+            "pr": 433
           },
           "B": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 650,
+            "lk": 335,
+            "pr": 315
           },
           "AB": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 252,
+            "lk": 130,
+            "pr": 122
           },
           "O": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 2546,
+            "lk": 1416,
+            "pr": 1130
           },
           "Tidak Tahu": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 74201,
+            "lk": 38078,
+            "pr": 36123
           }
         }
       },
@@ -2305,29 +2305,29 @@
         "label": "Sem 1 2023",
         "data": {
           "A": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 896,
+            "lk": 460,
+            "pr": 436
           },
           "B": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 651,
+            "lk": 336,
+            "pr": 315
           },
           "AB": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 253,
+            "lk": 131,
+            "pr": 122
           },
           "O": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 2546,
+            "lk": 1419,
+            "pr": 1127
           },
           "Tidak Tahu": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 74745,
+            "lk": 38340,
+            "pr": 36405
           }
         }
       },
@@ -2336,29 +2336,29 @@
         "label": "Sem 2 2023",
         "data": {
           "A": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 887,
+            "lk": 457,
+            "pr": 430
           },
           "B": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 655,
+            "lk": 337,
+            "pr": 318
           },
           "AB": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 252,
+            "lk": 131,
+            "pr": 121
           },
           "O": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 2594,
+            "lk": 1446,
+            "pr": 1148
           },
           "Tidak Tahu": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 75943,
+            "lk": 38989,
+            "pr": 36954
           }
         }
       },
@@ -2367,29 +2367,29 @@
         "label": "Sem 1 2024",
         "data": {
           "A": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 890,
+            "lk": 460,
+            "pr": 430
           },
           "B": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 655,
+            "lk": 338,
+            "pr": 317
           },
           "AB": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 260,
+            "lk": 133,
+            "pr": 127
           },
           "O": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 2625,
+            "lk": 1465,
+            "pr": 1160
           },
           "Tidak Tahu": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 77188,
+            "lk": 39687,
+            "pr": 37501
           }
         }
       },
@@ -2398,29 +2398,29 @@
         "label": "Sem 2 2024",
         "data": {
           "A": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 897,
+            "lk": 464,
+            "pr": 433
           },
           "B": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 662,
+            "lk": 344,
+            "pr": 318
           },
           "AB": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 256,
+            "lk": 129,
+            "pr": 127
           },
           "O": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 2667,
+            "lk": 1496,
+            "pr": 1171
           },
           "Tidak Tahu": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 78176,
+            "lk": 40208,
+            "pr": 37968
           }
         }
       },
@@ -2429,29 +2429,29 @@
         "label": "Sem 1 2025",
         "data": {
           "A": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 900,
+            "lk": 468,
+            "pr": 432
           },
           "B": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 663,
+            "lk": 342,
+            "pr": 321
           },
           "AB": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 259,
+            "lk": 129,
+            "pr": 130
           },
           "O": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 2645,
+            "lk": 1481,
+            "pr": 1164
           },
           "Tidak Tahu": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 78504,
+            "lk": 40332,
+            "pr": 38172
           }
         }
       },
@@ -2460,29 +2460,29 @@
         "label": "Sem 2 2025",
         "data": {
           "A": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 900,
+            "lk": 469,
+            "pr": 431
           },
           "B": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 671,
+            "lk": 345,
+            "pr": 326
           },
           "AB": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 259,
+            "lk": 129,
+            "pr": 130
           },
           "O": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 2629,
+            "lk": 1468,
+            "pr": 1161
           },
           "Tidak Tahu": {
-            "jumlah": 0,
-            "lk": 0,
-            "pr": 0
+            "jumlah": 78985,
+            "lk": 40547,
+            "pr": 38438
           }
         }
       }
@@ -2551,50 +2551,50 @@
         "periode": "202202",
         "label": "Sem 2 2022",
         "wktp": {
-          "wajib_ktp": 0,
-          "sudah_rekam": 0,
-          "belum_rekam": 0,
-          "pct_rekam": null
+          "wajib_ktp": 78762,
+          "sudah_rekam": 52733,
+          "belum_rekam": 26029,
+          "pct_rekam": 66.95
         },
         "kia": {
-          "wajib": 0,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": null
+          "wajib": 26027,
+          "memiliki": 16020,
+          "belum": 10007,
+          "pct": 61.55
         },
         "akta": {
-          "wajib": 0,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": null
+          "wajib": 78762,
+          "memiliki": 39714,
+          "belum": 39048,
+          "pct": 50.42
         },
         "kk": {
-          "jumlah": 0,
-          "sudah_cetak": 0,
+          "jumlah": 23170,
+          "sudah_cetak": 22757,
           "belum_cetak": 413,
-          "pct_cetak": null
+          "pct_cetak": 98.22
         }
       },
       {
         "periode": "202301",
         "label": "Sem 1 2023",
         "wktp": {
-          "wajib_ktp": 0,
-          "sudah_rekam": 0,
-          "belum_rekam": 0,
-          "pct_rekam": null
+          "wajib_ktp": 79319,
+          "sudah_rekam": 52744,
+          "belum_rekam": 26575,
+          "pct_rekam": 66.5
         },
         "kia": {
-          "wajib": 0,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": null
+          "wajib": 26573,
+          "memiliki": 16739,
+          "belum": 9834,
+          "pct": 62.99
         },
         "akta": {
-          "wajib": 0,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": null
+          "wajib": 79319,
+          "memiliki": 40469,
+          "belum": 38850,
+          "pct": 51.02
         },
         "kk": {
           "jumlah": 23270,
@@ -2607,22 +2607,22 @@
         "periode": "202302",
         "label": "Sem 2 2023",
         "wktp": {
-          "wajib_ktp": 0,
-          "sudah_rekam": 0,
-          "belum_rekam": 0,
-          "pct_rekam": null
+          "wajib_ktp": 80566,
+          "sudah_rekam": 54867,
+          "belum_rekam": 25699,
+          "pct_rekam": 68.1
         },
         "kia": {
-          "wajib": 0,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": null
+          "wajib": 27443,
+          "memiliki": 17752,
+          "belum": 9691,
+          "pct": 64.69
         },
         "akta": {
           "wajib": 80550,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": 0.0
+          "memiliki": 41952,
+          "belum": 38598,
+          "pct": 52.08
         },
         "kk": {
           "jumlah": 23534,
@@ -2635,10 +2635,10 @@
         "periode": "202401",
         "label": "Sem 1 2024",
         "wktp": {
-          "wajib_ktp": 0,
-          "sudah_rekam": 0,
-          "belum_rekam": 0,
-          "pct_rekam": null
+          "wajib_ktp": 81860,
+          "sudah_rekam": 55489,
+          "belum_rekam": 26371,
+          "pct_rekam": 67.79
         },
         "kia": {
           "wajib": 26683,
@@ -2648,9 +2648,9 @@
         },
         "akta": {
           "wajib": 81860,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": 0.0
+          "memiliki": 43330,
+          "belum": 38530,
+          "pct": 52.93
         },
         "kk": {
           "jumlah": 23813,
@@ -2663,10 +2663,10 @@
         "periode": "202402",
         "label": "Sem 2 2024",
         "wktp": {
-          "wajib_ktp": 0,
-          "sudah_rekam": 0,
-          "belum_rekam": 0,
-          "pct_rekam": null
+          "wajib_ktp": 82913,
+          "sudah_rekam": 55544,
+          "belum_rekam": 27369,
+          "pct_rekam": 66.99
         },
         "kia": {
           "wajib": 27366,
@@ -2676,25 +2676,25 @@
         },
         "akta": {
           "wajib": 82913,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": 0.0
+          "memiliki": 44606,
+          "belum": 38307,
+          "pct": 53.8
         },
         "kk": {
           "jumlah": 24066,
-          "sudah_cetak": 0,
-          "belum_cetak": 0,
-          "pct_cetak": 0.0
+          "sudah_cetak": 23565,
+          "belum_cetak": 501,
+          "pct_cetak": 97.92
         }
       },
       {
         "periode": "202501",
         "label": "Sem 1 2025",
         "wktp": {
-          "wajib_ktp": 0,
-          "sudah_rekam": 0,
-          "belum_rekam": 0,
-          "pct_rekam": null
+          "wajib_ktp": 83228,
+          "sudah_rekam": 57094,
+          "belum_rekam": 26134,
+          "pct_rekam": 68.6
         },
         "kia": {
           "wajib": 26253,
@@ -2704,14 +2704,14 @@
         },
         "akta": {
           "wajib": 83113,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": 0.0
+          "memiliki": 45619,
+          "belum": 37494,
+          "pct": 54.89
         },
         "kk": {
           "jumlah": 24076,
           "sudah_cetak": 23423,
-          "belum_cetak": 0,
+          "belum_cetak": 653,
           "pct_cetak": 97.29
         }
       },
@@ -2732,9 +2732,9 @@
         },
         "akta": {
           "wajib": 83650,
-          "memiliki": 0,
-          "belum": 0,
-          "pct": 0.0
+          "memiliki": 46465,
+          "belum": 37185,
+          "pct": 55.55
         },
         "kk": {
           "jumlah": 24176,

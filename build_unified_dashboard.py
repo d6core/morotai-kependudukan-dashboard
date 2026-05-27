@@ -278,9 +278,14 @@ for kec in agama_data.get('kecamatan', []):
     total = sum(kec.get(a, 0) for a in ['Islam','Kristen','Katolik','Hindu','Budha','Konghucu','Penghayat'])
     agama_kec_html += f'''<tr>
       <td>{kec['nama']}</td>
-      <td>{fmt(kec.get('Islam',0))}</td><td>{fmt(kec.get('Kristen',0))}</td>
-      <td>{fmt(kec.get('Katolik',0))}</td><td>{fmt(kec.get('Hindu',0))}</td>
-      <td>{fmt(total)}</td>
+      <td>{fmt(kec.get('Islam',0))}</td>
+      <td>{fmt(kec.get('Kristen',0))}</td>
+      <td>{fmt(kec.get('Katolik',0))}</td>
+      <td>{fmt(kec.get('Hindu',0))}</td>
+      <td>{fmt(kec.get('Budha',0))}</td>
+      <td>{fmt(kec.get('Konghucu',0))}</td>
+      <td>{fmt(kec.get('Penghayat',0))}</td>
+      <td><strong>{fmt(total)}</strong></td>
     </tr>'''
 
 # Agama trend data for stacked chart
@@ -310,7 +315,15 @@ html += f'''
   <div class="card" style="overflow-x:auto">
     <table class="data-table">
       <thead><tr>
-        <th>Kecamatan</th><th>Islam</th><th>Kristen</th><th>Katolik</th><th>Hindu</th><th>Total</th>
+        <th>Kecamatan</th>
+        <th>Islam</th>
+        <th>Kristen</th>
+        <th>Katolik</th>
+        <th>Hindu</th>
+        <th>Budha</th>
+        <th>Konghucu</th>
+        <th>Penghayat</th>
+        <th>Total</th>
       </tr></thead>
       <tbody>{agama_kec_html}</tbody>
     </table>

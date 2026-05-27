@@ -204,6 +204,353 @@ def get_rls_cols(row):
             
     return lk_val, pr_val, total_val
 
+def get_agama_data(row, col_prefix):
+    """Mengambil data agama (jumlah, lk, pr) secara sangat tangguh dengan penanganan berbagai varian kolom."""
+    if not row:
+        return {'jumlah': 0, 'lk': 0, 'pr': 0}
+        
+    keys = row.keys()
+    
+    # Adaptasi prefix (misal KATOLIK -> KATHOLIK jika diperlukan)
+    prefix_variants = [col_prefix]
+    if col_prefix == 'KATOLIK':
+        prefix_variants = ['KATHOLIK', 'KATOLIK']
+    elif col_prefix == 'BUDHA':
+        prefix_variants = ['BUDDHA', 'BUDHA']
+        
+    # Temukan kolom Laki-laki
+    lk_val = 0
+    for pfx in prefix_variants:
+        for sep in ['__', '_']:
+            col = f"{pfx}{sep}LAKI_LAKI"
+            if col in keys:
+                lk_val = safe_int(row[col])
+                break
+            # Dukungan format kolom L_
+            col_l = f"L_{pfx}"
+            if col_l in keys:
+                lk_val = safe_int(row[col_l])
+                break
+        if lk_val > 0:
+            break
+            
+    # Temukan kolom Perempuan
+    pr_val = 0
+    for pfx in prefix_variants:
+        for sep in ['__', '_']:
+            col = f"{pfx}{sep}PEREMPUAN"
+            if col in keys:
+                pr_val = safe_int(row[col])
+                break
+            # Dukungan format kolom P_
+            col_p = f"P_{pfx}"
+            if col_p in keys:
+                pr_val = safe_int(row[col_p])
+                break
+        if pr_val > 0:
+            break
+            
+    # Temukan kolom Jumlah
+    jml_val = 0
+    for pfx in prefix_variants:
+        for sep in ['__', '_']:
+            col = f"{pfx}{sep}JUMLAH"
+            if col in keys:
+                jml_val = safe_int(row[col])
+                break
+        if jml_val > 0:
+            break
+            
+    # Jika kolom Jumlah tidak ditemukan atau bernilai 0, kita hitung lk + pr
+    if jml_val == 0:
+        jml_val = lk_val + pr_val
+        
+    return {'jumlah': jml_val, 'lk': lk_val, 'pr': pr_val}
+
+def get_education_data(row, edu_type):
+    """Mendapatkan data pendidikan (jumlah, lk, pr) secara sangat adaptif menggunakan fuzzy keyword matching pada nama kolom."""
+    if not row:
+        return {'jumlah': 0, 'lk': 0, 'pr': 0}
+        
+    keys = list(row.keys())
+    
+    # Kriteria kata kunci untuk 10 kategori pendidikan
+    keywords = {
+        'tidak_sekolah': ['TIDAK_BLM_SEKOLAH', 'TIDAK_BELUM_SEKOLAH'],
+        'belum_sd': ['BELUM_TAMAT_SD', 'BLM_TAMAT_SD', 'BELUM_SD'],
+        'sd': ['TAMAT_SD', 'SD_SEDERAJAT'],
+        'sltp': ['SLTP', 'SLTP_SEDERAJAT'],
+        'slta': ['SLTA', 'SLTA_SEDERAJAT'],
+        'd1_d2': ['DIPLOMA_I_II', 'DIPLOMA_I', 'DIPLOMA_II'],
+        'd3': ['DIPLOMA_III', 'AKADEMI_DIPLOMA_III', 'AKADEMI_DIPLOMA_III_S__MUDA', 'AKADEMI_DIPLOMA_III_S_MUDA'],
+        'd4_s1': ['DIPLOMA_IV_STRATA_I', 'DIPLOMA_IV_S1', 'DIPLOMA_IV', 'STRATA_I', 'S1'],
+        's2': ['STRATA_II', 'S2'],
+        's3': ['STRATA_III', 'S3']
+    }
+    
+    targets = keywords.get(edu_type, [])
+    
+    # Cari kolom Laki-laki
+    lk_col = None
+    for k in keys:
+        k_upper = k.upper()
+        match = any(t in k_upper for t in targets)
+        if match:
+            is_lk = ('LAKI_LAKI' in k_upper or k_upper.startswith('L_') or k_upper.endswith('_L'))
+            if edu_type == 'sd' and ('BELUM' in k_upper or 'BLM' in k_upper):
+                continue
+            if is_lk:
+                lk_col = k
+                break
+                
+    # Cari kolom Perempuan
+    pr_col = None
+    for k in keys:
+        k_upper = k.upper()
+        match = any(t in k_upper for t in targets)
+        if match:
+            is_pr = ('PEREMPUAN' in k_upper or k_upper.startswith('P_') or k_upper.endswith('_P'))
+            if edu_type == 'sd' and ('BELUM' in k_upper or 'BLM' in k_upper):
+                continue
+            if is_pr:
+                pr_col = k
+                break
+                
+    # Cari kolom Jumlah
+    jml_col = None
+    for k in keys:
+        k_upper = k.upper()
+        match = any(t in k_upper for t in targets)
+        if match:
+            is_jml = ('JUMLAH' in k_upper or 'JML' in k_upper or k_upper.startswith('JML_') or 
+                      (k_upper in targets) or k_upper == 'TIDAK_BELUM_SEKOLAH' or k_upper == 'BELUM_TAMAT_SD_SEDERAJAT')
+            is_gender = ('LAKI_LAKI' in k_upper or 'PEREMPUAN' in k_upper or k_upper.startswith('L_') or k_upper.startswith('P_'))
+            if edu_type == 'sd' and ('BELUM' in k_upper or 'BLM' in k_upper):
+                continue
+            if is_jml and not is_gender:
+                jml_col = k
+                break
+                
+    lk_val = safe_int(row[lk_col]) if lk_col else 0
+    pr_val = safe_int(row[pr_col]) if pr_col else 0
+    
+    if jml_col:
+        jml_val = safe_int(row[jml_col])
+    else:
+        jml_val = lk_val + pr_val
+        
+    if jml_val == 0:
+        jml_val = lk_val + pr_val
+        
+    return {'jumlah': jml_val, 'lk': lk_val, 'pr': pr_val}
+
+def get_blood_data(row, col_prefix):
+    """Mendapatkan data golongan darah secara adaptif dengan penanganan single/double underscore dan nama kolom jumlah."""
+    if not row:
+        return {'jumlah': 0, 'lk': 0, 'pr': 0}
+        
+    keys = row.keys()
+    
+    # Cari kolom Laki-laki
+    lk_val = 0
+    for sep in ['__', '_']:
+        col = f"{col_prefix}{sep}LAKI_LAKI"
+        if col in keys:
+            lk_val = safe_int(row[col])
+            break
+            
+    # Cari kolom Perempuan
+    pr_val = 0
+    for sep in ['__', '_']:
+        col = f"{col_prefix}{sep}PEREMPUAN"
+        if col in keys:
+            pr_val = safe_int(row[col])
+            break
+            
+    # Cari kolom Jumlah
+    jml_val = 0
+    for col in [f"{col_prefix}__JUMLAH", f"{col_prefix}_JUMLAH", col_prefix]:
+        if col in keys:
+            jml_val = safe_int(row[col])
+            break
+            
+    if jml_val == 0:
+        jml_val = lk_val + pr_val
+        
+    return {'jumlah': jml_val, 'lk': lk_val, 'pr': pr_val}
+
+def get_wktp_data(row):
+    """Mendapatkan data Wajib KTP secara sangat adaptif."""
+    if not row:
+        return None
+    keys = row.keys()
+    
+    # 1. Cari wajib KTP
+    wajib = 0
+    for col in ['WAJIB_KTP', 'JUMLAH']:
+        if col in keys:
+            wajib = safe_int(row[col])
+            break
+            
+    # 2. Cari sudah rekam
+    rekam = 0
+    for col in ['SUDAH_REKAM', 'JML_WKTP']:
+        if col in keys:
+            rekam = safe_int(row[col])
+            break
+            
+    belum = wajib - rekam
+    if belum < 0:
+        belum = 0
+        
+    pct = round(rekam / wajib * 100, 2) if wajib > 0 else 0.0
+    return {
+        'wajib_ktp': wajib,
+        'sudah_rekam': rekam,
+        'belum_rekam': belum,
+        'pct_rekam': pct
+    }
+
+def get_kia_data(row):
+    """Mendapatkan data KIA secara sangat adaptif."""
+    if not row:
+        return None
+    keys = row.keys()
+    
+    # 1. Cari wajib
+    wajib = 0
+    for col in ['JML_DINAMIS', 'JUMLAH']:
+        if col in keys:
+            wajib = safe_int(row[col])
+            break
+            
+    # 2. Cari memiliki
+    memiliki = 0
+    for col in ['MMLK_DINAMIS', 'JML_MMLK', 'MEMILIKI', 'LK_MMLK']:
+        if col in keys:
+            if col == 'LK_MMLK':
+                memiliki = safe_int(row['LK_MMLK'])
+                if 'PR_MMLK' in keys:
+                    memiliki += safe_int(row['PR_MMLK'])
+                elif 'P_MMLK' in keys:
+                    memiliki += safe_int(row['P_MMLK'])
+            else:
+                memiliki = safe_int(row[col])
+            break
+            
+    # 3. Cari belum memiliki
+    belum = 0
+    for col in ['BLM_MMLK_DINAMIS', 'JML_BLM_MMLK', 'BELUM_MEMILIKI', 'LK_BLM_MMLK']:
+        if col in keys:
+            if col == 'LK_BLM_MMLK':
+                belum = safe_int(row['LK_BLM_MMLK'])
+                if 'PR_BLM_MMLK' in keys:
+                    belum += safe_int(row['PR_BLM_MMLK'])
+                elif 'P_BLM_MMLK' in keys:
+                    belum += safe_int(row['P_BLM_MMLK'])
+            else:
+                belum = safe_int(row[col])
+            break
+            
+    if wajib == 0:
+        wajib = memiliki + belum
+    if belum == 0 and wajib > memiliki:
+        belum = wajib - memiliki
+        
+    pct = round(memiliki / wajib * 100, 2) if wajib > 0 else 0.0
+    return {
+        'wajib': wajib,
+        'memiliki': memiliki,
+        'belum': belum,
+        'pct': pct
+    }
+
+def get_akta_data(row):
+    """Mendapatkan data Akta Lahir secara sangat adaptif dengan penanganan berbagai skema kolom."""
+    if not row:
+        return None
+        
+    keys = row.keys()
+    
+    # 1. Cari jumlah wajib
+    wajib = 0
+    for col in ['JML_DINAMIS', 'JUMLAH']:
+        if col in keys:
+            wajib = safe_int(row[col])
+            break
+            
+    # 2. Cari jumlah memiliki
+    memiliki = 0
+    for col in ['JML_MMLK_DINAMIS', 'LK_MMLK_DINAMIS', 'JML_MMLK', 'MEMILIKI']:
+        if col in keys:
+            if col == 'LK_MMLK_DINAMIS':
+                memiliki = safe_int(row['LK_MMLK_DINAMIS']) + safe_int(row.get('P_MMLK_DINAMIS', 0))
+            else:
+                memiliki = safe_int(row[col])
+            break
+            
+    # 3. Cari jumlah belum memiliki
+    belum = 0
+    for col in ['JML_BLM_MMLK_DINAMIS', 'LK_BLM_MMLK_DINAMIS', 'JML_BLM_MMLK', 'BELUM_MEMILIKI']:
+        if col in keys:
+            if col == 'LK_BLM_MMLK_DINAMIS':
+                belum = safe_int(row['LK_BLM_MMLK_DINAMIS']) + safe_int(row.get('P_BLM_MMLK_DINAMIS', 0))
+            else:
+                belum = safe_int(row[col])
+            break
+            
+    # Jika wajib masih 0, kita hitung memiliki + belum
+    if wajib == 0:
+        wajib = memiliki + belum
+        
+    pct = 0.0
+    for col in ['PERSENTASE', 'PERSEN']:
+        if col in keys:
+            pct = safe_float(row[col])
+            break
+            
+    if pct == 0.0 and wajib > 0:
+        pct = round(memiliki / wajib * 100, 2)
+        
+    return {
+        'wajib': wajib,
+        'memiliki': memiliki,
+        'belum': belum,
+        'pct': pct
+    }
+
+def get_kk_data(row):
+    """Mendapatkan data kepemilikan KK secara sangat adaptif."""
+    if not row:
+        return None
+    keys = row.keys()
+    
+    # 1. Cari jumlah KK
+    jumlah = 0
+    for col in ['JUMLAH_KK', 'KK_JUMLAH']:
+        if col in keys:
+            jumlah = safe_int(row[col])
+            break
+            
+    # 2. Cari sudah cetak KK
+    cetak = 0
+    for col in ['JUMLAH_CETAK_KK', 'CETAK_KK_JUMLAH', 'MMLK_KK_SEMULA']:
+        if col in keys:
+            cetak = safe_int(row[col])
+            break
+            
+    belum = jumlah - cetak
+    if belum < 0:
+        belum = 0
+        
+    pct = round(cetak / jumlah * 100, 2) if jumlah > 0 else 0.0
+    return {
+        'jumlah': jumlah,
+        'sudah_cetak': cetak,
+        'belum_cetak': belum,
+        'pct_cetak': pct
+    }
+
 # =====================================================================
 # MAIN EXTRACTION
 # =====================================================================
@@ -351,17 +698,7 @@ def main():
         if row:
             data = {}
             for col_prefix, label in agama_cols:
-                jml_col = f"{col_prefix}_JUMLAH"
-                lk_col = f"{col_prefix}_LAKI_LAKI"
-                pr_col = f"{col_prefix}_PEREMPUAN"
-                try:
-                    data[label] = {
-                        'jumlah': safe_int(row[jml_col]),
-                        'lk': safe_int(row[lk_col]),
-                        'pr': safe_int(row[pr_col]),
-                    }
-                except:
-                    data[label] = {'jumlah': 0, 'lk': 0, 'pr': 0}
+                data[label] = get_agama_data(row, col_prefix)
             agama_trend.append({'periode': p, 'label': PERIOD_LABELS[i], 'data': data})
         conn.close()
 
@@ -373,10 +710,8 @@ def main():
         for r in kec_rows:
             entry = {'nama': r['KECAMATAN'] or r['WILAYAH']}
             for col_prefix, label in agama_cols:
-                try:
-                    entry[label] = safe_int(r[f"{col_prefix}_JUMLAH"])
-                except:
-                    entry[label] = 0
+                res = get_agama_data(r, col_prefix)
+                entry[label] = res['jumlah']
             agama_kec.append(entry)
     conn.close()
 
@@ -386,17 +721,17 @@ def main():
     # TAB 3: PENDIDIKAN
     # =================================================================
     print("[3/10] Extracting: Pendidikan...")
-    edu_cols = [
-        ('TIDAK_BLM_SEKOLAH', 'Tidak/Belum Sekolah'),
-        ('BELUM_TAMAT_SD_SEDERAJAT', 'Belum Tamat SD'),
-        ('TAMAT_SD_SEDERAJAT', 'Tamat SD'),
-        ('SLTP_SEDERAJAT', 'SLTP'),
-        ('SLTA_SEDERAJAT', 'SLTA'),
-        ('DIPLOMA_I_II', 'Diploma I/II'),
-        ('AKADEMI_DIPLOMA_III_S__MUDA', 'Diploma III'),
-        ('DIPLOMA_IV_STRATA_I', 'D4/S1'),
-        ('STRATA_II', 'S2'),
-        ('STRATA_III', 'S3'),
+    edu_mapping = [
+        ('tidak_sekolah', 'Tidak/Belum Sekolah'),
+        ('belum_sd', 'Belum Tamat SD'),
+        ('sd', 'Tamat SD'),
+        ('sltp', 'SLTP'),
+        ('slta', 'SLTA'),
+        ('d1_d2', 'Diploma I/II'),
+        ('d3', 'Diploma III'),
+        ('d4_s1', 'D4/S1'),
+        ('s2', 'S2'),
+        ('s3', 'S3'),
     ]
     edu_trend = []
     for i, p in enumerate(PERIODS):
@@ -408,15 +743,8 @@ def main():
         row = get_kab_row(conn, 'pendidikan')
         if row:
             data = {}
-            for col_prefix, label in edu_cols:
-                try:
-                    data[label] = {
-                        'jumlah': safe_int(row[f"{col_prefix}_JUMLAH"]),
-                        'lk': safe_int(row[f"{col_prefix}_LAKI_LAKI"]),
-                        'pr': safe_int(row[f"{col_prefix}_PEREMPUAN"]),
-                    }
-                except:
-                    data[label] = {'jumlah': 0, 'lk': 0, 'pr': 0}
+            for edu_type, label in edu_mapping:
+                data[label] = get_education_data(row, edu_type)
             edu_trend.append({'periode': p, 'label': PERIOD_LABELS[i], 'data': data})
         conn.close()
 
@@ -799,14 +1127,7 @@ def main():
         if row:
             data = {}
             for col_prefix, label in drh_cols:
-                try:
-                    data[label] = {
-                        'jumlah': safe_int(row[f"{col_prefix}_JUMLAH"]),
-                        'lk': safe_int(row[f"{col_prefix}_LAKI_LAKI"]),
-                        'pr': safe_int(row[f"{col_prefix}_PEREMPUAN"]),
-                    }
-                except:
-                    data[label] = {'jumlah': 0, 'lk': 0, 'pr': 0}
+                data[label] = get_blood_data(row, col_prefix)
             drh_trend.append({'periode': p, 'label': PERIOD_LABELS[i], 'data': data})
         conn.close()
 
@@ -847,80 +1168,28 @@ def main():
         # Wajib KTP & e-KTP
         if table_exists(conn, 'wktp'):
             row = get_kab_row(conn, 'wktp')
-            if row:
-                try:
-                    wajib = safe_col(row, 'WAJIB_KTP')
-                    rekam = safe_col(row, 'SUDAH_REKAM')
-                    entry['wktp'] = {
-                        'wajib_ktp': wajib,
-                        'sudah_rekam': rekam,
-                        'belum_rekam': safe_col(row, 'BELUM_REKAM'),
-                        'pct_rekam': round(rekam/wajib*100, 2) if wajib > 0 else None,
-                    }
-                except:
-                    entry['wktp'] = None
-            else:
-                entry['wktp'] = None
+            entry['wktp'] = get_wktp_data(row)
         else:
             entry['wktp'] = None
 
         # KIA
         if table_exists(conn, 'kia'):
             row = get_kab_row(conn, 'kia')
-            if row:
-                try:
-                    jml = safe_col(row, 'JML_DINAMIS')
-                    mmlk = safe_col(row, 'MMLK_DINAMIS')
-                    entry['kia'] = {
-                        'wajib': jml,
-                        'memiliki': mmlk,
-                        'belum': safe_col(row, 'BLM_MMLK_DINAMIS'),
-                        'pct': round(mmlk/jml*100, 2) if jml > 0 else None,
-                    }
-                except:
-                    entry['kia'] = None
-            else:
-                entry['kia'] = None
+            entry['kia'] = get_kia_data(row)
         else:
             entry['kia'] = None
 
         # Akta Lahir
         if table_exists(conn, 'akta_lahir'):
             row = get_kab_row(conn, 'akta_lahir')
-            if row:
-                try:
-                    jml = safe_col(row, 'JML_DINAMIS')
-                    mmlk = safe_col(row, 'MMLK_DINAMIS')
-                    entry['akta'] = {
-                        'wajib': jml,
-                        'memiliki': mmlk,
-                        'belum': safe_col(row, 'BLM_MMLK_DINAMIS'),
-                        'pct': round(mmlk/jml*100, 2) if jml > 0 else None,
-                    }
-                except:
-                    entry['akta'] = None
-            else:
-                entry['akta'] = None
+            entry['akta'] = get_akta_data(row)
         else:
             entry['akta'] = None
 
         # Kepemilikan KK
         if table_exists(conn, 'kepemilikan_kk'):
             row = get_kab_row(conn, 'kepemilikan_kk')
-            if row:
-                try:
-                    jml = safe_col(row, 'JUMLAH_KK')
-                    cetak = safe_col(row, 'JUMLAH_CETAK_KK')
-                    entry['kk'] = {
-                        'jumlah': jml,
-                        'sudah_cetak': cetak,
-                        'belum_cetak': safe_col(row, 'BELUM_CETAK_KK'),
-                        'pct_cetak': round(cetak/jml*100, 2) if jml > 0 else None,
-                    }
-                except:
-                    entry['kk'] = None
-            else:
-                entry['kk'] = None
+            entry['kk'] = get_kk_data(row)
         else:
             entry['kk'] = None
 
