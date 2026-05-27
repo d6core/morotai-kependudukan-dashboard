@@ -161,8 +161,106 @@
       }
     ],
     "cagr": 1.76,
-    "kec_composition": [],
-    "kec_time_series": {}
+    "kec_composition": [
+      {
+        "nama": "MOROTAI SELATAN",
+        "pop": 33041,
+        "lk": 16814,
+        "pr": 16227,
+        "pct": 39.47
+      },
+      {
+        "nama": "MOROTAI UTARA",
+        "pop": 12566,
+        "lk": 6489,
+        "pr": 6077,
+        "pct": 15.01
+      },
+      {
+        "nama": "MOROTAI TIMUR",
+        "pop": 12347,
+        "lk": 6329,
+        "pr": 6018,
+        "pct": 14.75
+      },
+      {
+        "nama": "MOROTAI JAYA",
+        "pop": 10688,
+        "lk": 5635,
+        "pr": 5053,
+        "pct": 12.77
+      },
+      {
+        "nama": "MOROTAI SELATAN BARAT",
+        "pop": 10038,
+        "lk": 5218,
+        "pr": 4820,
+        "pct": 11.99
+      },
+      {
+        "nama": "PULAU RAO",
+        "pop": 5031,
+        "lk": 2594,
+        "pr": 2437,
+        "pct": 6.01
+      }
+    ],
+    "kec_time_series": {
+      "MOROTAI SELATAN": [
+        31003,
+        31249,
+        31738,
+        32254,
+        32639,
+        32821,
+        33041
+      ],
+      "MOROTAI SELATAN BARAT": [
+        9402,
+        9464,
+        9630,
+        9784,
+        9900,
+        9981,
+        10038
+      ],
+      "MOROTAI JAYA": [
+        10106,
+        10205,
+        10370,
+        10476,
+        10579,
+        10597,
+        10688
+      ],
+      "MOROTAI UTARA": [
+        11841,
+        11874,
+        12064,
+        12308,
+        12491,
+        12480,
+        12566
+      ],
+      "MOROTAI TIMUR": [
+        11546,
+        11645,
+        11837,
+        12042,
+        12284,
+        12319,
+        12347
+      ],
+      "PULAU RAO": [
+        4864,
+        4882,
+        4927,
+        4996,
+        5020,
+        5030,
+        5031
+      ]
+    }
   },
   "agama": {
     "trend": [
@@ -454,7 +552,68 @@
         }
       }
     ],
-    "kecamatan": []
+    "kecamatan": [
+      {
+        "nama": "MOROTAI SELATAN",
+        "Islam": 29080,
+        "Kristen": 3885,
+        "Katolik": 0,
+        "Hindu": 0,
+        "Budha": 0,
+        "Konghucu": 0,
+        "Penghayat": 0
+      },
+      {
+        "nama": "MOROTAI SELATAN BARAT",
+        "Islam": 4875,
+        "Kristen": 5125,
+        "Katolik": 0,
+        "Hindu": 0,
+        "Budha": 0,
+        "Konghucu": 0,
+        "Penghayat": 0
+      },
+      {
+        "nama": "MOROTAI JAYA",
+        "Islam": 3567,
+        "Kristen": 6820,
+        "Katolik": 0,
+        "Hindu": 0,
+        "Budha": 0,
+        "Konghucu": 0,
+        "Penghayat": 0
+      },
+      {
+        "nama": "MOROTAI UTARA",
+        "Islam": 6478,
+        "Kristen": 6069,
+        "Katolik": 0,
+        "Hindu": 0,
+        "Budha": 0,
+        "Konghucu": 0,
+        "Penghayat": 0
+      },
+      {
+        "nama": "MOROTAI TIMUR",
+        "Islam": 8279,
+        "Kristen": 4065,
+        "Katolik": 0,
+        "Hindu": 0,
+        "Budha": 0,
+        "Konghucu": 0,
+        "Penghayat": 0
+      },
+      {
+        "nama": "PULAU RAO",
+        "Islam": 40,
+        "Kristen": 4986,
+        "Katolik": 0,
+        "Hindu": 0,
+        "Budha": 0,
+        "Konghucu": 0,
+        "Penghayat": 0
+      }
+    ]
   },
   "pendidikan": {
     "distribusi": [
@@ -855,28 +1014,182 @@
       {
         "periode": "202202",
         "label": "Sem 2 2022",
-        "data": null
+        "kab_rls": 7.35,
+        "kab_rls_lk": 7.49,
+        "kab_rls_pr": 7.2,
+        "kecamatan": [
+          {
+            "nama": "MOROTAI SELATAN",
+            "rls_lk": 8.6,
+            "rls_pr": 8.44,
+            "rls_total": 8.52
+          },
+          {
+            "nama": "MOROTAI SELATAN BARAT",
+            "rls_lk": 6.83,
+            "rls_pr": 6.59,
+            "rls_total": 6.71
+          },
+          {
+            "nama": "MOROTAI JAYA",
+            "rls_lk": 6.37,
+            "rls_pr": 5.86,
+            "rls_total": 6.13
+          },
+          {
+            "nama": "MOROTAI UTARA",
+            "rls_lk": 6.64,
+            "rls_pr": 6.0,
+            "rls_total": 6.33
+          },
+          {
+            "nama": "MOROTAI TIMUR",
+            "rls_lk": 7.58,
+            "rls_pr": 7.29,
+            "rls_total": 7.43
+          },
+          {
+            "nama": "PULAU RAO",
+            "rls_lk": 6.45,
+            "rls_pr": 6.31,
+            "rls_total": 6.38
+          }
+        ]
       },
       {
         "periode": "202301",
         "label": "Sem 1 2023",
-        "data": null
+        "kab_rls": 7.35,
+        "kab_rls_lk": 7.49,
+        "kab_rls_pr": 7.2,
+        "kecamatan": [
+          {
+            "nama": "MOROTAI SELATAN",
+            "rls_lk": 8.6,
+            "rls_pr": 8.44,
+            "rls_total": 8.52
+          },
+          {
+            "nama": "MOROTAI SELATAN BARAT",
+            "rls_lk": 6.83,
+            "rls_pr": 6.59,
+            "rls_total": 6.71
+          },
+          {
+            "nama": "MOROTAI JAYA",
+            "rls_lk": 6.37,
+            "rls_pr": 5.86,
+            "rls_total": 6.13
+          },
+          {
+            "nama": "MOROTAI UTARA",
+            "rls_lk": 6.64,
+            "rls_pr": 6.0,
+            "rls_total": 6.33
+          },
+          {
+            "nama": "MOROTAI TIMUR",
+            "rls_lk": 7.58,
+            "rls_pr": 7.29,
+            "rls_total": 7.43
+          },
+          {
+            "nama": "PULAU RAO",
+            "rls_lk": 6.45,
+            "rls_pr": 6.31,
+            "rls_total": 6.38
+          }
+        ]
       },
       {
         "periode": "202302",
         "label": "Sem 2 2023",
-        "kab_rls": 0,
-        "kab_rls_lk": 0,
-        "kab_rls_pr": 0,
-        "kecamatan": []
+        "kab_rls": 7.35,
+        "kab_rls_lk": 7.49,
+        "kab_rls_pr": 7.2,
+        "kecamatan": [
+          {
+            "nama": "MOROTAI SELATAN",
+            "rls_lk": 8.6,
+            "rls_pr": 8.44,
+            "rls_total": 8.52
+          },
+          {
+            "nama": "MOROTAI SELATAN BARAT",
+            "rls_lk": 6.83,
+            "rls_pr": 6.59,
+            "rls_total": 6.71
+          },
+          {
+            "nama": "MOROTAI JAYA",
+            "rls_lk": 6.37,
+            "rls_pr": 5.86,
+            "rls_total": 6.13
+          },
+          {
+            "nama": "MOROTAI UTARA",
+            "rls_lk": 6.64,
+            "rls_pr": 6.0,
+            "rls_total": 6.33
+          },
+          {
+            "nama": "MOROTAI TIMUR",
+            "rls_lk": 7.58,
+            "rls_pr": 7.29,
+            "rls_total": 7.43
+          },
+          {
+            "nama": "PULAU RAO",
+            "rls_lk": 6.45,
+            "rls_pr": 6.31,
+            "rls_total": 6.38
+          }
+        ]
       },
       {
         "periode": "202401",
         "label": "Sem 1 2024",
-        "kab_rls": 0,
-        "kab_rls_lk": 0,
-        "kab_rls_pr": 0,
-        "kecamatan": []
+        "kab_rls": 7.28,
+        "kab_rls_lk": 7.41,
+        "kab_rls_pr": 7.14,
+        "kecamatan": [
+          {
+            "nama": "MOROTAI SELATAN",
+            "rls_lk": 8.45,
+            "rls_pr": 8.3,
+            "rls_total": 8.38
+          },
+          {
+            "nama": "MOROTAI SELATAN BARAT",
+            "rls_lk": 6.75,
+            "rls_pr": 6.57,
+            "rls_total": 6.66
+          },
+          {
+            "nama": "MOROTAI JAYA",
+            "rls_lk": 6.42,
+            "rls_pr": 5.9,
+            "rls_total": 6.17
+          },
+          {
+            "nama": "MOROTAI UTARA",
+            "rls_lk": 6.6,
+            "rls_pr": 5.99,
+            "rls_total": 6.3
+          },
+          {
+            "nama": "MOROTAI TIMUR",
+            "rls_lk": 7.46,
+            "rls_pr": 7.22,
+            "rls_total": 7.34
+          },
+          {
+            "nama": "PULAU RAO",
+            "rls_lk": 6.49,
+            "rls_pr": 6.28,
+            "rls_total": 6.39
+          }
+        ]
       },
       {
         "periode": "202402",
@@ -884,7 +1197,44 @@
         "kab_rls": 7.42,
         "kab_rls_lk": 7.54,
         "kab_rls_pr": 7.29,
-        "kecamatan": []
+        "kecamatan": [
+          {
+            "nama": "MOROTAI SELATAN",
+            "rls_lk": 8.59,
+            "rls_pr": 8.48,
+            "rls_total": 8.54
+          },
+          {
+            "nama": "MOROTAI SELATAN BARAT",
+            "rls_lk": 6.91,
+            "rls_pr": 6.68,
+            "rls_total": 6.8
+          },
+          {
+            "nama": "MOROTAI JAYA",
+            "rls_lk": 6.54,
+            "rls_pr": 6.04,
+            "rls_total": 6.3
+          },
+          {
+            "nama": "MOROTAI UTARA",
+            "rls_lk": 6.69,
+            "rls_pr": 6.13,
+            "rls_total": 6.42
+          },
+          {
+            "nama": "MOROTAI TIMUR",
+            "rls_lk": 7.63,
+            "rls_pr": 7.4,
+            "rls_total": 7.52
+          },
+          {
+            "nama": "PULAU RAO",
+            "rls_lk": 6.49,
+            "rls_pr": 6.34,
+            "rls_total": 6.42
+          }
+        ]
       },
       {
         "periode": "202501",
@@ -892,7 +1242,44 @@
         "kab_rls": 7.34,
         "kab_rls_lk": 7.46,
         "kab_rls_pr": 7.22,
-        "kecamatan": []
+        "kecamatan": [
+          {
+            "nama": "MOROTAI SELATAN",
+            "rls_lk": 8.47,
+            "rls_pr": 8.34,
+            "rls_total": 8.41
+          },
+          {
+            "nama": "MOROTAI SELATAN BARAT",
+            "rls_lk": 6.86,
+            "rls_pr": 6.7,
+            "rls_total": 6.78
+          },
+          {
+            "nama": "MOROTAI JAYA",
+            "rls_lk": 6.5,
+            "rls_pr": 5.98,
+            "rls_total": 6.25
+          },
+          {
+            "nama": "MOROTAI UTARA",
+            "rls_lk": 6.64,
+            "rls_pr": 6.09,
+            "rls_total": 6.37
+          },
+          {
+            "nama": "MOROTAI TIMUR",
+            "rls_lk": 7.55,
+            "rls_pr": 7.31,
+            "rls_total": 7.44
+          },
+          {
+            "nama": "PULAU RAO",
+            "rls_lk": 6.43,
+            "rls_pr": 6.29,
+            "rls_total": 6.36
+          }
+        ]
       },
       {
         "periode": "202502",
@@ -900,14 +1287,56 @@
         "kab_rls": 7.98,
         "kab_rls_lk": 8.11,
         "kab_rls_pr": 7.85,
-        "kecamatan": []
+        "kecamatan": [
+          {
+            "nama": "MOROTAI SELATAN",
+            "rls_lk": 9.28,
+            "rls_pr": 9.1,
+            "rls_total": 9.19
+          },
+          {
+            "nama": "MOROTAI SELATAN BARAT",
+            "rls_lk": 7.01,
+            "rls_pr": 6.84,
+            "rls_total": 6.93
+          },
+          {
+            "nama": "MOROTAI JAYA",
+            "rls_lk": 6.66,
+            "rls_pr": 6.15,
+            "rls_total": 6.42
+          },
+          {
+            "nama": "MOROTAI UTARA",
+            "rls_lk": 7.51,
+            "rls_pr": 6.99,
+            "rls_total": 7.26
+          },
+          {
+            "nama": "MOROTAI TIMUR",
+            "rls_lk": 8.71,
+            "rls_pr": 8.35,
+            "rls_total": 8.53
+          },
+          {
+            "nama": "PULAU RAO",
+            "rls_lk": 6.49,
+            "rls_pr": 6.38,
+            "rls_total": 6.43
+          }
+        ]
       }
     ],
     "usia_sekolah": [
       {
         "periode": "202202",
         "label": "Sem 2 2022",
-        "data": null
+        "data": {
+          "SD": 10383,
+          "SLTP": 5193,
+          "SLTA": 4066,
+          "PT": 9179
+        }
       },
       {
         "periode": "202301",
@@ -1775,7 +2204,68 @@
         }
       }
     ],
-    "kecamatan": []
+    "kecamatan": [
+      {
+        "nama": "MOROTAI SELATAN",
+        "total": 66,
+        "Fisik": 12,
+        "Netra/Buta": 3,
+        "Rungu/Wicara": 16,
+        "Mental/Jiwa": 23,
+        "Fisik & Mental": 0,
+        "Lainnya": 12
+      },
+      {
+        "nama": "MOROTAI SELATAN BARAT",
+        "total": 24,
+        "Fisik": 4,
+        "Netra/Buta": 2,
+        "Rungu/Wicara": 1,
+        "Mental/Jiwa": 4,
+        "Fisik & Mental": 0,
+        "Lainnya": 13
+      },
+      {
+        "nama": "MOROTAI JAYA",
+        "total": 6,
+        "Fisik": 1,
+        "Netra/Buta": 0,
+        "Rungu/Wicara": 2,
+        "Mental/Jiwa": 1,
+        "Fisik & Mental": 1,
+        "Lainnya": 1
+      },
+      {
+        "nama": "MOROTAI UTARA",
+        "total": 7,
+        "Fisik": 2,
+        "Netra/Buta": 2,
+        "Rungu/Wicara": 0,
+        "Mental/Jiwa": 1,
+        "Fisik & Mental": 2,
+        "Lainnya": 0
+      },
+      {
+        "nama": "MOROTAI TIMUR",
+        "total": 11,
+        "Fisik": 2,
+        "Netra/Buta": 1,
+        "Rungu/Wicara": 1,
+        "Mental/Jiwa": 0,
+        "Fisik & Mental": 6,
+        "Lainnya": 1
+      },
+      {
+        "nama": "PULAU RAO",
+        "total": 8,
+        "Fisik": 1,
+        "Netra/Buta": 0,
+        "Rungu/Wicara": 3,
+        "Mental/Jiwa": 1,
+        "Fisik & Mental": 0,
+        "Lainnya": 3
+      }
+    ]
   },
   "kesehatan": {
     "golongan_darah": [
@@ -3451,7 +3941,68 @@
         }
       ]
     },
-    "heatmap": [],
+    "heatmap": [
+      {
+        "kecamatan": "MOROTAI SELATAN",
+        "202202": 31003,
+        "202301": 31249,
+        "202302": 31738,
+        "202401": 32254,
+        "202402": 32639,
+        "202501": 32821,
+        "202502": 33041
+      },
+      {
+        "kecamatan": "MOROTAI UTARA",
+        "202202": 11841,
+        "202301": 11874,
+        "202302": 12064,
+        "202401": 12308,
+        "202402": 12491,
+        "202501": 12480,
+        "202502": 12566
+      },
+      {
+        "kecamatan": "MOROTAI TIMUR",
+        "202202": 11546,
+        "202301": 11645,
+        "202302": 11837,
+        "202401": 12042,
+        "202402": 12284,
+        "202501": 12319,
+        "202502": 12347
+      },
+      {
+        "kecamatan": "MOROTAI JAYA",
+        "202202": 10106,
+        "202301": 10205,
+        "202302": 10370,
+        "202401": 10476,
+        "202402": 10579,
+        "202501": 10597,
+        "202502": 10688
+      },
+      {
+        "kecamatan": "MOROTAI SELATAN BARAT",
+        "202202": 9402,
+        "202301": 9464,
+        "202302": 9630,
+        "202401": 9784,
+        "202402": 9900,
+        "202501": 9981,
+        "202502": 10038
+      },
+      {
+        "kecamatan": "PULAU RAO",
+        "202202": 4864,
+        "202301": 4882,
+        "202302": 4927,
+        "202401": 4996,
+        "202402": 5020,
+        "202501": 5030,
+        "202502": 5031
+      }
+    ],
     "pop_distribution": [
       {
         "label": "<500",
