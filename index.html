@@ -1058,7 +1058,7 @@ new Chart(document.getElementById('chartAgamaPie'), {
 
 new Chart(document.getElementById('chartAgamaTrend'), {
   type:'bar',
-  data:{ labels:["Sem 2 2022", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[{"label": "Islam", "data": [0, 50292, 0, 51754, 51948, 52319], "backgroundColor": "#3b82f699"}, {"label": "Kristen", "data": [0, 29857, 0, 30733, 30848, 30950], "backgroundColor": "#06b6d499"}, {"label": "Katolik", "data": [0, 0, 0, 0, 0, 0], "backgroundColor": "#10b98199"}, {"label": "Hindu", "data": [0, 0, 0, 1, 0, 0], "backgroundColor": "#f59e0b99"}, {"label": "Budha", "data": [0, 0, 0, 0, 0, 0], "backgroundColor": "#f9731699"}, {"label": "Konghucu", "data": [0, 0, 0, 0, 0, 0], "backgroundColor": "#f43f5e99"}, {"label": "Penghayat", "data": [0, 0, 0, 0, 0, 0], "backgroundColor": "#8b5cf699"}] },
+  data:{ labels:["Sem 2 2022", "Sem 1 2023", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[{"label": "Islam", "data": [0, 0, 50292, 0, 51754, 51948, 52319], "backgroundColor": "#3b82f699"}, {"label": "Kristen", "data": [0, 0, 29857, 0, 30733, 30848, 30950], "backgroundColor": "#06b6d499"}, {"label": "Katolik", "data": [0, 0, 0, 0, 0, 0, 0], "backgroundColor": "#10b98199"}, {"label": "Hindu", "data": [0, 0, 0, 0, 1, 0, 0], "backgroundColor": "#f59e0b99"}, {"label": "Budha", "data": [0, 0, 0, 0, 0, 0, 0], "backgroundColor": "#f9731699"}, {"label": "Konghucu", "data": [0, 0, 0, 0, 0, 0, 0], "backgroundColor": "#f43f5e99"}, {"label": "Penghayat", "data": [0, 0, 0, 0, 0, 0, 0], "backgroundColor": "#8b5cf699"}] },
   options:{ responsive:true, scales:{x:{stacked:true},y:{stacked:true}}, plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:9}}}} }
 });
 
@@ -1080,11 +1080,11 @@ new Chart(document.getElementById('chartRLS'), {
 
 new Chart(document.getElementById('chartUsiaSekolah'), {
   type:'bar',
-  data:{ labels:["Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[
-    { label:'SD', data:[10404, 10467, 10581, 10480, 10471], backgroundColor:'#3b82f699' },
-    { label:'SLTP', data:[5188, 5238, 5265, 5298, 5303], backgroundColor:'#06b6d499' },
-    { label:'SLTA', data:[4470, 5114, 5068, 5111, 5098], backgroundColor:'#10b98199' },
-    { label:'PT', data:[9275, 9309, 9544, 9832, 9826], backgroundColor:'#f59e0b99' }
+  data:{ labels:["Sem 1 2023", "Sem 2 2023", "Sem 1 2024", "Sem 2 2024", "Sem 1 2025", "Sem 2 2025"], datasets:[
+    { label:'SD', data:[10383, 10404, 10467, 10581, 10480, 10471], backgroundColor:'#3b82f699' },
+    { label:'SLTP', data:[5193, 5188, 5238, 5265, 5298, 5303], backgroundColor:'#06b6d499' },
+    { label:'SLTA', data:[4066, 4470, 5114, 5068, 5111, 5098], backgroundColor:'#10b98199' },
+    { label:'PT', data:[9179, 9275, 9309, 9544, 9832, 9826], backgroundColor:'#f59e0b99' }
   ] },
   options:{ responsive:true, scales:{x:{stacked:true},y:{stacked:true}}, plugins:{legend:{position:'bottom'}} }
 });
@@ -1210,7 +1210,7 @@ new Chart(document.getElementById('chartDokTrend'), {
     { label:'e-KTP Rekam %', data:[null, null, null, null, null, null, 96.41], borderColor:'#3b82f6', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false },
     { label:'KIA %', data:[null, null, null, 68.16, 67.8, 69.5, 70.74], borderColor:'#06b6d4', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false },
     { label:'Akta Lahir %', data:[null, null, 0.0, 0.0, 0.0, 0.0, 0.0], borderColor:'#10b981', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false },
-    { label:'KK Cetak %', data:[null, 99.81, 99.26, 97.82, null, 97.29, 97.78], borderColor:'#f59e0b', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false }
+    { label:'KK Cetak %', data:[null, 99.81, 99.26, 97.82, 0.0, 97.29, 97.78], borderColor:'#f59e0b', tension:0.4, borderWidth:2, pointRadius:4, fill:false, spanGaps:false }
   ] },
   options:{ responsive:true, plugins:{legend:{position:'bottom'}}, scales:{y:{min:0,max:100}} }
 });

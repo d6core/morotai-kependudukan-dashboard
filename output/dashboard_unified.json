@@ -51,7 +51,7 @@
         "lk": 41461,
         "pr": 39105,
         "kk": 23534,
-        "rasio_jk": 106.02,
+        "rasio_jk": 110.57,
         "art": 3.42
       },
       {
@@ -210,7 +210,43 @@
       {
         "periode": "202301",
         "label": "Sem 1 2023",
-        "data": null
+        "data": {
+          "Islam": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Kristen": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Katolik": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Hindu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Budha": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Konghucu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Penghayat": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
       },
       {
         "periode": "202302",
@@ -876,7 +912,12 @@
       {
         "periode": "202301",
         "label": "Sem 1 2023",
-        "data": null
+        "data": {
+          "SD": 10383,
+          "SLTP": 5193,
+          "SLTA": 4066,
+          "PT": 9179
+        }
       },
       {
         "periode": "202302",
@@ -1087,12 +1128,20 @@
       {
         "periode": "202202",
         "label": "Sem 2 2022",
-        "data": null
+        "data": {
+          "usia_kerja": 49620,
+          "jml_penduduk": 49620,
+          "persen_tk": 68.2
+        }
       },
       {
         "periode": "202301",
         "label": "Sem 1 2023",
-        "data": null
+        "data": {
+          "usia_kerja": 52260,
+          "jml_penduduk": 52260,
+          "persen_tk": 68.2
+        }
       },
       {
         "periode": "202302",
@@ -1144,12 +1193,32 @@
       {
         "periode": "202202",
         "label": "Sem 2 2022",
-        "data": null
+        "data": {
+          "muda": 25204,
+          "produktif": 49620,
+          "tua": 3938,
+          "lk_muda": 12854,
+          "pr_muda": 12350,
+          "lk_prod": 25306,
+          "pr_prod": 24314,
+          "lk_tua": 2008,
+          "pr_tua": 1930
+        }
       },
       {
         "periode": "202301",
         "label": "Sem 1 2023",
-        "data": null
+        "data": {
+          "muda": 23189,
+          "produktif": 52260,
+          "tua": 3870,
+          "lk_muda": 11826,
+          "pr_muda": 11363,
+          "lk_prod": 26653,
+          "pr_prod": 25607,
+          "lk_tua": 1974,
+          "pr_tua": 1896
+        }
       },
       {
         "periode": "202302",
@@ -1158,12 +1227,12 @@
           "muda": 24061,
           "produktif": 52725,
           "tua": 3780,
-          "lk_muda": 0,
-          "pr_muda": 0,
-          "lk_prod": 0,
-          "pr_prod": 0,
-          "lk_tua": 0,
-          "pr_tua": 0
+          "lk_muda": 12271,
+          "pr_muda": 11790,
+          "lk_prod": 26890,
+          "pr_prod": 25835,
+          "lk_tua": 1928,
+          "pr_tua": 1852
         }
       },
       {
@@ -1173,12 +1242,12 @@
           "muda": 22966,
           "produktif": 54818,
           "tua": 4076,
-          "lk_muda": 0,
-          "pr_muda": 0,
-          "lk_prod": 0,
-          "pr_prod": 0,
-          "lk_tua": 0,
-          "pr_tua": 0
+          "lk_muda": 11713,
+          "pr_muda": 11253,
+          "lk_prod": 27957,
+          "pr_prod": 26861,
+          "lk_tua": 2079,
+          "pr_tua": 1997
         }
       },
       {
@@ -1304,7 +1373,16 @@
       {
         "periode": "202301",
         "label": "Sem 1 2023",
-        "data": null
+        "data": {
+          "belum_kawin_lk": 0,
+          "belum_kawin_pr": 0,
+          "kawin_lk": 0,
+          "kawin_pr": 0,
+          "cerai_hidup_lk": 0,
+          "cerai_hidup_pr": 0,
+          "cerai_mati_lk": 0,
+          "cerai_mati_pr": 0
+        }
       },
       {
         "periode": "202302",
@@ -1735,7 +1813,33 @@
       {
         "periode": "202301",
         "label": "Sem 1 2023",
-        "data": null
+        "data": {
+          "A": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "B": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "AB": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "O": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          },
+          "Tidak Tahu": {
+            "jumlah": 0,
+            "lk": 0,
+            "pr": 0
+          }
+        }
       },
       {
         "periode": "202302",
@@ -1984,7 +2088,12 @@
       {
         "periode": "202301",
         "label": "Sem 1 2023",
-        "wktp": null,
+        "wktp": {
+          "wajib_ktp": 0,
+          "sudah_rekam": 0,
+          "belum_rekam": 0,
+          "pct_rekam": null
+        },
         "kia": {
           "wajib": 0,
           "memiliki": 0,
@@ -2081,7 +2190,12 @@
           "belum": 0,
           "pct": 0.0
         },
-        "kk": null
+        "kk": {
+          "jumlah": 24066,
+          "sudah_cetak": 0,
+          "belum_cetak": 0,
+          "pct_cetak": 0.0
+        }
       },
       {
         "periode": "202501",
