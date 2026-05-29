@@ -670,6 +670,69 @@ main { position: relative; z-index: 1; }
 .ews-title-group2 { font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; color: var(--accent2); letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; }
 .ews-divider1 { flex: 1; height: 1px; background: rgba(0, 212, 255, 0.15); }
 .ews-divider2 { flex: 1; height: 1px; background: rgba(124, 58, 237, 0.15); }
+
+/* ── KECAMATAN CUSTOM INTERACTIVE LEGEND ── */
+.kec-custom-legend {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 12px;
+}
+.kec-legend-item {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.kec-legend-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.kec-legend-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+.kec-legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.kec-legend-body {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+.kec-legend-val {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.kec-legend-pct {
+  font-size: 0.68rem;
+  color: var(--text3);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .kec-custom-legend {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 </style>
 </head>
 <body>
@@ -844,6 +907,7 @@ main { position: relative; z-index: 1; }
           <div class="donut-center-lbl">Total Jiwa</div>
         </div>
       </div>
+      <div class="kec-custom-legend" id="kecCustomLegend"></div>
     </div>
   </div>
 
@@ -4919,13 +4983,103 @@ overview() {
     },
     options: {
       responsive: true, maintainAspectRatio: false,
-      cutout: '68%',
+      cutout: '74%',
+      onHover: (event, activeElements) => {
+        const valEl = document.querySelector('#donutCenterKec .donut-center-val');
+        const lblEl = document.querySelector('#donutCenterKec .donut-center-lbl');
+        if (!valEl || !lblEl) return;
+
+        if (activeElements && activeElements.length > 0) {
+          const idx = activeElements[0].index;
+          const k = D.kecComp[idx];
+          valEl.textContent = fmt(k.pop);
+          lblEl.innerHTML = `<span style="color:${KEC_COLORS[idx]};font-weight:700;">${k.nama.replace('MOROTAI ','')}</span> (${k.pct}%)`;
+        } else {
+          const totalPop = D.kecComp.reduce((sum, item) => sum + item.pop, 0);
+          valEl.textContent = fmt(totalPop);
+          lblEl.textContent = 'Total Jiwa';
+        }
+      },
       plugins: {
-        legend: { position: 'right', labels: { boxWidth: 10, padding: 10, font: { size: 11 } } },
+        legend: { display: false },
         tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${fmt(ctx.parsed)} (${D.kecComp[ctx.dataIndex].pct}%)` } }
       }
     }
   });
+
+  // Render Custom Interactive Legend
+  const totalPop = D.kecComp.reduce((sum, item) => sum + item.pop, 0);
+  const valEl = document.querySelector('#donutCenterKec .donut-center-val');
+  if (valEl) valEl.textContent = fmt(totalPop);
+
+  const legendContainer = document.getElementById('kecCustomLegend');
+  if (legendContainer) {
+    legendContainer.innerHTML = D.kecComp.map((k, i) => `
+      <div class="kec-legend-item" data-index="${i}">
+        <div class="kec-legend-header">
+          <span class="kec-legend-dot" style="background:${KEC_COLORS[i]}"></span>
+          <span>${k.nama.replace('MOROTAI ', 'MRT ')}</span>
+        </div>
+        <div class="kec-legend-body">
+          <span class="kec-legend-val">${fmt(k.pop)}</span>
+          <span class="kec-legend-pct">${k.pct}%</span>
+        </div>
+      </div>
+    `).join('');
+
+    // Add Interactive Hover & Click Events to Legend Items
+    legendContainer.querySelectorAll('.kec-legend-item').forEach(item => {
+      const i = parseInt(item.getAttribute('data-index'), 10);
+      item.addEventListener('mouseenter', () => {
+        const chart = charts['chartKecDonut'];
+        if (chart) {
+          chart.setActiveElements([{ datasetIndex: 0, index: i }]);
+          chart.tooltip.setActiveElements([{ datasetIndex: 0, index: i }], { x: 0, y: 0 });
+          chart.update();
+
+          const valEl = document.querySelector('#donutCenterKec .donut-center-val');
+          const lblEl = document.querySelector('#donutCenterKec .donut-center-lbl');
+          const k = D.kecComp[i];
+          if (valEl && lblEl) {
+            valEl.textContent = fmt(k.pop);
+            lblEl.innerHTML = `<span style="color:${KEC_COLORS[i]};font-weight:700;">${k.nama.replace('MOROTAI ','')}</span> (${k.pct}%)`;
+          }
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        const chart = charts['chartKecDonut'];
+        if (chart) {
+          chart.setActiveElements([]);
+          chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+          chart.update();
+
+          const valEl = document.querySelector('#donutCenterKec .donut-center-val');
+          const lblEl = document.querySelector('#donutCenterKec .donut-center-lbl');
+          if (valEl && lblEl) {
+            valEl.textContent = fmt(totalPop);
+            lblEl.textContent = 'Total Jiwa';
+          }
+        }
+      });
+
+      item.addEventListener('click', () => {
+        const navTabKec = document.querySelector('button[onclick*="kecamatan"]');
+        if (navTabKec) {
+          navTabKec.click();
+          setTimeout(() => {
+            const accHeader = document.querySelectorAll('.kec-header')[i];
+            if (accHeader) {
+              accHeader.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              if (!accHeader.closest('.kec-item').classList.contains('open')) {
+                accHeader.click();
+              }
+            }
+          }, 350);
+        }
+      });
+    });
+  }
 
   // Growth bar
   mkChart('chartGrowth', {
