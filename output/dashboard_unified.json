@@ -1789,42 +1789,42 @@
         "periode": "202202",
         "label": "Sem 2 2022",
         "data": {
-          "belum_kawin_lk": 0,
-          "belum_kawin_pr": 0,
-          "kawin_lk": 0,
-          "kawin_pr": 0,
-          "cerai_hidup_lk": 0,
-          "cerai_hidup_pr": 0,
-          "cerai_mati_lk": 0,
-          "cerai_mati_pr": 0
+          "belum_kawin_lk": 22069,
+          "belum_kawin_pr": 18368,
+          "kawin_lk": 17602,
+          "kawin_pr": 17686,
+          "cerai_hidup_lk": 153,
+          "cerai_hidup_pr": 304,
+          "cerai_mati_lk": 693,
+          "cerai_mati_pr": 1887
         }
       },
       {
         "periode": "202301",
         "label": "Sem 1 2023",
         "data": {
-          "belum_kawin_lk": 0,
-          "belum_kawin_pr": 0,
-          "kawin_lk": 0,
-          "kawin_pr": 0,
-          "cerai_hidup_lk": 0,
-          "cerai_hidup_pr": 0,
-          "cerai_mati_lk": 0,
-          "cerai_mati_pr": 0
+          "belum_kawin_lk": 22256,
+          "belum_kawin_pr": 18541,
+          "kawin_lk": 17667,
+          "kawin_pr": 17757,
+          "cerai_hidup_lk": 160,
+          "cerai_hidup_pr": 313,
+          "cerai_mati_lk": 705,
+          "cerai_mati_pr": 1920
         }
       },
       {
         "periode": "202302",
         "label": "Sem 2 2023",
         "data": {
-          "belum_kawin_lk": 0,
-          "belum_kawin_pr": 0,
-          "kawin_lk": 0,
-          "kawin_pr": 0,
-          "cerai_hidup_lk": 0,
-          "cerai_hidup_pr": 0,
-          "cerai_mati_lk": 0,
-          "cerai_mati_pr": 0
+          "belum_kawin_lk": 22734,
+          "belum_kawin_pr": 18874,
+          "kawin_lk": 17837,
+          "kawin_pr": 17915,
+          "cerai_hidup_lk": 177,
+          "cerai_hidup_pr": 336,
+          "cerai_mati_lk": 713,
+          "cerai_mati_pr": 1980
         }
       },
       {
@@ -2564,9 +2564,9 @@
         },
         "akta": {
           "wajib": 78762,
-          "memiliki": 39714,
-          "belum": 39048,
-          "pct": 50.42
+          "memiliki": 39725,
+          "belum": 39037,
+          "pct": 50.44
         },
         "kk": {
           "jumlah": 23170,
@@ -2619,10 +2619,10 @@
           "pct": 64.69
         },
         "akta": {
-          "wajib": 80550,
-          "memiliki": 41952,
-          "belum": 38598,
-          "pct": 52.08
+          "wajib": 80542,
+          "memiliki": 42002,
+          "belum": 38540,
+          "pct": 52.15
         },
         "kk": {
           "jumlah": 23534,
@@ -2641,16 +2641,16 @@
           "pct_rekam": 67.79
         },
         "kia": {
-          "wajib": 26683,
-          "memiliki": 18186,
-          "belum": 8497,
-          "pct": 68.16
+          "wajib": 26457,
+          "memiliki": 17858,
+          "belum": 8599,
+          "pct": 67.5
         },
         "akta": {
-          "wajib": 81860,
-          "memiliki": 43330,
-          "belum": 38530,
-          "pct": 52.93
+          "wajib": 81806,
+          "memiliki": 43410,
+          "belum": 38396,
+          "pct": 53.06
         },
         "kk": {
           "jumlah": 23813,
@@ -2669,16 +2669,16 @@
           "pct_rekam": 66.99
         },
         "kia": {
-          "wajib": 27366,
-          "memiliki": 18554,
-          "belum": 8812,
-          "pct": 67.8
+          "wajib": 26683,
+          "memiliki": 18186,
+          "belum": 8497,
+          "pct": 68.16
         },
         "akta": {
-          "wajib": 82913,
-          "memiliki": 44606,
-          "belum": 38307,
-          "pct": 53.8
+          "wajib": 82750,
+          "memiliki": 44601,
+          "belum": 38149,
+          "pct": 53.9
         },
         "kk": {
           "jumlah": 24066,
@@ -2697,16 +2697,16 @@
           "pct_rekam": 68.6
         },
         "kia": {
-          "wajib": 26253,
-          "memiliki": 18246,
-          "belum": 8007,
-          "pct": 69.5
+          "wajib": 26321,
+          "memiliki": 18400,
+          "belum": 7921,
+          "pct": 69.91
         },
         "akta": {
-          "wajib": 83113,
-          "memiliki": 45619,
-          "belum": 37494,
-          "pct": 54.89
+          "wajib": 83035,
+          "memiliki": 45669,
+          "belum": 37366,
+          "pct": 55.0
         },
         "kk": {
           "jumlah": 24076,
@@ -2725,16 +2725,16 @@
           "pct_rekam": 96.41
         },
         "kia": {
-          "wajib": 26734,
-          "memiliki": 18911,
-          "belum": 7823,
-          "pct": 70.74
+          "wajib": 26409,
+          "memiliki": 18782,
+          "belum": 7627,
+          "pct": 71.12
         },
         "akta": {
-          "wajib": 83650,
-          "memiliki": 46465,
-          "belum": 37185,
-          "pct": 55.55
+          "wajib": 0,
+          "memiliki": 0,
+          "belum": 0,
+          "pct": 55.47
         },
         "kk": {
           "jumlah": 24176,
@@ -2822,7 +2822,11 @@
         "lk": 2182,
         "pr": 2230,
         "rasio_jk": 97.85,
-        "art": 3.43
+        "art": 3.43,
+        "ektp": 97.27,
+        "akta": 59.07,
+        "kia": 78.12,
+        "lpp": 0
       },
       {
         "nama": "DARUBA",
@@ -2832,7 +2836,11 @@
         "lk": 1885,
         "pr": 1768,
         "rasio_jk": 106.62,
-        "art": 3.52
+        "art": 3.52,
+        "ektp": 97.27,
+        "akta": 61.14,
+        "kia": 74.34,
+        "lpp": 0
       },
       {
         "nama": "DARAME",
@@ -2842,7 +2850,11 @@
         "lk": 1449,
         "pr": 1438,
         "rasio_jk": 100.76,
-        "art": 3.16
+        "art": 3.16,
+        "ektp": 97.71,
+        "akta": 55.67,
+        "kia": 79.14,
+        "lpp": 0
       },
       {
         "nama": "WAWAMA",
@@ -2852,7 +2864,11 @@
         "lk": 1075,
         "pr": 1051,
         "rasio_jk": 102.28,
-        "art": 3.57
+        "art": 3.57,
+        "ektp": 96.76,
+        "akta": 59.68,
+        "kia": 80.68,
+        "lpp": 0
       },
       {
         "nama": "SOPI MAJIKO",
@@ -2862,7 +2878,11 @@
         "lk": 1025,
         "pr": 907,
         "rasio_jk": 113.01,
-        "art": 3.49
+        "art": 3.49,
+        "ektp": 94.02,
+        "akta": 50.54,
+        "kia": 44.07,
+        "lpp": 0
       },
       {
         "nama": "LEO-LEO",
@@ -2872,7 +2892,11 @@
         "lk": 884,
         "pr": 803,
         "rasio_jk": 110.09,
-        "art": 3.12
+        "art": 3.12,
+        "ektp": 96.02,
+        "akta": 45.28,
+        "kia": 68.75,
+        "lpp": 0
       },
       {
         "nama": "PANDANGA",
@@ -2882,7 +2906,11 @@
         "lk": 818,
         "pr": 744,
         "rasio_jk": 109.95,
-        "art": 3.53
+        "art": 3.53,
+        "ektp": 97.37,
+        "akta": 56.7,
+        "kia": 83.21,
+        "lpp": 0
       },
       {
         "nama": "MUHAJIRIN",
@@ -2892,7 +2920,11 @@
         "lk": 787,
         "pr": 738,
         "rasio_jk": 106.64,
-        "art": 3.48
+        "art": 3.48,
+        "ektp": 98.16,
+        "akta": 61.47,
+        "kia": 86.09,
+        "lpp": 0
       },
       {
         "nama": "DAEO",
@@ -2902,7 +2934,11 @@
         "lk": 769,
         "pr": 752,
         "rasio_jk": 102.26,
-        "art": 3.55
+        "art": 3.55,
+        "ektp": 97.81,
+        "akta": 60.29,
+        "kia": 83.27,
+        "lpp": 0
       },
       {
         "nama": "LUSUO",
@@ -2912,7 +2948,11 @@
         "lk": 745,
         "pr": 706,
         "rasio_jk": 105.52,
-        "art": 3.45
+        "art": 3.45,
+        "ektp": 94.76,
+        "akta": 53.08,
+        "kia": 52.41,
+        "lpp": 0
       },
       {
         "nama": "SANGOWO TIMUR",
@@ -2922,7 +2962,11 @@
         "lk": 721,
         "pr": 685,
         "rasio_jk": 105.26,
-        "art": 3.84
+        "art": 3.84,
+        "ektp": 97.03,
+        "akta": 61.84,
+        "kia": 81.73,
+        "lpp": 0
       },
       {
         "nama": "YAYASAN",
@@ -2932,7 +2976,11 @@
         "lk": 699,
         "pr": 674,
         "rasio_jk": 103.71,
-        "art": 3.22
+        "art": 3.22,
+        "ektp": 97.81,
+        "akta": 56.44,
+        "kia": 83.37,
+        "lpp": 0
       },
       {
         "nama": "SANGOWO BARAT",
@@ -2942,7 +2990,11 @@
         "lk": 696,
         "pr": 675,
         "rasio_jk": 103.11,
-        "art": 3.77
+        "art": 3.77,
+        "ektp": 97.59,
+        "akta": 61.03,
+        "kia": 83.1,
+        "lpp": 0
       },
       {
         "nama": "JOUBELA",
@@ -2952,7 +3004,11 @@
         "lk": 662,
         "pr": 656,
         "rasio_jk": 100.91,
-        "art": 3.74
+        "art": 3.74,
+        "ektp": 96.49,
+        "akta": 60.0,
+        "kia": 76.8,
+        "lpp": 0
       },
       {
         "nama": "JUANGA",
@@ -2962,7 +3018,11 @@
         "lk": 665,
         "pr": 643,
         "rasio_jk": 103.42,
-        "art": 3.42
+        "art": 3.42,
+        "ektp": 97.09,
+        "akta": 58.84,
+        "kia": 75.96,
+        "lpp": 0
       },
       {
         "nama": "POSI-POSI",
@@ -2972,7 +3032,11 @@
         "lk": 645,
         "pr": 605,
         "rasio_jk": 106.61,
-        "art": 2.93
+        "art": 2.93,
+        "ektp": 96.46,
+        "akta": 48.23,
+        "kia": 76.68,
+        "lpp": 0
       },
       {
         "nama": "DAEO MAJIKO",
@@ -2982,7 +3046,11 @@
         "lk": 631,
         "pr": 597,
         "rasio_jk": 105.7,
-        "art": 3.57
+        "art": 3.57,
+        "ektp": 96.37,
+        "akta": 55.28,
+        "kia": 74.13,
+        "lpp": 0
       },
       {
         "nama": "SOPI",
@@ -2992,7 +3060,11 @@
         "lk": 610,
         "pr": 554,
         "rasio_jk": 110.11,
-        "art": 3.44
+        "art": 3.44,
+        "ektp": 96.92,
+        "akta": 53.52,
+        "kia": 62.74,
+        "lpp": 0
       },
       {
         "nama": "BIDO",
@@ -3002,7 +3074,11 @@
         "lk": 592,
         "pr": 565,
         "rasio_jk": 104.78,
-        "art": 3.45
+        "art": 3.45,
+        "ektp": 96.38,
+        "akta": 53.33,
+        "kia": 61.96,
+        "lpp": 0
       },
       {
         "nama": "SAMBIKI BARU",
@@ -3012,7 +3088,11 @@
         "lk": 586,
         "pr": 564,
         "rasio_jk": 103.9,
-        "art": 3.25
+        "art": 3.25,
+        "ektp": 97.95,
+        "akta": 49.96,
+        "kia": 67.19,
+        "lpp": 0
       },
       {
         "nama": "WAYABULA",
@@ -3022,7 +3102,11 @@
         "lk": 581,
         "pr": 543,
         "rasio_jk": 107.0,
-        "art": 3.42
+        "art": 3.42,
+        "ektp": 96.74,
+        "akta": 55.65,
+        "kia": 75.78,
+        "lpp": 0
       },
       {
         "nama": "YAO",
@@ -3032,7 +3116,11 @@
         "lk": 575,
         "pr": 493,
         "rasio_jk": 116.63,
-        "art": 3.67
+        "art": 3.67,
+        "ektp": 96.9,
+        "akta": 49.77,
+        "kia": 49.84,
+        "lpp": 0
       },
       {
         "nama": "DEHEGILA",
@@ -3042,7 +3130,11 @@
         "lk": 535,
         "pr": 518,
         "rasio_jk": 103.28,
-        "art": 3.52
+        "art": 3.52,
+        "ektp": 96.03,
+        "akta": 59.66,
+        "kia": 73.78,
+        "lpp": 0
       },
       {
         "nama": "SABATAI TUA",
@@ -3052,7 +3144,11 @@
         "lk": 510,
         "pr": 528,
         "rasio_jk": 96.59,
-        "art": 3.62
+        "art": 3.62,
+        "ektp": 96.98,
+        "akta": 57.93,
+        "kia": 74.56,
+        "lpp": 0
       },
       {
         "nama": "LOLEO JAYA",
@@ -3062,7 +3158,11 @@
         "lk": 535,
         "pr": 489,
         "rasio_jk": 109.41,
-        "art": 3.34
+        "art": 3.34,
+        "ektp": 96.22,
+        "akta": 46.83,
+        "kia": 41.28,
+        "lpp": 0
       },
       {
         "nama": "TUTUHU",
@@ -3072,7 +3172,11 @@
         "lk": 541,
         "pr": 478,
         "rasio_jk": 113.18,
-        "art": 3.35
+        "art": 3.35,
+        "ektp": 97.2,
+        "akta": 50.24,
+        "kia": 64.24,
+        "lpp": 0
       },
       {
         "nama": "KENARI",
@@ -3082,7 +3186,11 @@
         "lk": 520,
         "pr": 499,
         "rasio_jk": 104.21,
-        "art": 3.58
+        "art": 3.58,
+        "ektp": 97.29,
+        "akta": 54.57,
+        "kia": 71.11,
+        "lpp": 0
       },
       {
         "nama": "SAKITA",
@@ -3092,7 +3200,11 @@
         "lk": 527,
         "pr": 491,
         "rasio_jk": 107.33,
-        "art": 3.19
+        "art": 3.19,
+        "ektp": 97.35,
+        "akta": 47.73,
+        "kia": 53.08,
+        "lpp": 0
       },
       {
         "nama": "PANGEO",
@@ -3102,7 +3214,11 @@
         "lk": 522,
         "pr": 487,
         "rasio_jk": 107.19,
-        "art": 3.68
+        "art": 3.68,
+        "ektp": 94.93,
+        "akta": 56.13,
+        "kia": 66.56,
+        "lpp": 0
       },
       {
         "nama": "SANGOWO",
@@ -3112,7 +3228,11 @@
         "lk": 506,
         "pr": 491,
         "rasio_jk": 103.05,
-        "art": 3.64
+        "art": 3.64,
+        "ektp": 98.02,
+        "akta": 60.1,
+        "kia": 82.25,
+        "lpp": 0
       },
       {
         "nama": "TOTODOKU",
@@ -3122,7 +3242,11 @@
         "lk": 497,
         "pr": 477,
         "rasio_jk": 104.19,
-        "art": 3.65
+        "art": 3.65,
+        "ektp": 96.54,
+        "akta": 60.93,
+        "kia": 79.46,
+        "lpp": 0
       },
       {
         "nama": "MORODADI",
@@ -3132,7 +3256,11 @@
         "lk": 500,
         "pr": 448,
         "rasio_jk": 111.61,
-        "art": 3.63
+        "art": 3.63,
+        "ektp": 96.41,
+        "akta": 56.06,
+        "kia": 80.4,
+        "lpp": 0
       },
       {
         "nama": "TILEY",
@@ -3142,7 +3270,11 @@
         "lk": 485,
         "pr": 450,
         "rasio_jk": 107.78,
-        "art": 3.49
+        "art": 3.49,
+        "ektp": 95.43,
+        "akta": 56.94,
+        "kia": 76.25,
+        "lpp": 0
       },
       {
         "nama": "SABATAI BARU",
@@ -3152,7 +3284,11 @@
         "lk": 458,
         "pr": 476,
         "rasio_jk": 96.22,
-        "art": 3.19
+        "art": 3.19,
+        "ektp": 98.19,
+        "akta": 51.39,
+        "kia": 76.67,
+        "lpp": 0
       },
       {
         "nama": "CUCUMARE",
@@ -3162,7 +3298,11 @@
         "lk": 504,
         "pr": 424,
         "rasio_jk": 118.87,
-        "art": 3.76
+        "art": 3.76,
+        "ektp": 95.11,
+        "akta": 60.69,
+        "kia": 57.42,
+        "lpp": 0
       },
       {
         "nama": "LOLEO",
@@ -3172,7 +3312,11 @@
         "lk": 477,
         "pr": 445,
         "rasio_jk": 107.19,
-        "art": 3.56
+        "art": 3.56,
+        "ektp": 94.62,
+        "akta": 53.9,
+        "kia": 42.28,
+        "lpp": 0
       },
       {
         "nama": "KORAGO",
@@ -3182,7 +3326,11 @@
         "lk": 490,
         "pr": 422,
         "rasio_jk": 116.11,
-        "art": 3.52
+        "art": 3.52,
+        "ektp": 96.87,
+        "akta": 49.61,
+        "kia": 61.25,
+        "lpp": 0
       },
       {
         "nama": "MIRA",
@@ -3192,7 +3340,11 @@
         "lk": 455,
         "pr": 446,
         "rasio_jk": 102.02,
-        "art": 3.28
+        "art": 3.28,
+        "ektp": 97.44,
+        "akta": 58.49,
+        "kia": 69.82,
+        "lpp": 0
       },
       {
         "nama": "CENDANA",
@@ -3202,7 +3354,11 @@
         "lk": 472,
         "pr": 421,
         "rasio_jk": 112.11,
-        "art": 3.62
+        "art": 3.62,
+        "ektp": 95.21,
+        "akta": 54.48,
+        "kia": 52.84,
+        "lpp": 0
       },
       {
         "nama": "RAJA",
@@ -3212,7 +3368,11 @@
         "lk": 451,
         "pr": 433,
         "rasio_jk": 104.16,
-        "art": 3.16
+        "art": 3.16,
+        "ektp": 97.25,
+        "akta": 48.76,
+        "kia": 81.13,
+        "lpp": 0
       },
       {
         "nama": "RAHMAT",
@@ -3222,7 +3382,11 @@
         "lk": 454,
         "pr": 415,
         "rasio_jk": 109.4,
-        "art": 3.65
+        "art": 3.65,
+        "ektp": 96.66,
+        "akta": 63.68,
+        "kia": 68.9,
+        "lpp": 0
       },
       {
         "nama": "WARINGIN",
@@ -3232,7 +3396,11 @@
         "lk": 467,
         "pr": 396,
         "rasio_jk": 117.93,
-        "art": 3.33
+        "art": 3.33,
+        "ektp": 95.17,
+        "akta": 54.72,
+        "kia": 72.52,
+        "lpp": 0
       },
       {
         "nama": "BUHO-BUHO",
@@ -3242,7 +3410,11 @@
         "lk": 440,
         "pr": 413,
         "rasio_jk": 106.54,
-        "art": 3.48
+        "art": 3.48,
+        "ektp": 94.77,
+        "akta": 54.76,
+        "kia": 77.99,
+        "lpp": 0
       },
       {
         "nama": "LOU MADORO",
@@ -3252,7 +3424,11 @@
         "lk": 429,
         "pr": 412,
         "rasio_jk": 104.13,
-        "art": 3.0
+        "art": 3.0,
+        "ektp": 93.81,
+        "akta": 43.4,
+        "kia": 50.72,
+        "lpp": 0
       },
       {
         "nama": "BERE-BERE",
@@ -3262,7 +3438,11 @@
         "lk": 411,
         "pr": 399,
         "rasio_jk": 103.01,
-        "art": 3.39
+        "art": 3.39,
+        "ektp": 96.5,
+        "akta": 58.59,
+        "kia": 63.77,
+        "lpp": 0
       },
       {
         "nama": "SESELI JAYA",
@@ -3272,7 +3452,11 @@
         "lk": 436,
         "pr": 371,
         "rasio_jk": 117.52,
-        "art": 3.48
+        "art": 3.48,
+        "ektp": 94.89,
+        "akta": 48.7,
+        "kia": 53.31,
+        "lpp": 0
       },
       {
         "nama": "TANJUNG SALEH",
@@ -3282,7 +3466,11 @@
         "lk": 384,
         "pr": 419,
         "rasio_jk": 91.65,
-        "art": 3.52
+        "art": 3.52,
+        "ektp": 97.33,
+        "akta": 55.94,
+        "kia": 72.99,
+        "lpp": 0
       },
       {
         "nama": "NAKAMURA",
@@ -3292,7 +3480,11 @@
         "lk": 407,
         "pr": 384,
         "rasio_jk": 105.99,
-        "art": 3.97
+        "art": 3.97,
+        "ektp": 94.62,
+        "akta": 63.72,
+        "kia": 71.78,
+        "lpp": 0
       },
       {
         "nama": "GORUA",
@@ -3302,7 +3494,11 @@
         "lk": 424,
         "pr": 357,
         "rasio_jk": 118.77,
-        "art": 3.46
+        "art": 3.46,
+        "ektp": 95.73,
+        "akta": 53.39,
+        "kia": 74.27,
+        "lpp": 0
       },
       {
         "nama": "PILOWO",
@@ -3312,7 +3508,11 @@
         "lk": 405,
         "pr": 353,
         "rasio_jk": 114.73,
-        "art": 3.56
+        "art": 3.56,
+        "ektp": 94.5,
+        "akta": 59.74,
+        "kia": 73.45,
+        "lpp": 0
       },
       {
         "nama": "MOMOJIU",
@@ -3322,7 +3522,11 @@
         "lk": 363,
         "pr": 369,
         "rasio_jk": 98.37,
-        "art": 3.55
+        "art": 3.55,
+        "ektp": 97.31,
+        "akta": 61.48,
+        "kia": 95.95,
+        "lpp": 0
       },
       {
         "nama": "TAWAKALI",
@@ -3332,7 +3536,11 @@
         "lk": 379,
         "pr": 346,
         "rasio_jk": 109.54,
-        "art": 3.49
+        "art": 3.49,
+        "ektp": 97.16,
+        "akta": 51.03,
+        "kia": 52.58,
+        "lpp": 0
       },
       {
         "nama": "ARU BURUNG",
@@ -3342,7 +3550,11 @@
         "lk": 367,
         "pr": 346,
         "rasio_jk": 106.07,
-        "art": 3.41
+        "art": 3.41,
+        "ektp": 93.11,
+        "akta": 49.65,
+        "kia": 65.0,
+        "lpp": 0
       },
       {
         "nama": "SAMBIKI TUA",
@@ -3352,7 +3564,11 @@
         "lk": 354,
         "pr": 356,
         "rasio_jk": 99.44,
-        "art": 3.46
+        "art": 3.46,
+        "ektp": 97.22,
+        "akta": 57.18,
+        "kia": 74.58,
+        "lpp": 0
       },
       {
         "nama": "GORUA SELATAN",
@@ -3362,7 +3578,11 @@
         "lk": 367,
         "pr": 339,
         "rasio_jk": 108.26,
-        "art": 3.74
+        "art": 3.74,
+        "ektp": 97.05,
+        "akta": 55.01,
+        "kia": 48.93,
+        "lpp": 0
       },
       {
         "nama": "BERE BERE KECIL",
@@ -3372,7 +3592,11 @@
         "lk": 366,
         "pr": 314,
         "rasio_jk": 116.56,
-        "art": 3.38
+        "art": 3.38,
+        "ektp": 92.61,
+        "akta": 48.23,
+        "kia": 48.17,
+        "lpp": 0
       },
       {
         "nama": "HAPO",
@@ -3382,7 +3606,11 @@
         "lk": 360,
         "pr": 318,
         "rasio_jk": 113.21,
-        "art": 4.08
+        "art": 4.08,
+        "ektp": 93.1,
+        "akta": 61.56,
+        "kia": 49.8,
+        "lpp": 0
       },
       {
         "nama": "TOWARA",
@@ -3392,7 +3620,11 @@
         "lk": 343,
         "pr": 324,
         "rasio_jk": 105.86,
-        "art": 3.92
+        "art": 3.92,
+        "ektp": 95.52,
+        "akta": 54.65,
+        "kia": 57.51,
+        "lpp": 0
       },
       {
         "nama": "WEWEMO",
@@ -3402,7 +3634,11 @@
         "lk": 346,
         "pr": 310,
         "rasio_jk": 111.61,
-        "art": 3.45
+        "art": 3.45,
+        "ektp": 98.38,
+        "akta": 57.95,
+        "kia": 56.76,
+        "lpp": 0
       },
       {
         "nama": "KOLORAY",
@@ -3412,7 +3648,11 @@
         "lk": 348,
         "pr": 306,
         "rasio_jk": 113.73,
-        "art": 3.78
+        "art": 3.78,
+        "ektp": 97.97,
+        "akta": 56.24,
+        "kia": 73.43,
+        "lpp": 0
       },
       {
         "nama": "CIO GERONG",
@@ -3422,7 +3662,11 @@
         "lk": 320,
         "pr": 322,
         "rasio_jk": 99.38,
-        "art": 3.33
+        "art": 3.33,
+        "ektp": 96.95,
+        "akta": 45.48,
+        "kia": 59.22,
+        "lpp": 0
       },
       {
         "nama": "MABA",
@@ -3432,7 +3676,11 @@
         "lk": 311,
         "pr": 325,
         "rasio_jk": 95.69,
-        "art": 3.37
+        "art": 3.37,
+        "ektp": 96.81,
+        "akta": 57.1,
+        "kia": 69.74,
+        "lpp": 0
       },
       {
         "nama": "GALO-GALO",
@@ -3442,7 +3690,11 @@
         "lk": 352,
         "pr": 280,
         "rasio_jk": 125.71,
-        "art": 3.74
+        "art": 3.74,
+        "ektp": 96.64,
+        "akta": 57.32,
+        "kia": 78.6,
+        "lpp": 0
       },
       {
         "nama": "GAMLAMO",
@@ -3452,7 +3704,11 @@
         "lk": 319,
         "pr": 312,
         "rasio_jk": 102.24,
-        "art": 3.92
+        "art": 3.92,
+        "ektp": 96.64,
+        "akta": 58.89,
+        "kia": 71.23,
+        "lpp": 0
       },
       {
         "nama": "TILEY PANTAI",
@@ -3462,7 +3718,11 @@
         "lk": 314,
         "pr": 311,
         "rasio_jk": 100.96,
-        "art": 3.36
+        "art": 3.36,
+        "ektp": 96.5,
+        "akta": 53.53,
+        "kia": 78.46,
+        "lpp": 0
       },
       {
         "nama": "DOKU MIRA",
@@ -3472,7 +3732,11 @@
         "lk": 314,
         "pr": 303,
         "rasio_jk": 103.63,
-        "art": 3.65
+        "art": 3.65,
+        "ektp": 97.12,
+        "akta": 61.91,
+        "kia": 70.51,
+        "lpp": 0
       },
       {
         "nama": "TITIGOGOLI",
@@ -3482,7 +3746,11 @@
         "lk": 293,
         "pr": 260,
         "rasio_jk": 112.69,
-        "art": 3.71
+        "art": 3.71,
+        "ektp": 94.79,
+        "akta": 54.17,
+        "kia": 65.22,
+        "lpp": 0
       },
       {
         "nama": "SABALA",
@@ -3492,7 +3760,11 @@
         "lk": 266,
         "pr": 278,
         "rasio_jk": 95.68,
-        "art": 3.44
+        "art": 3.44,
+        "ektp": 98.56,
+        "akta": 57.3,
+        "kia": 75.26,
+        "lpp": 0
       },
       {
         "nama": "SAMI NYAMAU",
@@ -3502,7 +3774,11 @@
         "lk": 269,
         "pr": 271,
         "rasio_jk": 99.26,
-        "art": 2.97
+        "art": 2.97,
+        "ektp": 93.35,
+        "akta": 42.51,
+        "kia": 52.54,
+        "lpp": 0
       },
       {
         "nama": "GORUGO",
@@ -3512,7 +3788,11 @@
         "lk": 297,
         "pr": 238,
         "rasio_jk": 124.79,
-        "art": 3.47
+        "art": 3.47,
+        "ektp": 93.81,
+        "akta": 52.35,
+        "kia": 65.52,
+        "lpp": 0
       },
       {
         "nama": "GOSOMA MALUKU",
@@ -3522,7 +3802,11 @@
         "lk": 270,
         "pr": 263,
         "rasio_jk": 102.66,
-        "art": 3.19
+        "art": 3.19,
+        "ektp": 95.79,
+        "akta": 54.05,
+        "kia": 72.19,
+        "lpp": 0
       },
       {
         "nama": "BOBULA",
@@ -3532,7 +3816,11 @@
         "lk": 271,
         "pr": 258,
         "rasio_jk": 105.04,
-        "art": 3.48
+        "art": 3.48,
+        "ektp": 94.25,
+        "akta": 56.93,
+        "kia": 80.25,
+        "lpp": 0
       },
       {
         "nama": "HINO",
@@ -3542,7 +3830,11 @@
         "lk": 264,
         "pr": 258,
         "rasio_jk": 102.33,
-        "art": 3.26
+        "art": 3.26,
+        "ektp": 95.15,
+        "akta": 50.97,
+        "kia": 58.78,
+        "lpp": 0
       },
       {
         "nama": "ARU",
@@ -3552,7 +3844,11 @@
         "lk": 263,
         "pr": 242,
         "rasio_jk": 108.68,
-        "art": 3.41
+        "art": 3.41,
+        "ektp": 95.32,
+        "akta": 51.88,
+        "kia": 74.05,
+        "lpp": 0
       },
       {
         "nama": "LIBANO",
@@ -3562,7 +3858,11 @@
         "lk": 249,
         "pr": 241,
         "rasio_jk": 103.32,
-        "art": 3.48
+        "art": 3.48,
+        "ektp": 94.1,
+        "akta": 50.91,
+        "kia": 69.03,
+        "lpp": 0
       },
       {
         "nama": "NGELE-NGELE KECIL",
@@ -3572,7 +3872,11 @@
         "lk": 253,
         "pr": 236,
         "rasio_jk": 107.2,
-        "art": 3.35
+        "art": 3.35,
+        "ektp": 95.59,
+        "akta": 55.24,
+        "kia": 84.93,
+        "lpp": 0
       },
       {
         "nama": "CIO DALAM",
@@ -3582,7 +3886,11 @@
         "lk": 243,
         "pr": 229,
         "rasio_jk": 106.11,
-        "art": 3.37
+        "art": 3.37,
+        "ektp": 94.77,
+        "akta": 45.78,
+        "kia": 62.7,
+        "lpp": 0
       },
       {
         "nama": "CIO MALOLEO",
@@ -3592,7 +3900,11 @@
         "lk": 242,
         "pr": 226,
         "rasio_jk": 107.08,
-        "art": 3.18
+        "art": 3.18,
+        "ektp": 96.46,
+        "akta": 48.41,
+        "kia": 56.49,
+        "lpp": 0
       },
       {
         "nama": "GOA HIRA",
@@ -3602,7 +3914,11 @@
         "lk": 229,
         "pr": 227,
         "rasio_jk": 100.88,
-        "art": 3.43
+        "art": 3.43,
+        "ektp": 98.11,
+        "akta": 52.72,
+        "kia": 71.74,
+        "lpp": 0
       },
       {
         "nama": "CEMPAKA",
@@ -3612,7 +3928,11 @@
         "lk": 217,
         "pr": 187,
         "rasio_jk": 116.04,
-        "art": 3.64
+        "art": 3.64,
+        "ektp": 91.96,
+        "akta": 54.7,
+        "kia": 68.64,
+        "lpp": 0
       },
       {
         "nama": "USBAR PANTAI",
@@ -3622,7 +3942,11 @@
         "lk": 194,
         "pr": 198,
         "rasio_jk": 97.98,
-        "art": 3.6
+        "art": 3.6,
+        "ektp": 95.35,
+        "akta": 56.74,
+        "kia": 70.15,
+        "lpp": 0
       },
       {
         "nama": "AHA",
@@ -3632,7 +3956,11 @@
         "lk": 205,
         "pr": 182,
         "rasio_jk": 112.64,
-        "art": 3.1
+        "art": 3.1,
+        "ektp": 99.22,
+        "akta": 64.62,
+        "kia": 92.19,
+        "lpp": 0
       },
       {
         "nama": "ARU IRIAN",
@@ -3642,7 +3970,11 @@
         "lk": 193,
         "pr": 173,
         "rasio_jk": 111.56,
-        "art": 3.27
+        "art": 3.27,
+        "ektp": 94.33,
+        "akta": 50.41,
+        "kia": 56.3,
+        "lpp": 0
       },
       {
         "nama": "FALILA",
@@ -3652,7 +3984,11 @@
         "lk": 183,
         "pr": 174,
         "rasio_jk": 105.17,
-        "art": 3.37
+        "art": 3.37,
+        "ektp": 99.16,
+        "akta": 57.3,
+        "kia": 84.87,
+        "lpp": 0
       },
       {
         "nama": "MANDIRI",
@@ -3662,7 +3998,11 @@
         "lk": 163,
         "pr": 163,
         "rasio_jk": 100.0,
-        "art": 3.43
+        "art": 3.43,
+        "ektp": 98.15,
+        "akta": 61.42,
+        "kia": 79.09,
+        "lpp": 0
       },
       {
         "nama": "LIFAO",
@@ -3672,7 +4012,11 @@
         "lk": 168,
         "pr": 156,
         "rasio_jk": 107.69,
-        "art": 3.52
+        "art": 3.52,
+        "ektp": 98.54,
+        "akta": 55.86,
+        "kia": 61.86,
+        "lpp": 0
       },
       {
         "nama": "NGELE-NGELE BESAR",
@@ -3682,7 +4026,11 @@
         "lk": 159,
         "pr": 143,
         "rasio_jk": 111.19,
-        "art": 3.97
+        "art": 3.97,
+        "ektp": 93.78,
+        "akta": 60.13,
+        "kia": 61.29,
+        "lpp": 0
       },
       {
         "nama": "PODIMOR PADANGE",
@@ -3692,7 +4040,11 @@
         "lk": 141,
         "pr": 115,
         "rasio_jk": 122.61,
-        "art": 4.13
+        "art": 4.13,
+        "ektp": 91.57,
+        "akta": 57.81,
+        "kia": 60.0,
+        "lpp": 0
       }
     ],
     "desa_growth": {
